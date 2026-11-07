@@ -1,0 +1,136 @@
+# 西方/现代博弈模型卡 · 第 11 批：战略：间接路线（v2 操作升级）
+# 来源：《战略：间接路线》(Liddell Hart) —— 二手提炼；v2 未取得原书全文，未逐页核对
+# v2 升级：每卡补 example / signals / scripts / defense / failure_modes / 参数默认值 / related
+# 字段：id / name / card_type / mechanism / definition / example / signals / scripts / defense / recognize / misjudge / failure_modes / action / params / counter / related / source / ethics / confidence / review_status / v2_status
+
+- id: model-indirect-approach
+  name: 间接路线
+  card_type: model
+  mechanism: {primary: M4, secondary: [M3]}
+  definition: 不正面硬拼，选择对手未防备、心理上难承受的方向达成目标。
+  example: 不跟对手拼价格，先做他没做的差异化服务。
+  signals: [正面代价高, 对手注意力集中在正面]
+  scripts: [「不正面拼，换条路。」, 「找他没防的地方切入。」]
+  defense: [「对手是不是在绕开我的正面？」, 「我的侧翼/后方有没有漏洞？」]
+  recognize: [正面代价高, 对手注意力集中在正面]
+  misjudge: [把迂回当绕远, 忽略时间成本]
+  failure_modes: [迂回太远, 时间成本高, 被识破]
+  action: [找对手薄弱/意外的方向, 用最小代价撬动, 保持目标不变]
+  params: {route: 侧翼/差异化, cost: 中}
+  counter: [对手识破并调整部署]
+  related: [M4 关键点, 围魏救赵]
+  source: {book: 战略：间接路线, chapter: 概念条目（章节待核）, source_type: 二手提炼, verified: false}
+  ethics: gray
+  confidence: medium
+  review_status: reviewed-v1
+  v2_status: operational-v2
+
+- id: model-surprise
+  name: 出敌不意
+  card_type: model
+  mechanism: {primary: M10, secondary: [M9]}
+  definition: 在对手未预料的时间、地点、方式行动，放大效果。
+  example: 在对手年度预算已定后突然推出新方案。
+  signals: [对手有固定预期, 你有信息优势]
+  scripts: [「选他想不到的时机。」, 「先藏意图，到点再动。」]
+  defense: [「我有没有被出敌不意？」, 「我的固定节奏被摸了吗？」]
+  recognize: [对手有固定预期, 你有信息优势]
+  misjudge: [为奇而奇, 忽略后续能力]
+  failure_modes: [奇袭后无后续, 意图提前泄露, 时机误判]
+  action: [隐藏意图, 选意外时机, 确保奇袭后有后续]
+  params: {surprise: 中–高, follow_up: 有}
+  counter: [对手保持警戒与多方案]
+  related: [M10 情报, M9 信号]
+  source: {book: 战略：间接路线, chapter: 概念条目（章节待核）, source_type: 二手提炼, verified: false}
+  ethics: gray
+  confidence: medium
+  review_status: reviewed-v1
+  v2_status: operational-v2
+
+- id: model-psychological-disruption
+  name: 心理扰乱
+  card_type: model
+  mechanism: {primary: M12, secondary: [M9]}
+  definition: 打乱对手的判断与信心，使其自乱阵脚；心理失衡比物理损失更致命。
+  example: 释放不确定信号，让对方团队内部先乱。
+  signals: [对手依赖稳定预期, 你掌握其焦虑点]
+  scripts: [「先稳住对方情绪。」, 「留一条谈判出口。」]
+  defense: [「这是不是心理战？」, 「我的情绪被带跑了吗？」]
+  recognize: [对手依赖稳定预期, 你掌握其焦虑点]
+  misjudge: [过度恐吓引发反扑, 忽略伦理]
+  failure_modes: [引发反扑, 被识破, 越过伦理红线]
+  action: [制造不确定, 打击其信心来源, 留谈判出口]
+  params: {anxiety: 中, intensity: 低–中}
+  counter: [对手稳定情绪、公开澄清]
+  related: [M12 框架, M9 信号]
+  source: {book: 战略：间接路线, chapter: 概念条目（章节待核）, source_type: 二手提炼, verified: false}
+  ethics: gray
+  confidence: low
+  review_status: reviewed-v1
+  v2_status: operational-v2
+
+- id: model-maneuver
+  name: 机动
+  card_type: model
+  mechanism: {primary: M2, secondary: [M4]}
+  definition: 通过移动与调整位置，迫使对手在不利条件下应对；速度与位置比蛮力重要。
+  example: 调整团队分工，避开对手最强项，专攻他薄弱环节。
+  signals: [僵持, 对手部署固定]
+  scripts: [「换个位置打。」, 「保持机动，别被钉住。」]
+  defense: [「对手是不是在调我离开主场？」, 「我的部署是不是太固定？」]
+  recognize: [僵持, 对手部署固定]
+  misjudge: [乱动消耗自己, 忽略后勤]
+  failure_modes: [乱动, 后勤断, 被钉住]
+  action: [保持机动性, 调动对手, 选有利位置决战]
+  params: {speed: 中–高, position: 有利}
+  counter: [对手以静制动]
+  related: [M2 节奏, M4 关键点]
+  source: {book: 战略：间接路线, chapter: 概念条目（章节待核）, source_type: 二手提炼, verified: false}
+  ethics: green
+  confidence: medium
+  review_status: reviewed-v1
+  v2_status: operational-v2
+
+- id: model-economy-of-force
+  name: 节约兵力
+  card_type: model
+  mechanism: {primary: M11, secondary: [M4]}
+  definition: 用最少资源达成目标，把节省的力量投入关键点。
+  example: 砍掉两个次要市场，把钱投到核心市场。
+  signals: [资源紧张, 多处要守]
+  scripts: [「砍掉次要的。」, 「用低成本方式守住边角。」]
+  defense: [「对手是否在逼我分散？」, 「我的资源是不是摊太薄？」]
+  recognize: [资源紧张, 多处要守]
+  misjudge: [平均用力, 过度投入次要方向]
+  failure_modes: [摊薄, 砍错, 关键点投入不足]
+  action: [砍次要目标, 用低成本手段守, 集中到关键点]
+  params: {budget: 紧, priorities: 1–2 个}
+  counter: [对手逼你分散]
+  related: [M11 资源, 集中优势]
+  source: {book: 战略：间接路线, chapter: 概念条目（章节待核）, source_type: 二手提炼, verified: false}
+  ethics: green
+  confidence: medium
+  review_status: reviewed-v1
+  v2_status: operational-v2
+
+- id: model-dislocation
+  name: 打乱平衡
+  card_type: model
+  mechanism: {primary: M4, secondary: [M10]}
+  definition: 让对手的部署、节奏或心理失衡，再在其恢复前行动。
+  example: 在对手换帅/调整期推出新产品，打他一个措手不及。
+  signals: [对手体系严密但脆弱点明显, 你有扰动手段]
+  scripts: [「找他的失衡窗口。」, 「扰动后立刻行动，别等他恢复。」]
+  defense: [「他是不是在诱我出手？」, 「我恢复得过来吗？」]
+  recognize: [对手体系严密但脆弱点明显, 你有扰动手段]
+  misjudge: [扰动后没有后续, 低估对手恢复力]
+  failure_modes: [扰动无效, 后续跟不上, 被反制]
+  action: [找失衡点, 扰动后立刻行动, 准备第二波]
+  params: {disruption: 中, window: 短}
+  counter: [对手快速恢复或反制]
+  related: [M4 关键点, M10 情报]
+  source: {book: 战略：间接路线, chapter: 概念条目（章节待核）, source_type: 二手提炼, verified: false}
+  ethics: gray
+  confidence: medium
+  review_status: reviewed-v1
+  v2_status: operational-v2

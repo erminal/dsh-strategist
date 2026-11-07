@@ -1,0 +1,167 @@
+{
+  "version": "0.1",
+  "updated": "2026-11-07",
+  "total": 20,
+  "cards": [
+    {
+      "id": "prin-xianwei-bukesheng",
+      "name": "先为不可胜",
+      "chapter": "军形篇",
+      "primary": "M6",
+      "variant": "var-keypoint",
+      "ethics": "green"
+    },
+    {
+      "id": "prin-zhibi-zhiji",
+      "name": "知彼知己",
+      "chapter": "谋攻篇",
+      "primary": "M1",
+      "variant": "var-intel",
+      "ethics": "green"
+    },
+    {
+      "id": "prin-zhiren-buzhiren",
+      "name": "致人而不致于人",
+      "chapter": "虚实篇",
+      "primary": "M2",
+      "variant": "var-tempo",
+      "ethics": "green"
+    },
+    {
+      "id": "prin-zhenghe-qisheng",
+      "name": "以正合，以奇胜",
+      "chapter": "兵势篇",
+      "primary": "M4",
+      "variant": "var-keypoint",
+      "ethics": "green"
+    },
+    {
+      "id": "prin-bishi-jixu",
+      "name": "避实击虚",
+      "chapter": "虚实篇",
+      "primary": "M4",
+      "variant": "var-keypoint",
+      "ethics": "green"
+    },
+    {
+      "id": "prin-gongqi-bijiu",
+      "name": "攻其所必救",
+      "chapter": "虚实篇",
+      "primary": "M4",
+      "variant": "var-keypoint",
+      "ethics": "green"
+    },
+    {
+      "id": "prin-xingren-woxing",
+      "name": "形人而我无形",
+      "chapter": "虚实篇",
+      "primary": "M1",
+      "variant": "var-info-conceal",
+      "ethics": "gray"
+    },
+    {
+      "id": "prin-wozhuan-difen",
+      "name": "我专而敌分",
+      "chapter": "虚实篇",
+      "primary": "M4",
+      "variant": "var-keypoint",
+      "ethics": "green"
+    },
+    {
+      "id": "prin-yindi-bianhua",
+      "name": "因敌变化而取胜",
+      "chapter": "虚实篇",
+      "primary": "M2",
+      "variant": "var-tempo",
+      "ethics": "green"
+    },
+    {
+      "id": "prin-bingguisheng",
+      "name": "兵贵胜，不贵久",
+      "chapter": "作战篇",
+      "primary": "M11",
+      "variant": "var-attrition",
+      "ethics": "green"
+    },
+    {
+      "id": "prin-shangbing-famou",
+      "name": "上兵伐谋",
+      "chapter": "谋攻篇",
+      "primary": "M12",
+      "variant": "var-framing",
+      "ethics": "green"
+    },
+    {
+      "id": "prin-buzhan-quren",
+      "name": "不战而屈人之兵",
+      "chapter": "谋攻篇",
+      "primary": "M3",
+      "variant": "var-coalition",
+      "ethics": "green"
+    },
+    {
+      "id": "prin-quansheng",
+      "name": "全胜（全国为上）",
+      "chapter": "谋攻篇",
+      "primary": "M4",
+      "variant": "var-keypoint",
+      "ethics": "green"
+    },
+    {
+      "id": "prin-jiudi-zhibian",
+      "name": "九地之变",
+      "chapter": "九地篇",
+      "primary": "M8",
+      "variant": "var-maneuver",
+      "ethics": "green"
+    },
+    {
+      "id": "prin-yongjian",
+      "name": "用间",
+      "chapter": "用间篇",
+      "primary": "M10",
+      "variant": "var-intel",
+      "ethics": "gray"
+    },
+    {
+      "id": "prin-zhizhi",
+      "name": "治气治心治力治变",
+      "chapter": "军争篇",
+      "primary": "M2",
+      "variant": "var-tempo",
+      "ethics": "green"
+    },
+    {
+      "id": "prin-wangdi-cun",
+      "name": "投之亡地然后存",
+      "chapter": "九地篇",
+      "primary": "M6",
+      "variant": "var-commitment",
+      "ethics": "gray"
+    },
+    {
+      "id": "prin-yiyu-weizhi",
+      "name": "以迂为直，以患为利",
+      "chapter": "军争篇",
+      "primary": "M4",
+      "variant": "var-indirect",
+      "ethics": "green"
+    },
+    {
+      "id": "prin-libuyai",
+      "name": "立于不败之地",
+      "chapter": "军形篇",
+      "primary": "M6",
+      "variant": "var-keypoint",
+      "ethics": "green"
+    },
+    {
+      "id": "prin-xiansheng-houqiu",
+      "name": "先胜而后求战",
+      "chapter": "军形篇",
+      "primary": "M6",
+      "variant": "var-commitment",
+      "ethics": "green"
+    }
+  ]
+}

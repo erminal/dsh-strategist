@@ -1,0 +1,21 @@
+{
+  "tree_id": "t-case4",
+  "actions": [
+    {
+      "action": "整理成果汇报",
+      "reactions": [
+        {"reaction": "继续抢功", "prob": 0.5, "payoff": 5, "source": "assumption"},
+        {"reaction": "拉票", "prob": 0.3, "payoff": 6, "source": "assumption"},
+        {"reaction": "正常竞争", "prob": 0.2, "payoff": 7, "source": "assumption"}
+      ]
+    },
+    {
+      "action": "争取团队支持",
+      "reactions": [
+        {"reaction": "继续抢功", "prob": 0.4, "payoff": 4, "source": "assumption"},
+        {"reaction": "拉票", "prob": 0.3, "payoff": 6, "source": "assumption"},
+        {"reaction": "正常竞争", "prob": 0.3, "payoff": 8, "source": "assumption"}
+      ]
+    }
+  ]
+}

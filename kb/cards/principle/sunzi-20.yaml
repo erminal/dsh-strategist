@@ -1,0 +1,303 @@
+# 孙子兵法原则卡 · 20 张（v1）
+# 来源：kb/raw/sunzi-bingfa.txt（13 篇，初采）
+# 字段：id / name / source / mechanism / plain / use_when / actions / signals / counter / detect / failure_modes / ethics / related_variant / status
+
+- id: prin-xianwei-bukesheng
+  name: 先为不可胜
+  source: {book: 孙子兵法, chapter: 军形篇, text: 先为不可胜，以待敌之可胜。不可胜在己，可胜在敌。}
+  mechanism: {primary: M6, secondary: [M11]}
+  plain: 先把自己做到不可被击败，再等对手露出可胜之机。
+  use_when: [劣势, 局势不明, 对手强势]
+  actions: [先补自己的短板, 建立防线与备份, 不急着决战, 等对手犯错]
+  signals: [对手开始急躁, 对手出现破绽]
+  counter: [对手不给你时间, 对手也稳]
+  detect: [对手是否在等你先犯错]
+  failure_modes: [只守不攻错失窗口, 自认为不可胜而松懈]
+  ethics: green
+  related_variant: var-keypoint
+  status: principle-v1
+
+- id: prin-zhibi-zhiji
+  name: 知彼知己
+  source: {book: 孙子兵法, chapter: 谋攻篇, text: 知彼知己者，百战不殆。}
+  mechanism: {primary: M1, secondary: [M10]}
+  plain: 了解对方也了解自己，才不会被误判带偏。
+  use_when: [信息不足, 需要判断胜负]
+  actions: [列双方目标/资源/约束, 找信息缺口, 多源核对]
+  signals: [判断反复摇摆, 信息矛盾]
+  counter: [对手示假, 信息被污染]
+  detect: [自己是否只了解一方]
+  failure_modes: [只知己不知彼, 只知彼不知己]
+  ethics: green
+  related_variant: var-intel
+  status: principle-v1
+
+- id: prin-zhiren-buzhiren
+  name: 致人而不致于人
+  source: {book: 孙子兵法, chapter: 虚实篇, text: 善战者，致人而不致于人。}
+  mechanism: {primary: M2, secondary: [M4]}
+  plain: 让对手按你的节奏走，而不是你被对手调动。
+  use_when: [被对手带节奏, 需要夺回主动]
+  actions: [制造对方必须回应的点, 控制节奏, 不跟着对方走]
+  signals: [自己一直在被动回应]
+  counter: [对手也设点调动你]
+  detect: [自己是否在追对方节奏]
+  failure_modes: [被拖入对方战场, 疲于奔命]
+  ethics: green
+  related_variant: var-tempo
+  status: principle-v1
+
+- id: prin-zhenghe-qisheng
+  name: 以正合，以奇胜
+  source: {book: 孙子兵法, chapter: 兵势篇, text: 凡战者，以正合，以奇胜。}
+  mechanism: {primary: M4, secondary: [M9]}
+  plain: 正面稳住，出奇制胜；常规动作掩护非常规动作。
+  use_when: [正面僵持, 需要破局]
+  actions: [正面保持压力, 准备奇招, 奇正配合]
+  signals: [对手只防正面]
+  counter: [对手也留后手]
+  detect: [对手的奇招在哪]
+  failure_modes: [只有正没有奇, 奇招无后续]
+  ethics: green
+  related_variant: var-keypoint
+  status: principle-v1
+
+- id: prin-bishi-jixu
+  name: 避实击虚
+  source: {book: 孙子兵法, chapter: 虚实篇, text: 兵之形，避实而击虚。}
+  mechanism: {primary: M4, secondary: [M10]}
+  plain: 避开对手强点，打其薄弱处。
+  use_when: [对手有强有弱, 正面难打]
+  actions: [找薄弱环节, 集中打弱处, 不硬碰强点]
+  signals: [对手强点之外出现漏洞]
+  counter: [对手补强弱点, 设陷阱]
+  detect: [自己是否在硬碰对方强点]
+  failure_modes: [打错弱点, 被诱入陷阱]
+  ethics: green
+  related_variant: var-keypoint
+  status: principle-v1
+
+- id: prin-gongqi-bijiu
+  name: 攻其所必救
+  source: {book: 孙子兵法, chapter: 虚实篇, text: 我欲战，敌虽高垒深沟，不得不与我战者，攻其所必救也。}
+  mechanism: {primary: M4, secondary: [M2]}
+  plain: 打对手必须回救的点，逼他按你的节奏动。
+  use_when: [对手避战, 需要逼其出来]
+  actions: [找必救点, 施加压力, 在其回援时行动]
+  signals: [对手被迫分兵回援]
+  counter: [对手弃子不救]
+  detect: [对手是否在打你的必救点]
+  failure_modes: [必救点判断错, 对手不救]
+  ethics: green
+  related_variant: var-keypoint
+  status: principle-v1
+
+- id: prin-xingren-woxing
+  name: 形人而我无形
+  source: {book: 孙子兵法, chapter: 虚实篇, text: 形人而我无形，则我专而敌分。}
+  mechanism: {primary: M1, secondary: [M4]}
+  plain: 让对手暴露，而自己不暴露。
+  use_when: [信息不对称, 需要隐藏意图]
+  actions: [示形调动对手, 隐藏真实部署, 保持选择权]
+  signals: [对手暴露部署, 自己信息泄露少]
+  counter: [对手也示形, 反向侦察]
+  detect: [自己是否暴露太多]
+  failure_modes: [示形被识破, 隐藏失败]
+  ethics: gray
+  related_variant: var-info-conceal
+  status: principle-v1
+
+- id: prin-wozhuan-difen
+  name: 我专而敌分
+  source: {book: 孙子兵法, chapter: 虚实篇, text: 我专为一，敌分为十，是以十攻其一也。}
+  mechanism: {primary: M4, secondary: [M11]}
+  plain: 集中自己的力量，迫使对手分散，形成局部优势。
+  use_when: [资源有限, 对手战线长]
+  actions: [集中资源, 逼对手多点防守, 打其一点]
+  signals: [对手开始分兵]
+  counter: [对手也集中, 诱你分散]
+  detect: [自己是否被逼分兵]
+  failure_modes: [分兵, 集中点选错]
+  ethics: green
+  related_variant: var-keypoint
+  status: principle-v1
+
+- id: prin-yindi-bianhua
+  name: 因敌变化而取胜
+  source: {book: 孙子兵法, chapter: 虚实篇, text: 能因敌变化而取胜者，谓之神。}
+  mechanism: {primary: M2, secondary: [M10]}
+  plain: 没有固定套路，随对手变化调整。
+  use_when: [局势快速变化, 旧方案失效]
+  actions: [持续观察, 快速调整, 不迷信原计划]
+  signals: [对手变了, 原方案卡住]
+  counter: [对手用假变化诱你调整]
+  detect: [自己是否在用旧地图]
+  failure_modes: [应变太慢, 被假变化带偏]
+  ethics: green
+  related_variant: var-tempo
+  status: principle-v1
+
+- id: prin-bingguisheng
+  name: 兵贵胜，不贵久
+  source: {book: 孙子兵法, chapter: 作战篇, text: 兵贵胜，不贵久。}
+  mechanism: {primary: M11, secondary: [M2]}
+  plain: 速胜优于久拖；拖久了资源与士气都会崩。
+  use_when: [消耗大, 时间不利]
+  actions: [算清消耗, 争取速决, 设止损时间]
+  signals: [成本快速上升, 士气下滑]
+  counter: [对手拖你]
+  detect: [自己是否被拖入消耗]
+  failure_modes: [久拖不决, 被拖垮]
+  ethics: green
+  related_variant: var-attrition
+  status: principle-v1
+
+- id: prin-shangbing-famou
+  name: 上兵伐谋
+  source: {book: 孙子兵法, chapter: 谋攻篇, text: 上兵伐谋，其次伐交，其次伐兵，其下攻城。}
+  mechanism: {primary: M12, secondary: [M3]}
+  plain: 最高明的是破坏对手的谋划，其次拆其联盟，再次才动兵。
+  use_when: [冲突初期, 还有非战手段]
+  actions: [先破坏对手计划, 再拆联盟, 最后才硬碰]
+  signals: [对手计划被打乱]
+  counter: [对手也伐你的谋]
+  detect: [自己是否一上来就硬碰]
+  failure_modes: [跳过谋略直接硬拼]
+  ethics: green
+  related_variant: var-framing
+  status: principle-v1
+
+- id: prin-buzhan-quren
+  name: 不战而屈人之兵
+  source: {book: 孙子兵法, chapter: 谋攻篇, text: 不战而屈人之兵，善之善者也。}
+  mechanism: {primary: M3, secondary: [M12]}
+  plain: 不通过正面冲突就让对方屈服，是最高明的。
+  use_when: [正面冲突代价高, 有威慑/联盟手段]
+  actions: [用威慑/联盟/合法性施压, 给对方台阶, 避免正面战]
+  signals: [对方开始让步]
+  counter: [对手不吃威慑]
+  detect: [自己是否把冲突升级了]
+  failure_modes: [威慑不可信, 对方误判]
+  ethics: green
+  related_variant: var-coalition
+  status: principle-v1
+
+- id: prin-quansheng
+  name: 全胜（全国为上）
+  source: {book: 孙子兵法, chapter: 谋攻篇, text: 凡用兵之法，全国为上，破国次之。}
+  mechanism: {primary: M4, secondary: [M12]}
+  plain: 尽量完整地拿下，不把对方打烂；保全利益比惨胜更值。
+  use_when: [可以完整获取, 惨胜代价高]
+  actions: [优先完整接管, 避免毁灭性打法, 保留合作可能]
+  signals: [对方愿意谈, 完整接管的窗口]
+  counter: [对手宁为玉碎]
+  detect: [自己是否在追求惨胜]
+  failure_modes: [打烂了拿不到价值]
+  ethics: green
+  related_variant: var-keypoint
+  status: principle-v1
+
+- id: prin-jiudi-zhibian
+  name: 九地之变
+  source: {book: 孙子兵法, chapter: 九地篇, text: 九地之变，屈伸之利，人情之理，不可不察。}
+  mechanism: {primary: M8, secondary: [M2]}
+  plain: 不同处境用不同姿态：散地、轻地、重地、死地各有打法。
+  use_when: [进入新环境, 处境变化]
+  actions: [先判断处境类型, 选对应姿态, 该进则进该退则退]
+  signals: [环境/距离/退路变化]
+  counter: [对手把你引入不利地形]
+  detect: [自己处在哪种处境]
+  failure_modes: [一种打法用到底]
+  ethics: green
+  related_variant: var-maneuver
+  status: principle-v1
+
+- id: prin-yongjian
+  name: 用间
+  source: {book: 孙子兵法, chapter: 用间篇, text: 故用间有五：因间、内间、反间、死间、生间。}
+  mechanism: {primary: M10, secondary: [M1]}
+  plain: 用情报手段了解对手；但现实中只做合法信息收集与防御识别。
+  use_when: [信息不足, 需要提前知情]
+  actions: [合法公开信息收集, 多源交叉验证, 识别对方的间谍手段]
+  signals: [信息来路不明, 有人刻意接近]
+  counter: [对方反间, 喂假信息]
+  detect: [自己是否被渗透]
+  failure_modes: [越界违法, 被假情报误导]
+  ethics: gray
+  related_variant: var-intel
+  status: principle-v1
+
+- id: prin-zhizhi
+  name: 治气治心治力治变
+  source: {book: 孙子兵法, chapter: 军争篇, text: 以治待乱，以静待哗，此治心者也；以近待远，以佚待劳，此治力者也。}
+  mechanism: {primary: M2, secondary: [M11]}
+  plain: 管理士气、心态、体力与变化：避其锐气，击其惰归。
+  use_when: [对手锐气正盛, 我方疲惫]
+  actions: [避其锐气, 等其惰归, 以静待哗, 以逸待劳]
+  signals: [对手士气下滑, 对手疲惫]
+  counter: [对手速战, 对手也稳]
+  detect: [自己士气/体力状态]
+  failure_modes: [硬拼锐气, 自己先崩]
+  ethics: green
+  related_variant: var-tempo
+  status: principle-v1
+
+- id: prin-wangdi-cun
+  name: 投之亡地然后存
+  source: {book: 孙子兵法, chapter: 九地篇, text: 投之亡地然后存，陷之死地然后生。}
+  mechanism: {primary: M6, secondary: [M9]}
+  plain: 把团队置于无退路，激发最大战斗力；但这是高风险手段。
+  use_when: [绝境, 需要背水一战]
+  actions: [明确无退路, 激发意志, 留最低限度保障]
+  signals: [团队被逼到墙角]
+  counter: [对手给你留退路诱降]
+  detect: [自己是否被对手逼入死地]
+  failure_modes: [真崩了, 士气反噬]
+  ethics: gray
+  related_variant: var-commitment
+  status: principle-v1
+
+- id: prin-yiyu-weizhi
+  name: 以迂为直，以患为利
+  source: {book: 孙子兵法, chapter: 军争篇, text: 军争之难者，以迂为直，以患为利。}
+  mechanism: {primary: M4, secondary: [M2]}
+  plain: 绕远反而先到，把不利转化为有利。
+  use_when: [直线走不通, 有可转化的不利]
+  actions: [选迂回路线, 把劣势包装成优势, 后发先至]
+  signals: [对手只防直线]
+  counter: [对手识破迂回]
+  detect: [自己是否只走直线]
+  failure_modes: [迂回太远, 弄巧成拙]
+  ethics: green
+  related_variant: var-indirect
+  status: principle-v1
+
+- id: prin-libuyai
+  name: 立于不败之地
+  source: {book: 孙子兵法, chapter: 军形篇, text: 善战者，立于不败之地，而不失敌之败也。}
+  mechanism: {primary: M6, secondary: [M4]}
+  plain: 先保证自己不败，再抓对手的败机。
+  use_when: [实力接近, 需要稳健]
+  actions: [先补防线, 保留反击力量, 等对手失误]
+  signals: [对手开始冒险]
+  counter: [对手不犯错]
+  detect: [自己是否露出破绽]
+  failure_modes: [只求不败错失战机]
+  ethics: green
+  related_variant: var-keypoint
+  status: principle-v1
+
+- id: prin-xiansheng-houqiu
+  name: 先胜而后求战
+  source: {book: 孙子兵法, chapter: 军形篇, text: 胜兵先胜而后求战，败兵先战而后求胜。}
+  mechanism: {primary: M6, secondary: [M4]}
+  plain: 先创造胜利条件再打，而不是打了再赌运气。
+  use_when: [准备不足, 想赌一把]
+  actions: [先算胜算, 创造有利条件, 条件不够就不打]
+  signals: [自己急着开战]
+  counter: [对手诱你仓促开战]
+  detect: [自己是否在赌]
+  failure_modes: [先战而后求胜]
+  ethics: green
+  related_variant: var-commitment
+  status: principle-v1

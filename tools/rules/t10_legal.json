@@ -1,0 +1,366 @@
+{
+  "version": "0.1",
+  "updated": "2026-11-07",
+  "rules": [
+    {
+      "id": "L-RED-1",
+      "checkpoint": "C3",
+      "level": "red",
+      "domain": "名誉/刑事",
+      "patterns": [
+        "曝光",
+        "搞臭",
+        "不给就"
+      ],
+      "issue": "以曝光隐私施压",
+      "consequence": "可能构成威胁/敲诈勒索",
+      "alternative": "走正式申诉/协商/法律途径",
+      "needs_lawyer": true,
+      "confidence": 0.8
+    },
+    {
+      "id": "L-RED-2",
+      "checkpoint": "C2",
+      "level": "red",
+      "domain": "个人信息保护法",
+      "patterns": [
+        "买信息",
+        "窃取",
+        "查开房",
+        "查通话",
+        "黑进",
+        "开房",
+        "查记录",
+        "查流水"
+      ],
+      "issue": "非法获取个人信息",
+      "consequence": "可能构成侵犯公民个人信息罪",
+      "alternative": "只用公开信息/对方自愿提供",
+      "needs_lawyer": true,
+      "confidence": 0.9
+    },
+    {
+      "id": "L-RED-3",
+      "checkpoint": "C1",
+      "level": "red",
+      "domain": "刑事",
+      "patterns": [
+        "伪造",
+        "假证据",
+        "私刻"
+      ],
+      "issue": "伪造证据/文件",
+      "consequence": "可能构成伪造证据/伪造公司文件",
+      "alternative": "如实举证或申请调查令",
+      "needs_lawyer": true,
+      "confidence": 0.9
+    },
+    {
+      "id": "L-RED-4",
+      "checkpoint": "C1",
+      "level": "red",
+      "domain": "反不正当竞争/刑事",
+      "patterns": [
+        "回扣",
+        "行贿",
+        "送礼打点",
+        "好处费"
+      ],
+      "issue": "商业贿赂",
+      "consequence": "可能构成行贿/非国家工作人员受贿",
+      "alternative": "走合同与正式激励",
+      "needs_lawyer": true,
+      "confidence": 0.9
+    },
+    {
+      "id": "L-RED-5",
+      "checkpoint": "C2",
+      "level": "red",
+      "domain": "治安/刑事",
+      "patterns": [
+        "跟踪",
+        "堵门",
+        "骚扰家人",
+        "打电话轰炸"
+      ],
+      "issue": "骚扰/跟踪",
+      "consequence": "可能违反治安管理处罚法",
+      "alternative": "通过律师函或诉讼主张权利",
+      "needs_lawyer": true,
+      "confidence": 0.8
+    },
+    {
+      "id": "L-ORG-1",
+      "checkpoint": "C2",
+      "level": "orange",
+      "domain": "取证合规",
+      "patterns": [
+        "私下录音",
+        "偷录",
+        "暗中录像"
+      ],
+      "issue": "取证方式边界",
+      "consequence": "取证合法性可能被质疑",
+      "alternative": "公开场合记录/书面确认/律师指导取证",
+      "needs_lawyer": true,
+      "confidence": 0.6
+    },
+    {
+      "id": "L-ORG-2",
+      "checkpoint": "C3",
+      "level": "orange",
+      "domain": "欺诈/误导",
+      "patterns": [
+        "虚构",
+        "编个 offer",
+        "假报价",
+        "假装"
+      ],
+      "issue": "虚构事实施压",
+      "consequence": "可能构成欺诈/误导",
+      "alternative": "用真实数据/区间替代",
+      "needs_lawyer": false,
+      "confidence": 0.7
+    },
+    {
+      "id": "L-YEL-1",
+      "checkpoint": "C2",
+      "level": "yellow",
+      "domain": "商业秘密/隐私",
+      "patterns": [
+        "打听",
+        "熟人",
+        "内部消息",
+        "侧面了解"
+      ],
+      "issue": "信息获取方式",
+      "consequence": "可能涉及不当获取内部信息",
+      "alternative": "只问公开口径/不涉隐私",
+      "needs_lawyer": false,
+      "confidence": 0.5
+    },
+    {
+      "id": "L-YEL-2",
+      "checkpoint": "C4",
+      "level": "yellow",
+      "domain": "合同",
+      "patterns": [
+        "口头",
+        "包在我身上",
+        "不用签"
+      ],
+      "issue": "口头承诺/无书面",
+      "consequence": "举证困难、条款不明",
+      "alternative": "写书面备忘/合同",
+      "needs_lawyer": false,
+      "confidence": 0.5
+    },
+    {
+      "id": "L-YEL-3",
+      "checkpoint": "C5",
+      "level": "yellow",
+      "domain": "诉讼时效",
+      "patterns": [
+        "拖了一年",
+        "很久没还",
+        "两年"
+      ],
+      "issue": "诉讼时效",
+      "consequence": "注意 3 年诉讼时效",
+      "alternative": "书面催款/保留时效中断证据",
+      "needs_lawyer": false,
+      "confidence": 0.6
+    },
+    {
+      "id": "L-RED-6",
+      "checkpoint": "C3",
+      "level": "red",
+      "domain": "名誉/刑事",
+      "patterns": [
+        "造谣",
+        "诽谤",
+        "散布谣言"
+      ],
+      "issue": "造谣诽谤",
+      "consequence": "可能构成诽谤/损害名誉",
+      "alternative": "用事实和证据申诉",
+      "needs_lawyer": true,
+      "confidence": 0.85
+    },
+    {
+      "id": "L-RED-7",
+      "checkpoint": "C2",
+      "level": "red",
+      "domain": "个人信息/治安",
+      "patterns": [
+        "定位",
+        "跟踪",
+        "堵人"
+      ],
+      "issue": "跟踪定位",
+      "consequence": "可能违反治安管理处罚法",
+      "alternative": "通过律师函/诉讼",
+      "needs_lawyer": true,
+      "confidence": 0.8
+    },
+    {
+      "id": "L-RED-8",
+      "checkpoint": "C1",
+      "level": "red",
+      "domain": "商业秘密",
+      "patterns": [
+        "带走客户",
+        "拷走",
+        "源代码带走",
+        "泄露商业"
+      ],
+      "issue": "带走/泄露商业秘密",
+      "consequence": "可能构成侵犯商业秘密",
+      "alternative": "走合法离职交接/竞业约定",
+      "needs_lawyer": true,
+      "confidence": 0.85
+    },
+    {
+      "id": "L-RED-9",
+      "checkpoint": "C1",
+      "level": "red",
+      "domain": "金融/税务",
+      "patterns": [
+        "内幕",
+        "操纵股价",
+        "洗钱",
+        "逃税"
+      ],
+      "issue": "金融/税务违法",
+      "consequence": "可能构成犯罪",
+      "alternative": "合规咨询/申报",
+      "needs_lawyer": true,
+      "confidence": 0.9
+    },
+    {
+      "id": "L-ORG-3",
+      "checkpoint": "C2",
+      "level": "orange",
+      "domain": "欺诈",
+      "patterns": [
+        "冒充",
+        "假身份",
+        "假名片"
+      ],
+      "issue": "冒充他人",
+      "consequence": "可能构成欺诈",
+      "alternative": "如实表明身份",
+      "needs_lawyer": false,
+      "confidence": 0.7
+    },
+    {
+      "id": "L-ORG-4",
+      "checkpoint": "C2",
+      "level": "orange",
+      "domain": "名誉",
+      "patterns": [
+        "恶意举报",
+        "诬告"
+      ],
+      "issue": "恶意举报",
+      "consequence": "可能构成诬告/诽谤",
+      "alternative": "走正规投诉渠道",
+      "needs_lawyer": true,
+      "confidence": 0.75
+    },
+    {
+      "id": "L-ORG-5",
+      "checkpoint": "C1",
+      "level": "orange",
+      "domain": "劳动法/竞业",
+      "patterns": [
+        "竞业",
+        "挖人"
+      ],
+      "issue": "竞业限制",
+      "consequence": "可能违约/不正当竞争",
+      "alternative": "先看竞业协议",
+      "needs_lawyer": true,
+      "confidence": 0.6
+    },
+    {
+      "id": "L-ORG-6",
+      "checkpoint": "C2",
+      "level": "orange",
+      "domain": "隐私",
+      "patterns": [
+        "查邮件",
+        "看聊天记录",
+        "偷看手机"
+      ],
+      "issue": "偷看他人通信",
+      "consequence": "侵犯隐私",
+      "alternative": "对方自愿提供",
+      "needs_lawyer": false,
+      "confidence": 0.7
+    },
+    {
+      "id": "L-YEL-4",
+      "checkpoint": "C4",
+      "level": "yellow",
+      "domain": "合同",
+      "patterns": [
+        "定金",
+        "押金",
+        "口头协议"
+      ],
+      "issue": "担保/口头约定",
+      "consequence": "举证与条款风险",
+      "alternative": "写书面协议",
+      "needs_lawyer": false,
+      "confidence": 0.5
+    },
+    {
+      "id": "L-YEL-5",
+      "checkpoint": "C1",
+      "level": "yellow",
+      "domain": "劳动法",
+      "patterns": [
+        "加班",
+        "调岗",
+        "降薪"
+      ],
+      "issue": "劳动用工",
+      "consequence": "需符合劳动法程序",
+      "alternative": "先看合同/制度，书面沟通",
+      "needs_lawyer": false,
+      "confidence": 0.6
+    },
+    {
+      "id": "L-YEL-6",
+      "checkpoint": "C2",
+      "level": "yellow",
+      "domain": "个人信息保护法",
+      "patterns": [
+        "肖像",
+        "人脸",
+        "身份证照片"
+      ],
+      "issue": "个人信息/肖像",
+      "consequence": "需取得同意",
+      "alternative": "最小必要+明确同意",
+      "needs_lawyer": false,
+      "confidence": 0.6
+    },
+    {
+      "id": "L-YEL-7",
+      "checkpoint": "C2",
+      "level": "yellow",
+      "domain": "数据合规",
+      "patterns": [
+        "跨境",
+        "出境数据"
+      ],
+      "issue": "数据出境",
+      "consequence": "需合规评估",
+      "alternative": "先问法务",
+      "needs_lawyer": true,
+      "confidence": 0.6
+    }
+  ]
+}

@@ -1,0 +1,288 @@
+# 统一变体卡 · 第二批（V0–V5，19 个）
+# 来源：kb/index/unified-variants.json
+# 字段：id / name / mechanism / members / definition / use_when / actions / signals / counter / detect / failure_modes / ethics / related / status
+
+- id: var-foundation
+  name: 基础分析工具
+  mechanism: {primary: M0, secondary: []}
+  members: [model-backward-induction, model-nash-equilibrium, model-mixed-strategy]
+  definition: 逆向归纳、纳什均衡、混合策略等分析概念，用来拆解局面，不直接作为策略。
+  use_when: [需要判断稳定点/末轮反应/随机化]
+  actions: [先写清参与人与收益, 找相互最优反应, 多均衡时找聚焦点, 需要时随机化]
+  signals: [双方僵持, 都在猜对方]
+  counter: [参与者非理性, 信息不全]
+  detect: [自己是否把均衡当「应该」]
+  failure_modes: [把均衡当唯一结果, 用分析代替执行]
+  ethics: green
+  related: [var-focal]
+  status: unified-v1
+
+- id: var-fabrication
+  name: 虚构与假象
+  mechanism: {primary: M1, secondary: [M12]}
+  members: [strat-wuzhong-shengyou]
+  definition: 制造不存在的假象，改变对手判断，再逐步让假象变真。
+  use_when: [信息不对称, 需要改变对手预期]
+  actions: [设计可信假象, 用配套动作支撑, 关键时兑现一部分]
+  signals: [对手按假象调整, 对手开始求证]
+  counter: [对方要证据, 对方交叉验证]
+  detect: [对方说法是否有实物支撑, 是否在制造既成事实]
+  failure_modes: [被证伪, 信誉受损, 假戏无法收场]
+  ethics: gray
+  related: [var-signal]
+  status: unified-v1
+
+- id: var-agency
+  name: 委托代理与道德风险
+  mechanism: {primary: M1, secondary: [M6]}
+  members: [model-moral-hazard, model-principal-agent]
+  definition: 行为不可观察时，代理人倾向少投入或冒险；用激励与监督让自利对齐目标。
+  use_when: [你让别人替你办事, 结果难观测]
+  actions: [设可观测指标, 让代理方共担风险, 保留检查与退出权]
+  signals: [过程不透明, 结果与投入不匹配]
+  counter: [代理人隐藏/伪造过程, 钻指标空子]
+  detect: [对方是否在把风险转嫁给你]
+  failure_modes: [指标造假, 监督成本过高, 激励扭曲]
+  ethics: green
+  related: [var-incentive]
+  status: unified-v1
+
+- id: var-focal
+  name: 协调与聚焦点
+  mechanism: {primary: M1, secondary: [M9]}
+  members: [model-schelling-point]
+  definition: 多均衡下，双方不约而同选中的显眼方案，靠共同知识而非沟通协调。
+  use_when: [有多个都可能的结果, 无法细沟通]
+  actions: [找共同熟悉的先例, 主动提出显眼方案, 降低协调成本]
+  signals: [双方都看向同一个选项]
+  counter: [对方抢先定义聚焦点]
+  detect: [自己觉得显眼对方是否也这么想]
+  failure_modes: [选了不同聚焦点, 文化差异]
+  ethics: green
+  related: [var-foundation]
+  status: unified-v1
+
+- id: var-maneuver
+  name: 调动与机动
+  mechanism: {primary: M2, secondary: [M4]}
+  members: [model-maneuver, strat-diaohu-lishan, strat-yuqin-guzong]
+  definition: 把对手从有利位置调开，或让自己保持机动，在移动中创造优势。
+  use_when: [僵持, 对手强在主场, 可被诱离]
+  actions: [设计诱饵调离, 保持自身机动, 在对手移动时出手]
+  signals: [对手离开主场, 对手部署被打乱]
+  counter: [对方以静制动, 对方留代理人]
+  detect: [对方是否在调你离开主场, 你离开后谁受益]
+  failure_modes: [对方不动, 自己乱动消耗]
+  ethics: gray
+  related: [var-tempo]
+  status: unified-v1
+
+- id: var-fortune
+  name: 能力与机运
+  mechanism: {primary: M2, secondary: [M9]}
+  members: [model-virtu-fortuna]
+  definition: 成功一半靠能力，一半靠时机与运气；能做的是准备与抓窗口。
+  use_when: [局势变化快, 机会与风险并存]
+  actions: [平时积累能力, 识别窗口, 窗口出现时果断行动]
+  signals: [窗口出现, 对手还没反应]
+  counter: [对手抢占窗口]
+  detect: [自己是否把运气当能力]
+  failure_modes: [错过窗口, 高估能力, 没有备份]
+  ethics: green
+  related: [var-tempo]
+  status: unified-v1
+
+- id: var-coalition
+  name: 联盟与第三方杠杆
+  mechanism: {primary: M3, secondary: [M7]}
+  members: [model-coalition, model-coalition-building, model-cooperation-cluster, model-stag-hunt, strat-jiedao-sharen, strat-yuanjiao-jingong, strat-jiadao-faguo, strat-gean-guanhuo]
+  definition: 联合有共同利益的一方改变力量对比，或借第三方之手打击对手。
+  use_when: [单打独斗不足, 有共同对手/利益, 有可借力的第三方]
+  actions: [找共同利益, 明确分工与回报, 先小圈子再扩大, 保持可否认]
+  signals: [第三方突然对对手发难, 对手在拆你的联盟]
+  counter: [对方拆联盟, 第三方反噬]
+  detect: [自己是否被当枪使, 联盟共同利益是否还在]
+  failure_modes: [联盟松散, 被收编, 第三方反噬]
+  ethics: gray
+  related: [var-cooptation, var-dependence]
+  status: unified-v1
+
+- id: var-dependence
+  name: 资源依赖与权力源
+  mechanism: {primary: M3, secondary: [M11]}
+  members: [model-resource-dependence, model-dependence-relation, model-sources-of-power]
+  definition: 谁掌握你需要的资源，谁就有权力；降低依赖、提高不可替代性就是权力建设。
+  use_when: [互相需要, 一方明显更依赖]
+  actions: [画依赖图, 找替代资源, 提高自身不可替代性, 不滥用依赖]
+  signals: [对方可以卡你资源, 你在找备选]
+  counter: [对方培养替代者, 故意制造稀缺]
+  detect: [对方是否在降低对你的依赖]
+  failure_modes: [被卡脖子, 过度依赖, 滥用依赖反噬]
+  ethics: green
+  related: [var-coalition]
+  status: unified-v1
+
+- id: var-cooptation
+  name: 吸纳与收编
+  mechanism: {primary: M3, secondary: [M7]}
+  members: [model-cooptation]
+  definition: 把潜在反对者拉进决策圈，用参与感和利益换支持；也可能被反客为主。
+  use_when: [有强势反对者, 直接对抗成本高]
+  actions: [给位置但先定规则, 明确授权边界, 保留否决权]
+  signals: [对方进入后开始改规则]
+  counter: [被收编者反客为主]
+  detect: [给你的是名义还是实权]
+  failure_modes: [反客为主, 被架空]
+  ethics: gray
+  related: [var-coalition, var-convert]
+  status: unified-v1
+
+- id: var-indirect
+  name: 间接与打乱
+  mechanism: {primary: M4, secondary: [M10]}
+  members: [model-indirect-approach, model-dislocation]
+  definition: 不正面硬拼，绕开强点、打乱对手平衡，再在失衡窗口出手。
+  use_when: [正面代价高, 对手体系严密但有脆弱点]
+  actions: [找侧翼/薄弱方向, 制造失衡, 失衡后立刻行动]
+  signals: [对手部署被打乱, 对手开始调整]
+  counter: [对手识破并调整, 对手以静制动]
+  detect: [对方是否在绕开你的正面, 你是否被诱出手]
+  failure_modes: [迂回太远, 扰动后无后续]
+  ethics: gray
+  related: [var-keypoint]
+  status: unified-v1
+
+- id: var-encircle
+  name: 断退路与包围
+  mechanism: {primary: M4, secondary: [M6]}
+  members: [strat-guanmen-zhuozei]
+  definition: 诱对手进入不利位置，再断其退路收网。
+  use_when: [对手已入局, 可断退路]
+  actions: [诱其深入, 断退路, 留可控出口]
+  signals: [对方投入增加, 对方开始找退路]
+  counter: [困兽犹斗, 对方留后手]
+  detect: [对方是否在诱你深入, 你的退路还在吗]
+  failure_modes: [困兽反扑, 断太死]
+  ethics: gray
+  related: [var-commitment]
+  status: unified-v1
+
+- id: var-bait
+  name: 诱饵与小利
+  mechanism: {primary: M5, secondary: [M1]}
+  members: [strat-paozhuan-yinyu, strat-shunshou-qianyang, strat-lidai-taozhang, strat-lianhuan-ji]
+  definition: 用小诱饵引大收益，或弃小保大，或多计组合让对手顾此失彼。
+  use_when: [对方有更大筹码, 需要以小引大]
+  actions: [选小诱饵, 明确要换什么, 见好就收, 多计要留断点预案]
+  signals: [对方接了诱饵, 对方开始透露信息]
+  counter: [对手只拿不给, 对手反设饵]
+  detect: [对方是否在用小的换你的大的, 小利背后有无隐性代价]
+  failure_modes: [砖丢玉没来, 因小失大, 一环断全盘崩]
+  ethics: gray
+  related: [var-negotiation-int]
+  status: unified-v1
+
+- id: var-opportunity
+  name: 机会窗口
+  mechanism: {primary: M5, secondary: [M11]}
+  members: [strat-chenhuo-dajie, strat-hunshui-moyu]
+  definition: 趁对手危机或局面混乱时取利，窗口短、要快。
+  use_when: [对手内乱/危机, 局面混乱]
+  actions: [观察窗口, 快速出手, 留对方体面, 见好就收]
+  signals: [对手开始甩卖/裁员/延期, 规则暂时失效]
+  counter: [对手稳住, 拉第三方救, 清场]
+  detect: [对方是否在趁你危机压价, 乱局中谁获利]
+  failure_modes: [趁人之危招报复, 水浑自己也失控]
+  ethics: gray
+  related: [var-bait]
+  status: unified-v1
+
+- id: var-risk
+  name: 风险偏好
+  mechanism: {primary: M5, secondary: [M6]}
+  members: [model-risk-preference]
+  definition: 不同人对不确定收益态度不同；风险厌恶者愿为确定性付溢价。
+  use_when: [结果不确定, 对方在犹豫]
+  actions: [识别对方风险态度, 用确定性换让步, 给区间而非单点]
+  signals: [对方反复确认, 对方怕浮动]
+  counter: [对方伪装风险偏好]
+  detect: [自己是否误判对方风险态度]
+  failure_modes: [溢价给太多, 误判态度]
+  ethics: green
+  related: [var-negotiation-dist]
+  status: unified-v1
+
+- id: var-incentive
+  name: 激励与机制设计
+  mechanism: {primary: M5, secondary: [M3]}
+  members: [model-mechanism-design, model-boxed-pigs]
+  definition: 用规则与激励让自利行为对齐目标；比说服更可靠。
+  use_when: [需要影响一群人, 号召效果差]
+  actions: [明确目标行为, 设计激励, 预留防钻空子校验]
+  signals: [有人搭便车, 指标被钻]
+  counter: [钻空子, 合谋]
+  detect: [自己是否在被规则设计]
+  failure_modes: [激励错位, 指标造假]
+  ethics: green
+  related: [var-agency]
+  status: unified-v1
+
+- id: var-auction
+  name: 拍卖与赢家诅咒
+  mechanism: {primary: M5, secondary: [M1]}
+  members: [model-auction]
+  definition: 竞价中出价最高者中标；共同价值拍卖中赢家常因高估而亏损。
+  use_when: [多人竞价, 价值不确定]
+  actions: [先独立估值, 设最高出价, 参考他人报价信息]
+  signals: [多人竞价, 越报越低]
+  counter: [对方抬价或设局]
+  detect: [自己是否把中标当成功]
+  failure_modes: [赢家诅咒, 情绪抬价]
+  ethics: green
+  related: [var-screening]
+  status: unified-v1
+
+- id: var-scarcity
+  name: 稀缺
+  mechanism: {primary: M5, secondary: [M12]}
+  members: [model-scarcity]
+  definition: 越稀缺越显得有价值；限时限量制造紧迫感。
+  use_when: [对方在犹豫, 有真实稀缺]
+  actions: [先判断真实需求, 用真实稀缺推动, 识别伪造紧迫]
+  signals: [对方强调最后机会/限量]
+  counter: [对方伪造稀缺与倒计时]
+  detect: [自己是否因怕错过而高估价值]
+  failure_modes: [冲动下单, 买完后悔]
+  ethics: gray
+  related: [var-opportunity]
+  status: unified-v1
+
+- id: var-orgbargain
+  name: 组织内谈判
+  mechanism: {primary: M5, secondary: [M2]}
+  members: [model-org-bargaining]
+  definition: 组织内资源、预算、晋升都是谈判；筹码来自依赖、信息与替代方案。
+  use_when: [需要跨部门资源, 有利益冲突]
+  actions: [先算筹码, 用交换换支持, 留长期合作余地]
+  signals: [对方用层级压你]
+  counter: [对方用层级压你]
+  detect: [这是谈判还是通知]
+  failure_modes: [筹码不足, 关系透支]
+  ethics: green
+  related: [var-dependence]
+  status: unified-v1
+
+- id: var-temptation
+  name: 诱惑软肋（red）
+  mechanism: {primary: M5, secondary: [M7]}
+  members: [strat-meiren-ji]
+  definition: 用对方软肋/欲望影响其判断；仅历史解析与防御识别，现实禁用。
+  use_when: [仅历史解析/防御识别]
+  actions: [只做识别与防御, 不提供现实操作]
+  signals: [对方刻意用情感/欲望接近]
+  counter: [自律与制度, 识别诱惑]
+  detect: [对方是否在利用你的欲望/软肋]
+  failure_modes: [伦理红线, 违法风险]
+  ethics: red
+  related: [var-liking]
+  status: unified-v1

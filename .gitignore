@@ -1,0 +1,11 @@
+# 运行产物
+__pycache__/
+*.pyc
+.venv/
+
+# 本地数据
+data/
+*.db
+*.sqlite
+logs/
+.state/

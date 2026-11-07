@@ -1,0 +1,212 @@
+{
+  "version": "0.1",
+  "updated": "2026-11-07",
+  "rules": [
+    {
+      "id": "M-ANGER",
+      "patterns": [
+        "气得",
+        "愤怒",
+        "想骂",
+        "马上发",
+        "今晚就发"
+      ],
+      "emotion": 4,
+      "stress": 2,
+      "biases": [
+        "face"
+      ],
+      "needs": [
+        "认可"
+      ],
+      "pause": true,
+      "anchor": "先别发，冷却 30 分钟再决定",
+      "actions": [
+        "写下最坏结果",
+        "找一个人复述局面",
+        "明早再回复"
+      ]
+    },
+    {
+      "id": "M-ANXIETY",
+      "patterns": [
+        "反复检查",
+        "刷消息",
+        "睡不着",
+        "担心",
+        "焦虑"
+      ],
+      "emotion": 3,
+      "stress": 4,
+      "biases": [
+        "loss_aversion"
+      ],
+      "needs": [
+        "控制"
+      ],
+      "pause": true,
+      "anchor": "先放下手机 10 分钟，做一次深呼吸",
+      "actions": [
+        "列出可控/不可控",
+        "设定检查时间",
+        "只回复必要信息"
+      ]
+    },
+    {
+      "id": "M-FATIGUE",
+      "patterns": [
+        "很累",
+        "疲惫",
+        "没睡",
+        "熬夜"
+      ],
+      "emotion": 2,
+      "stress": 3,
+      "biases": [
+        "overconfidence"
+      ],
+      "needs": [
+        "安全"
+      ],
+      "pause": true,
+      "anchor": "重大决定推迟到睡够之后",
+      "actions": [
+        "补觉",
+        "把决定拆小",
+        "找可信的人复核"
+      ]
+    },
+    {
+      "id": "M-IMPULSE",
+      "patterns": [
+        "梭哈",
+        "全押",
+        "赌一把",
+        "一把定输赢"
+      ],
+      "emotion": 4,
+      "stress": 2,
+      "biases": [
+        "overconfidence",
+        "loss_aversion"
+      ],
+      "needs": [
+        "认可"
+      ],
+      "pause": true,
+      "anchor": "先算最坏结果，再决定要不要下注",
+      "actions": [
+        "设止损线",
+        "分批投入",
+        "留退路"
+      ]
+    },
+    {
+      "id": "M-CALM",
+      "patterns": [
+        "平静",
+        "冷静",
+        "想清楚了"
+      ],
+      "emotion": 1,
+      "stress": 1,
+      "biases": [],
+      "needs": [],
+      "pause": false,
+      "anchor": "保持当前节奏",
+      "actions": [
+        "按计划执行"
+      ]
+    },
+    {
+      "id": "M-PANIC",
+      "patterns": [
+        "慌",
+        "不知道怎么办",
+        "心里没底"
+      ],
+      "emotion": 3,
+      "stress": 4,
+      "biases": [
+        "loss_aversion"
+      ],
+      "needs": [
+        "控制"
+      ],
+      "pause": true,
+      "anchor": "先把问题拆成三件可做的小事",
+      "actions": [
+        "写下来",
+        "问一个可信的人",
+        "先做最小一步"
+      ]
+    },
+    {
+      "id": "M-OVERCONF",
+      "patterns": [
+        "稳了",
+        "没问题",
+        "肯定成"
+      ],
+      "emotion": 2,
+      "stress": 1,
+      "biases": [
+        "overconfidence"
+      ],
+      "needs": [
+        "认可"
+      ],
+      "pause": true,
+      "anchor": "先列三个可能失败的原因",
+      "actions": [
+        "找反例",
+        "预演失败",
+        "设止损"
+      ]
+    },
+    {
+      "id": "M-GUILT",
+      "patterns": [
+        "自责",
+        "内疚",
+        "都怪我"
+      ],
+      "emotion": 3,
+      "stress": 3,
+      "biases": [
+        "loss_aversion"
+      ],
+      "needs": [
+        "认可"
+      ],
+      "pause": true,
+      "anchor": "先区分你的责任和对方的责任",
+      "actions": [
+        "写事实清单",
+        "找客观标准",
+        "允许自己犯错"
+      ]
+    },
+    {
+      "id": "M-LONELY",
+      "patterns": [
+        "没人理解",
+        "孤独",
+        "没人帮我"
+      ],
+      "emotion": 3,
+      "stress": 3,
+      "biases": [],
+      "needs": [
+        "归属"
+      ],
+      "pause": false,
+      "anchor": "先找一个可信的人说 10 分钟",
+      "actions": [
+        "找人聊",
+        "写下来",
+        "参加一次线下活动"
+      ]
+    }
+  ]
+}

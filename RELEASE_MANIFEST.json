@@ -1,0 +1,384 @@
+{
+  "name": "dsh-strategist",
+  "version": "0.1.0",
+  "built_at": "2026-11-07T11:38:25",
+  "file_count": 75,
+  "total_bytes": 667840,
+  "files": [
+    {
+      "path": ".gitignore",
+      "size": 91,
+      "sha256": "f06d9f64337f66e151f65b87d0191e4889d421ab86dbb352f3fb83b17005ace6"
+    },
+    {
+      "path": "LICENSE",
+      "size": 35151,
+      "sha256": "728be057de55da6aaab61a6a65b5a911dc355648bc5b4488e864fdb225c98c21"
+    },
+    {
+      "path": "package.json",
+      "size": 496,
+      "sha256": "adb545868ecd8784990164904c7267a839f99b3e5d15b5b28baf84b3a427e2dc"
+    },
+    {
+      "path": "README.md",
+      "size": 3015,
+      "sha256": "a124c0f646d0a35c1d21773ce71c84ea80be359145d52015414c04820178bd28"
+    },
+    {
+      "path": "docs/SOP-谋划流程-v0.1.md",
+      "size": 4245,
+      "sha256": "18848a883ac877313b13795f16121444a1adbaac56243c2717d513e5b84b8b64"
+    },
+    {
+      "path": "docs/知识库结构-v1.md",
+      "size": 2724,
+      "sha256": "fa94dc9b5663145c3beba0f66b9872384e9576c2028e18fb25c234a94da08ed9"
+    },
+    {
+      "path": "examples/case4/background.txt",
+      "size": 349,
+      "sha256": "feafcf4691569cda36c44c92bb2bc9f5fc9ded9f08a283d1f253f45d5c054ddb"
+    },
+    {
+      "path": "examples/case4/decision.json",
+      "size": 1374,
+      "sha256": "53c16110535c7f802cf0187ec0e710969bcec1ecc965c72b611053426336c1b7"
+    },
+    {
+      "path": "examples/case4/game_input.json",
+      "size": 177,
+      "sha256": "6ea7a01620ecee54018d9917eaf4f937f4a4a8f1f662e24c2c34bc48d25a4720"
+    },
+    {
+      "path": "examples/case4/goal.json",
+      "size": 510,
+      "sha256": "13f6f4f46c31c10b6df23bc2fa4976a8f7e40967e0efdad73c2804133e787624"
+    },
+    {
+      "path": "examples/case4/payoffs.json",
+      "size": 1038,
+      "sha256": "543473e8e88190fb36190abde3304264c76c08c0e6bcce0f77be8d493cab4d59"
+    },
+    {
+      "path": "examples/case4/plans.json",
+      "size": 761,
+      "sha256": "fc8117f99abd978b28512ad06956a05de074c15579efef77fe80533d23a24992"
+    },
+    {
+      "path": "examples/case4/report.html",
+      "size": 10561,
+      "sha256": "e66dde458e001dcf55fb0d95bece577a257dc4c9f5a8d21f9422b11ecdf03584"
+    },
+    {
+      "path": "examples/case4/sir.json",
+      "size": 3130,
+      "sha256": "8c5705d431b3e392b536546b3ca9c91e34b1fdd7f5d91a1ef7172cf22b502cd1"
+    },
+    {
+      "path": "examples/case4/tree_spec.json",
+      "size": 720,
+      "sha256": "7c0f6d7716405b9ccc6bf9ee1b579a9ff7342895ed33b30111ee3d80eda311fa"
+    },
+    {
+      "path": "kb/cards/model/conflict-strategy-8.yaml",
+      "size": 10000,
+      "sha256": "213e475f48d6a0230fef12e42f768629ae1d8da0ab8ad4cef0f0a57150fd49e9"
+    },
+    {
+      "path": "kb/cards/model/evolution-of-cooperation-6.yaml",
+      "size": 7139,
+      "sha256": "3b1f19c93058e64579f77d40b438b5bbb45777501f9a16169ada235664860050"
+    },
+    {
+      "path": "kb/cards/model/getting-to-yes-10.yaml",
+      "size": 11471,
+      "sha256": "4d239f4aedda8c53d1668874756c4f191a6a5e6310fcca8928067daa0338a06d"
+    },
+    {
+      "path": "kb/cards/model/indirect-approach-6.yaml",
+      "size": 7078,
+      "sha256": "0dc2d2c12a120610049628081c003b5e93a8768712611b5d02d6066435185235"
+    },
+    {
+      "path": "kb/cards/model/influence-6.yaml",
+      "size": 7756,
+      "sha256": "f521c99fb0316a42aa91ed6e8655479071d45df8a97eeab414c9310ca7f0bf73"
+    },
+    {
+      "path": "kb/cards/model/negotiation-analysis-8.yaml",
+      "size": 9121,
+      "sha256": "fa1e7179f8b4ed1c8266c743c88a48da4a2af6bb31ff3712ca9b1a3e5ed89a95"
+    },
+    {
+      "path": "kb/cards/model/on-war-8.yaml",
+      "size": 9478,
+      "sha256": "436eaeeaee6fa110b132ef398b54e9deee3688ec5d4c880bdc99b290a882187a"
+    },
+    {
+      "path": "kb/cards/model/ooda-4.yaml",
+      "size": 4912,
+      "sha256": "d7fe3862a8fad9065a4d85cce76f93aa75d6bb3fb475300562bfb27b91f6d9e4"
+    },
+    {
+      "path": "kb/cards/model/organizational-politics-8.yaml",
+      "size": 9696,
+      "sha256": "297b78829f722d18496b82fdbb32f8ab8c1050426ae3b75705d4a39ea6c5e925"
+    },
+    {
+      "path": "kb/cards/model/power-6.yaml",
+      "size": 7560,
+      "sha256": "30cb63cda3307be60282bb20d2dd5cec6b6439816f45e642b1162de1b2339b52"
+    },
+    {
+      "path": "kb/cards/model/psychology-of-intelligence-6.yaml",
+      "size": 7548,
+      "sha256": "d77a57a7d867bdf871129dfc95a7aac5b6cfe56c90809b1bf437bd0508ba9fba"
+    },
+    {
+      "path": "kb/cards/model/strategy-thinking-20.yaml",
+      "size": 23534,
+      "sha256": "4ae062424e329c207167e83a361026c8428f41c5f78d7117d47e29ba3dc03e74"
+    },
+    {
+      "path": "kb/cards/model/the-prince-6.yaml",
+      "size": 7353,
+      "sha256": "7038b4278624832b7d7afa9fab399e6de515f4ee59b0d4ba7dfc1475c9ca34cc"
+    },
+    {
+      "path": "kb/cards/principle/sunzi-20.yaml",
+      "size": 12902,
+      "sha256": "6dd18933d35de8de8a47b3373e46599811de5085b29ca4c690afb1f66ffabf81"
+    },
+    {
+      "path": "kb/cards/stratagem/36ji-1-18.yaml",
+      "size": 14577,
+      "sha256": "1190508f49988280b5e0180f61a2daf264b02d17b4287eaabbbb429bbd2693b3"
+    },
+    {
+      "path": "kb/cards/stratagem/36ji-19-36.yaml",
+      "size": 13972,
+      "sha256": "997f70711b4fbf96300b718ae255ba8c273818f74580037b96dcf92a14533b5e"
+    },
+    {
+      "path": "kb/cards/unified/12-variants.yaml",
+      "size": 10129,
+      "sha256": "813e66549dc267f024e6d2902fce038649576607e3971275e04a708f7ff0e40f"
+    },
+    {
+      "path": "kb/cards/unified/variants-batch2.yaml",
+      "size": 12551,
+      "sha256": "a6dc5c5aaa264c691b21bd46afdb688874a0f274b2eec2a327599193cdf1db7a"
+    },
+    {
+      "path": "kb/cards/unified/variants-batch3.yaml",
+      "size": 11004,
+      "sha256": "6dcc1283d074471bfc8235e1734629e719a95a9b7c2ec5abb8852ac2f5f91bb7"
+    },
+    {
+      "path": "kb/index/36ji-mechanism-index.json",
+      "size": 8737,
+      "sha256": "057324fdff40e51743789a8fceae9074e476bfc66b71edc79752f5fa48d65814"
+    },
+    {
+      "path": "kb/index/unified-variants.json",
+      "size": 29509,
+      "sha256": "5c94799d459498e9eeb66342df232dc1fac79f37dc2b78cfc8d442c5113441b7"
+    },
+    {
+      "path": "kb/meta/cards-index.json",
+      "size": 21861,
+      "sha256": "ae12040d1dc53d16291d8d4a426e16853843927f5f7e0e72c04abdf1ecaaa31b"
+    },
+    {
+      "path": "kb/meta/catalog.json",
+      "size": 8417,
+      "sha256": "e109c4d49f7bdfebf981d749bd57441c7cc7efdbe430218b4ccc2e082dddb144"
+    },
+    {
+      "path": "kb/meta/principle-index.json",
+      "size": 3909,
+      "sha256": "ed6f5ef8d2893ee4805b9cc9863528954e7de6ff7a76c44dbc88274cee165973"
+    },
+    {
+      "path": "kb/meta/stratagem-index.json",
+      "size": 8202,
+      "sha256": "ccc59186dad27d1a0400e6c1979a866413a05313db0250d5377c431fa786f4db"
+    },
+    {
+      "path": "kb/meta/来源登记.md",
+      "size": 2953,
+      "sha256": "88e587e2f0d65e15946108fd67f1acec66d28baae007c8bef458bdc6b72738d9"
+    },
+    {
+      "path": "kb/raw/guiguzi.txt",
+      "size": 29261,
+      "sha256": "095aaae06ab88158fbfc96b153fafcc9cb58f177b0904b0fa371533f6d94fe6a"
+    },
+    {
+      "path": "kb/raw/liutao.txt",
+      "size": 64011,
+      "sha256": "49db9694de01da5a39260812c469c4a0b558746eaccde79a82ef57b528f3c78e"
+    },
+    {
+      "path": "kb/raw/sanlue.txt",
+      "size": 14831,
+      "sha256": "ba22a6cb8c09e74d76092f23b39eab3e438afb7c7f0343620723f1bca648da7a"
+    },
+    {
+      "path": "kb/raw/sanshiliuji.txt",
+      "size": 4547,
+      "sha256": "2bd7fc70610ddf655640ff56458a067928a4304050ddf5f74b7ffd522880440e"
+    },
+    {
+      "path": "kb/raw/simafa.txt",
+      "size": 13045,
+      "sha256": "71737b2f681177394c82afd6642a1518cf6f8233e2956189c11338fa0606e6e4"
+    },
+    {
+      "path": "kb/raw/sunzi-bingfa.txt",
+      "size": 22671,
+      "sha256": "981bf2250a93763a545470b77bdcb47c2bbd59a1ddd3e5c23f65cc4c4f41a159"
+    },
+    {
+      "path": "kb/raw/weiliaozi.txt",
+      "size": 36197,
+      "sha256": "19dad4bead611c4d1d089b6caf03f2217796a71d33dcd031e3411a49702df94a"
+    },
+    {
+      "path": "kb/raw/wuzi.txt",
+      "size": 17951,
+      "sha256": "83d1f13ecaf56290fc303c0f4f23ea4988bcf25bc030c8f0aa6ddbdf7dae9f38"
+    },
+    {
+      "path": "prompts/README.md",
+      "size": 559,
+      "sha256": "02b2b78381f753ee2dca0ac476f7820b3352babc724aa0b2cc4bba8e53b1ccde"
+    },
+    {
+      "path": "prompts/S0-背景速填.md",
+      "size": 750,
+      "sha256": "eedb859f04d6c8c80692e856131856d013cdd86c6f07871a0039435afd157b76"
+    },
+    {
+      "path": "prompts/S1-目标卡表单.md",
+      "size": 1718,
+      "sha256": "9b5261402e1add056048f17ca02946d6cca94ef29ea20e3fc5bb960a1a56b46c"
+    },
+    {
+      "path": "prompts/S4-推演参数表单.md",
+      "size": 1696,
+      "sha256": "2b0d58110d824c510cc79b2f0d9e75a56b314037f535068b12d5b4675591386c"
+    },
+    {
+      "path": "prompts/S6-转折速填.md",
+      "size": 800,
+      "sha256": "7639cb6cc8397a651e4f0d1fa8d2c0a825e5631370227ddc81aa24ed384b054e"
+    },
+    {
+      "path": "prompts/t1_extract_sir.md",
+      "size": 3536,
+      "sha256": "ce71ae391ead59a9243d864f5cf2269fdc43aa081d52f73c4092969d0516ffb5"
+    },
+    {
+      "path": "skills/dsh-strategist/SKILL.md",
+      "size": 6375,
+      "sha256": "a8ecbcb8cc467e8fc289dd5fffcfeacb8858e73a02dfe6996722de1a5360a342"
+    },
+    {
+      "path": "skills/dsh-strategist/references/工具速查.md",
+      "size": 2768,
+      "sha256": "63e7ebaf48ba62b29250ee909087401f537b4dd837ea3871a7f92720ee028663"
+    },
+    {
+      "path": "skills/dsh-strategist/references/表单速用.md",
+      "size": 1429,
+      "sha256": "1206e578796baa5d8999b649ead992c74420887abdc63315603598eaddf51626"
+    },
+    {
+      "path": "tools/check.py",
+      "size": 11561,
+      "sha256": "bf56811cf550519b968474029480a5dfd8121cc6dda81bd02b364883e8f4b8b3"
+    },
+    {
+      "path": "tools/install_skill.py",
+      "size": 3975,
+      "sha256": "c736668888dc0bd837fc1555f2df9387148cb61267099af67ba88509c5584af9"
+    },
+    {
+      "path": "tools/render_report.py",
+      "size": 14892,
+      "sha256": "b27ac5356d872ed25185fc806c938deb6ba4cbe0a5d68eaf92418f9ff3ce1fc2"
+    },
+    {
+      "path": "tools/run_pipeline.py",
+      "size": 6361,
+      "sha256": "8bb2612b74a6a06b164c9a0d08292db99dad48613fc6893d613463feb2793840"
+    },
+    {
+      "path": "tools/t10_legal.py",
+      "size": 2466,
+      "sha256": "3776daa8a5a9bed89f08654ae815205e53b14ea6b73fa88b5e6732992ee76849"
+    },
+    {
+      "path": "tools/t11_mind.py",
+      "size": 2237,
+      "sha256": "02d04839a9fae181d4c8a4911e14f395db5807b801e0b6354aa924a02f0a04e4"
+    },
+    {
+      "path": "tools/t1_repair.py",
+      "size": 2594,
+      "sha256": "b10a2691ac8e2a0ae7d1c831afd620932ce81e675f8796361d7de53cd161f2b1"
+    },
+    {
+      "path": "tools/t2_tag.py",
+      "size": 3425,
+      "sha256": "711f97a8e3ee3ece2de8241a0cfb3d7afe0d4ce16f48df6d9ed8f8a47934c497"
+    },
+    {
+      "path": "tools/t3_retrieve.py",
+      "size": 8414,
+      "sha256": "3cbe289c36cdeee19b8d572c3f88beb3a9c3b7e98644a3e4559325c560069f22"
+    },
+    {
+      "path": "tools/t4_build.py",
+      "size": 3471,
+      "sha256": "370fa8c9009bbc92e19604109489a8c77e1cfb8dcdf3943817a969e07f3df4e5"
+    },
+    {
+      "path": "tools/t5_solve.py",
+      "size": 3497,
+      "sha256": "a5f2c5106c411b3b7cdf03498a060ff83d821e82b3e34d06cf3df799de6c1faa"
+    },
+    {
+      "path": "tools/t6_tree.py",
+      "size": 4305,
+      "sha256": "5df1502fb7bf61d5c572df0159594c348b5113d0a4cfef4502ab22522ec2c919"
+    },
+    {
+      "path": "tools/t8_log.py",
+      "size": 5967,
+      "sha256": "de84c5c4636a9f4c1df3e1a9b2b2d94f237ac24c5e9a23ab5dd4656fa3a10222"
+    },
+    {
+      "path": "tools/t9_profile.py",
+      "size": 6310,
+      "sha256": "5256eeb2685beb3887eb97de05be6e3771ca9a963dc97c445308723e48453689"
+    },
+    {
+      "path": "tools/rules/t10_legal.json",
+      "size": 9036,
+      "sha256": "b1e58b55d4e09d55b98554da8ed66178dd5065b3550330670cc72c9c38fe3ceb"
+    },
+    {
+      "path": "tools/rules/t11_mind.json",
+      "size": 4059,
+      "sha256": "f1e79921d769c0b3dbbc51efc3b2c375c3e426f40c904a6d1033f704047e8aca"
+    },
+    {
+      "path": "tools/rules/t2_rules.json",
+      "size": 7414,
+      "sha256": "d7904c7e18e0fc0dad09bb4bf040314e70b7ceed3fe5668fca3a36a01325c176"
+    }
+  ]
+}

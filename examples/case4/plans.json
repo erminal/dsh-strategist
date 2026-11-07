@@ -1,0 +1,28 @@
+{
+  "plans": [
+    {
+      "name": "整理成果汇报",
+      "outcomes": [
+        {"label": "老板认可", "prob": 0.4, "value": 9},
+        {"label": "持平", "prob": 0.4, "value": 6},
+        {"label": "被抢功", "prob": 0.2, "value": 2}
+      ]
+    },
+    {
+      "name": "争取团队支持",
+      "outcomes": [
+        {"label": "老板认可", "prob": 0.3, "value": 9},
+        {"label": "持平", "prob": 0.3, "value": 6},
+        {"label": "被抢功", "prob": 0.4, "value": 2}
+      ]
+    },
+    {
+      "name": "找老板谈发展",
+      "outcomes": [
+        {"label": "老板认可", "prob": 0.2, "value": 9},
+        {"label": "持平", "prob": 0.3, "value": 6},
+        {"label": "被抢功", "prob": 0.5, "value": 2}
+      ]
+    }
+  ]
+}

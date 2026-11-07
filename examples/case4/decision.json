@@ -1,0 +1,18 @@
+{
+  "conclusion": "先整理可验证成果，再争取团队公开支持，最后找老板谈发展；不贬低老李。",
+  "situation": "竞争+权威结构，老李频繁汇报，老板两周内定人，团队有不满声音。",
+  "candidates": ["整理成果汇报", "争取团队支持", "找老板谈发展"],
+  "recommendation": "整理成果汇报",
+  "reasons": "成果可验证，先把事实摆清楚；团队支持补评价短板；谈发展放在最后。",
+  "countermeasures": ["老李抢功：用提交记录/评审证据还原贡献", "团队不满：一对一沟通，给具体改进承诺"],
+  "steps": ["整理项目贡献材料", "找团队关键成员一对一", "向老板做一次成果汇报", "问清下一轮条件"],
+  "signals": ["老板主动问细节", "团队态度缓和", "老李开始拉票"],
+  "fail_criteria": "老板明确这次不考虑",
+  "plan_b": "争取下一轮明确条件或横向发展机会",
+  "confidence": 0.55,
+  "assumptions": ["概率为经验估计，未校准", "老板主要看项目贡献"],
+  "ethics_check": {"level": "green", "note": "不贬低老李、不造假数据"},
+  "legal_check": {"level": "yellow", "note": "不泄露公司资料、不越级违规"},
+  "sources": ["user: 背景", "card: var-keypoint", "card: var-coalition", "calc: calc-case4"],
+  "cards_used": ["var-keypoint", "var-coalition"]
+}

@@ -1,0 +1,214 @@
+# 西方/现代博弈模型卡 · 第 3 批：谈判力（v2 操作升级）
+# 来源：《谈判力》(Fisher & Ury) —— 二手提炼；v2 未取得原书全文，未逐页核对
+# v2 升级：每卡补 example / signals / scripts / failure_modes / 参数默认值 / related
+# 字段：id / name / card_type / mechanism / definition / example / signals / scripts / recognize / misjudge / failure_modes / action / params / counter / related / source / ethics / confidence / review_status / v2_status
+
+- id: model-interests-vs-positions
+  name: 利益与立场
+  card_type: model
+  mechanism: {primary: M12, secondary: [M5]}
+  definition: 立场是嘴上要的，利益是背后真正在乎的；谈利益才能创造双赢。
+  example: 房东咬死 6000，其实最怕房子空置；你能出 5400，但怕麻烦。
+  signals: [双方在具体条款上僵持, 对方要求看似不合理]
+  scripts: [「你更在意租金，还是尽快租出去？」, 「我们先谈你最担心什么，再谈数字。」]
+  recognize: [双方在具体条款上僵持, 对方要求看似不合理]
+  misjudge: [把立场当利益, 只谈数字不谈原因]
+  failure_modes: [猜错利益, 把让步当善意, 忽略面子]
+  action: [问「为什么」而不是「要多少」, 列出双方利益清单, 找交集]
+  params: {positions: 2–5 个, interests: 2–4 个}
+  counter: [对方故意用立场掩护真实利益]
+  related: [M12 框架, 创造选项]
+  source: {book: 谈判力, chapter: 概念条目（章节待核）, source_type: 二手提炼, verified: false}
+  ethics: green
+  confidence: high
+  review_status: reviewed-v1
+  v2_status: operational-v2
+
+- id: model-batna
+  name: BATNA（最佳替代方案）
+  card_type: model
+  mechanism: {primary: M5, secondary: [M8]}
+  definition: 谈不成时你的最佳选择；它决定你的真实底线与谈判力。
+  example: 你手里有另一个 offer，谈薪时就不慌。
+  signals: [你需要知道什么时候该走, 对方在试探你的底线]
+  scripts: [「我还有一个机会在谈。」, 「谈不成我就选另一个，所以不用急。」]
+  recognize: [你需要知道什么时候该走, 对方在试探你的底线]
+  misjudge: [没有备选就上桌, 把希望当 BATNA]
+  failure_modes: [备选是假的, 高估备选, 暴露备选被压价]
+  action: [先算清谈崩后的最佳方案, 持续改善 BATNA, 不轻易暴露]
+  params: {batna_value: 中–高, improvement_cost: 低–中}
+  counter: [对方贬低你的替代方案]
+  related: [M5 交换, 离场与底线]
+  source: {book: 谈判力, chapter: 概念条目（章节待核）, source_type: 二手提炼, verified: false}
+  ethics: green
+  confidence: high
+  review_status: reviewed-v1
+  v2_status: operational-v2
+
+- id: model-zopa
+  name: ZOPA（可达成区间）
+  card_type: model
+  mechanism: {primary: M5, secondary: [M2]}
+  definition: 双方保留价之间的重叠区间；没有重叠就没有协议空间。
+  example: 房东底价 5200，你能到 5600，区间 5200–5600 可谈。
+  signals: [双方都有底线, 想知道能不能谈成]
+  scripts: [「你的底价大概在哪个区间？」, 「我们看看有没有重叠。」]
+  recognize: [双方都有底线, 想知道能不能谈成]
+  misjudge: [把对方报价当保留价, 忽略区间可能为空]
+  failure_modes: [区间估算错, 对方虚报, 只盯一点]
+  action: [估算双方保留价, 先探测区间是否存在, 区间窄时先做大蛋糕]
+  params: {seller_reserve: 5200, buyer_reserve: 5600}
+  counter: [对方虚报保留价]
+  related: [M5 交换, BATNA]
+  source: {book: 谈判力, chapter: 概念条目（章节待核）, source_type: 二手提炼, verified: false}
+  ethics: green
+  confidence: high
+  review_status: reviewed-v1
+  v2_status: operational-v2
+
+- id: model-objective-criteria
+  name: 客观标准
+  card_type: model
+  mechanism: {primary: M12, secondary: [M5]}
+  definition: 用双方都认可的外部标准（市场价、先例、规则）来定结果，而不是比谁强硬。
+  example: 用同小区同户型最近成交价定租金。
+  signals: [双方对价格/条件争执不下, 需要第三方能认可的依据]
+  scripts: [「同户型最近成交在 5200–5400。」, 「按市场价来，不是我说了算。」]
+  recognize: [双方对价格/条件争执不下, 需要第三方能认可的依据]
+  misjudge: [只用自己的标准, 忽略对方认不认]
+  failure_modes: [标准不被认可, 数据造假, 标准太多挑花眼]
+  action: [先找共同认可的标准, 用数据支撑, 把分歧转为标准之争]
+  params: {standard: 市场价/先例/规则, evidence: 中–高}
+  counter: [对方拒绝承认任何标准]
+  related: [M12 框架, 利益与立场]
+  source: {book: 谈判力, chapter: 概念条目（章节待核）, source_type: 二手提炼, verified: false}
+  ethics: green
+  confidence: high
+  review_status: reviewed-v1
+  v2_status: operational-v2
+
+- id: model-separate-people
+  name: 人与问题分开
+  card_type: model
+  mechanism: {primary: M7, secondary: [M12]}
+  definition: 把情绪、关系与实质问题分开处理，避免把对人的不满带进条款。
+  example: 对方在会上拍了桌子，你先私下缓和，再回到条款。
+  signals: [谈判中情绪升温, 对方开始人身攻击]
+  scripts: [「我理解你着急，我们先把事拆开。」, 「对事不对人，这条我们单独谈。」]
+  recognize: [谈判中情绪升温, 对方开始人身攻击]
+  misjudge: [用让步换关系, 用关系压条款]
+  failure_modes: [情绪带入条款, 私下话说重, 关系裂缝扩大]
+  action: [先处理情绪再谈事, 用中性语言描述问题, 私下沟通敏感点]
+  params: {emotion: 中–高, relationship: 中}
+  counter: [对方故意把人和问题绑在一起施压]
+  related: [M7 分化, M12 框架]
+  source: {book: 谈判力, chapter: 概念条目（章节待核）, source_type: 二手提炼, verified: false}
+  ethics: green
+  confidence: medium
+  review_status: reviewed-v1
+  v2_status: operational-v2
+
+- id: model-options-brainstorm
+  name: 创造选项
+  card_type: model
+  mechanism: {primary: M5, secondary: [M12]}
+  definition: 先扩大方案空间再筛选，避免在单一方案上零和争夺。
+  example: 除了价格，还能谈账期、服务范围、长期合同。
+  signals: [只有一套方案, 双方在同一个数字上拉锯]
+  scripts: [「除了价格，我们还能调账期和范围。」, 「先列方案，别急着否定。」]
+  recognize: [只有一套方案, 双方在同一个数字上拉锯]
+  misjudge: [过早评判, 只谈分蛋糕不谈做蛋糕]
+  failure_modes: [方案不落地, 选项太多失焦, 对方只给二选一]
+  action: [先发散不评判, 把不同议题组合成多方案, 再按标准筛选]
+  params: {options: 3–5 个, criteria: 2–3 条}
+  counter: [对方只给二选一]
+  related: [M5 交换, 多议题打包]
+  source: {book: 谈判力, chapter: 概念条目（章节待核）, source_type: 二手提炼, verified: false}
+  ethics: green
+  confidence: medium
+  review_status: reviewed-v1
+  v2_status: operational-v2
+
+- id: model-anchor
+  name: 锚定
+  card_type: model
+  mechanism: {primary: M12, secondary: [M5]}
+  definition: 先抛出的数字会成为后续讨论的参照点，影响最终结果。
+  example: 你先报 10% 涨幅，把讨论区间拉高。
+  signals: [对方先报价, 你需要判断是否被锚住]
+  scripts: [「基于市场数据，我的预期是 10%。」, 「这个数字有依据，不是随口报的。」]
+  recognize: [对方先报价, 你需要判断是否被锚住]
+  misjudge: [被对方锚定后小幅还价, 自己先报过低]
+  failure_modes: [锚太离谱失去可信度, 被对方重置, 没有理由支撑]
+  action: [先准备自己的锚并给理由, 对方锚离谱时明确拒绝并重置, 用区间代替单点]
+  params: {anchor_value: 高于目标 15–30%, justification: 中–高}
+  counter: [对方用极端锚点施压]
+  related: [M12 框架, 客观标准]
+  source: {book: 谈判力, chapter: 概念条目（章节待核）, source_type: 二手提炼, verified: false}
+  ethics: green
+  confidence: high
+  review_status: reviewed-v1
+  v2_status: operational-v2
+
+- id: model-concession-pacing
+  name: 让步节奏
+  card_type: model
+  mechanism: {primary: M5, secondary: [M2]}
+  definition: 让步的幅度、频率与时机本身传递信号；无条件快让会被读成还有空间。
+  example: 每次让 2%→1%→0.5%，并且每次换一个条件。
+  signals: [对方在试探你还能让多少, 你急于成交]
+  scripts: [「我可以让到 8%，但你得把账期缩短。」, 「这是最后一次让步。」]
+  recognize: [对方在试探你还能让多少, 你急于成交]
+  misjudge: [一次让到底, 每次让步幅度递增]
+  failure_modes: [让得太快, 无条件让, 让完没有回报]
+  action: [让步递减且附条件, 用交换代替单方让步, 控制节奏]
+  params: {step: 2%→1%→0.5%, frequency: 低}
+  counter: [对方用最后通牒逼你快速让步]
+  related: [M5 交换, 锚定]
+  source: {book: 谈判力, chapter: 概念条目（章节待核）, source_type: 二手提炼, verified: false}
+  ethics: green
+  confidence: high
+  review_status: reviewed-v1
+  v2_status: operational-v2
+
+- id: model-package-deal
+  name: 多议题打包
+  card_type: model
+  mechanism: {primary: M5, secondary: [M12]}
+  definition: 把多个议题捆在一起谈，用一方在次要议题上的让步换主要议题的收益。
+  example: 价格+账期+服务范围一起谈，价格让一点、服务多包一点。
+  signals: [存在多个可谈条款, 双方优先级不同]
+  scripts: [「价格我让，服务你包。」, 「两个条款一起定，别单拆。」]
+  recognize: [存在多个可谈条款, 双方优先级不同]
+  misjudge: [逐项谈导致每项都零和, 忽略优先级差异]
+  failure_modes: [打包太复杂, 对方拒拆, 权重估错]
+  action: [先列全部议题与双方优先级, 设计打包方案, 用低优先级换高优先级]
+  params: {issues: 3–5 个, weights: 差异明显}
+  counter: [对方坚持逐项谈]
+  related: [M5 交换, 创造选项]
+  source: {book: 谈判力, chapter: 概念条目（章节待核）, source_type: 二手提炼, verified: false}
+  ethics: green
+  confidence: high
+  review_status: reviewed-v1
+  v2_status: operational-v2
+
+- id: model-walk-away
+  name: 离场与底线
+  card_type: model
+  mechanism: {primary: M8, secondary: [M5]}
+  definition: 明确「低于什么条件就不谈」，并在必要时真的离场；离场能力本身是谈判力。
+  example: 低于 5000 就不签，起身走人。
+  signals: [对方条件已低于你的底线, 你怕失去这次机会]
+  scripts: [「低于这个数我就不谈了。」, 「这是底线，不是威胁。」]
+  recognize: [对方条件已低于你的底线, 你怕失去这次机会]
+  misjudge: [没有底线, 用离场威胁但不真走]
+  failure_modes: [说了不走, 底线被试探, 离场后没有退路]
+  action: [提前写死底线与触发条件, 离场要体面并留回旋, 用 BATNA 支撑]
+  params: {reservation: 5000, walkaway_cost: 中}
+  counter: [对方假装不在乎你离场]
+  related: [M8 退出, BATNA]
+  source: {book: 谈判力, chapter: 概念条目（章节待核）, source_type: 二手提炼, verified: false}
+  ethics: green
+  confidence: high
+  review_status: reviewed-v1
+  v2_status: operational-v2

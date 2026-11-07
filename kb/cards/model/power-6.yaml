@@ -1,0 +1,137 @@
+# 西方/现代博弈模型卡 · 第 8 批：权力（v2 操作升级）
+# 来源：《权力》(Pfeffer) —— 二手提炼；v2 未取得原书全文，未逐页核对
+# 说明：描述权力运作，不等于鼓励权术；卡层需配合伦理提示。
+# v2 升级：每卡补 example / signals / scripts / defense / failure_modes / 参数默认值 / related
+# 字段：id / name / card_type / mechanism / definition / example / signals / scripts / defense / recognize / misjudge / failure_modes / action / params / counter / related / source / ethics / confidence / review_status / v2_status
+
+- id: model-sources-of-power
+  name: 权力来源
+  card_type: model
+  mechanism: {primary: M3, secondary: [M9]}
+  definition: 权力来自资源控制、依赖关系、正式职位、信息与关系网络；不同来源对应不同用法。
+  example: 新领导头衔很高，但关键客户和预算都在老员工手里，真正说话算数的是老员工。
+  signals: [需要判断谁真正有影响力, 正式职位与实际权力不一致]
+  scripts: [「先画一张权力地图。」, 「找真正能拍板的人，不看头衔。」]
+  defense: [「我只看了头衔吗？」, 「我有没有忽略非正式网络？」]
+  recognize: [需要判断谁真正有影响力, 正式职位与实际权力不一致]
+  misjudge: [只看职位, 忽略非正式网络]
+  failure_modes: [站错队, 低估非正式权力, 得罪关键节点]
+  action: [画权力地图, 区分正式与非正式权力, 找到关键节点]
+  params: {formal: 中, informal: 高}
+  counter: [对方隐藏真实影响力]
+  related: [M3 联盟, M9 信号]
+  source: {book: 权力, chapter: 概念条目（章节待核）, source_type: 二手提炼, verified: false}
+  ethics: gray
+  confidence: medium
+  review_status: reviewed-v1
+  v2_status: operational-v2
+
+- id: model-dependence-relation
+  name: 依赖关系
+  card_type: model
+  mechanism: {primary: M3, secondary: [M11]}
+  definition: 对方越依赖你，你越有权力；降低自身依赖、增加对方依赖是权力建设。
+  example: 你依赖一个大客户，对方一压价你就得让。
+  signals: [互相需要, 一方明显更依赖]
+  scripts: [「把单点依赖降下来。」, 「让自己变得不可替代。」]
+  defense: [「对方是否在培养替代者？」, 「我的不可替代性在下降吗？」]
+  recognize: [互相需要, 一方明显更依赖]
+  misjudge: [把依赖当感情, 忽略可替代性]
+  failure_modes: [被卡脖子, 过度依赖, 关系绑定]
+  action: [提高自身不可替代性, 降低单点依赖, 不滥用依赖]
+  params: {asymmetry: 中, substitutes: 2 个}
+  counter: [对方培养替代者]
+  related: [M3 联盟, 资源依赖]
+  source: {book: 权力, chapter: 概念条目（章节待核）, source_type: 二手提炼, verified: false}
+  ethics: green
+  confidence: high
+  review_status: reviewed-v1
+  v2_status: operational-v2
+
+- id: model-influence-tactics
+  name: 影响力战术
+  card_type: model
+  mechanism: {primary: M9, secondary: [M12]}
+  definition: 用说服、交换、合法化、施压、联盟等战术影响决策；战术要与场景匹配。
+  example: 推一个决定：先私下说服关键人，再用资源交换，最后才在会上施压。
+  signals: [需要推动一个决定, 对方不完全买账]
+  scripts: [「先软后硬，别一上来就压。」, 「保留施压作为最后手段。」]
+  defense: [「对方是不是在对我用这套？」, 「我是被说服还是被施压？」]
+  recognize: [需要推动一个决定, 对方不完全买账]
+  misjudge: [只用一种战术, 施压过度反噬]
+  failure_modes: [一上来就施压, 战术与场景不匹配, 反噬]
+  action: [先软后硬, 用交换换支持, 保留施压作为最后手段]
+  params: {tactic: 说服/交换/施压, intensity: 低→高}
+  counter: [对方识破并反制]
+  related: [M9 信号, M12 框架]
+  source: {book: 权力, chapter: 概念条目（章节待核）, source_type: 二手提炼, verified: false}
+  ethics: gray
+  confidence: medium
+  review_status: reviewed-v1
+  v2_status: operational-v2
+
+- id: model-coalition-building
+  name: 建联盟
+  card_type: model
+  mechanism: {primary: M3, secondary: [M6]}
+  definition: 找到共同利益者，形成稳定支持网络；联盟比单点说服更有效。
+  example: 推改革前，先私下找三个关键部门对齐利益。
+  signals: [需要多数支持, 单打独斗不够]
+  scripts: [「提前布局，别临时抱佛脚。」, 「用共同利益绑定盟友。」]
+  defense: [「我的盟友会不会被挖走？」, 「联盟的共同利益还在吗？」]
+  recognize: [需要多数支持, 单打独斗不够]
+  misjudge: [临时抱佛脚, 忽略盟友利益]
+  failure_modes: [盟友被挖, 利益分歧, 联盟松散]
+  action: [提前布局, 用共同利益绑定, 维护长期关系]
+  params: {support: 3+ 方, commitment: 中}
+  counter: [对方挖走关键盟友]
+  related: [M3 联盟, M6 承诺]
+  source: {book: 权力, chapter: 概念条目（章节待核）, source_type: 二手提炼, verified: false}
+  ethics: gray
+  confidence: medium
+  review_status: reviewed-v1
+  v2_status: operational-v2
+
+- id: model-framing-power
+  name: 框架控制
+  card_type: model
+  mechanism: {primary: M12, secondary: [M1]}
+  definition: 定义问题的框架，决定什么被看见、什么被忽略；框架权是隐性权力。
+  example: 把「要不要投入」定义成「不投入会损失多少」，讨论方向立刻变了。
+  signals: [讨论被某套说法主导, 你的方案总被放在不利框架里]
+  scripts: [「换个说法看这件事。」, 「用你最关心的价值来重述。」]
+  defense: [「我是不是在对方的框架里？」, 「这个框架漏掉了什么？」]
+  recognize: [讨论被某套说法主导, 你的方案总被放在不利框架里]
+  misjudge: [在对方框架里争, 忽略换框架]
+  failure_modes: [框架被锁死, 换框架失败, 受众不买]
+  action: [识别现有框架, 提出替代框架, 用对方关心的价值重述]
+  params: {frame: 成本/机会/风险, audience: 关键决策者}
+  counter: [对方否定你的框架合法性]
+  related: [M12 框架, M1 信息]
+  source: {book: 权力, chapter: 概念条目（章节待核）, source_type: 二手提炼, verified: false}
+  ethics: gray
+  confidence: medium
+  review_status: reviewed-v1
+  v2_status: operational-v2
+
+- id: model-resistance-management
+  name: 抵抗管理
+  card_type: model
+  mechanism: {primary: M8, secondary: [M9]}
+  definition: 面对抵抗，先判断来源（利益/程序/情绪/权力），再选择交换、参与或施压。
+  example: 推新流程，团队表面同意实际不动。
+  signals: [推行受阻, 出现消极执行或公开反对]
+  scripts: [「先诊断抵抗来源。」, 「给一个参与渠道，让他们改流程。」]
+  defense: [「抵抗是利益问题还是情绪问题？」, 「我是不是压得太紧？」]
+  recognize: [推行受阻, 出现消极执行或公开反对]
+  misjudge: [一律高压, 忽略抵抗的合理诉求]
+  failure_modes: [高压反弹, 表面服从, 关系破裂]
+  action: [诊断抵抗来源, 给参与渠道, 用交换化解]
+  params: {source: 利益/程序/情绪, intensity: 中}
+  counter: [抵抗升级为联盟对抗]
+  related: [M8 退出, M9 信号]
+  source: {book: 权力, chapter: 概念条目（章节待核）, source_type: 二手提炼, verified: false}
+  ethics: green
+  confidence: medium
+  review_status: reviewed-v1
+  v2_status: operational-v2

@@ -1,0 +1,92 @@
+# 西方/现代博弈模型卡 · 第 13 批：OODA（v2 操作升级）
+# 来源：Boyd OODA 循环（公开简报/二手研究）—— 二手提炼；v2 未逐页核对
+# v2 升级：每卡补 example / signals / scripts / defense / failure_modes / 参数默认值 / related
+# 字段：id / name / card_type / mechanism / definition / example / signals / scripts / defense / recognize / misjudge / failure_modes / action / params / counter / related / source / ethics / confidence / review_status / v2_status
+
+- id: model-ooda-loop
+  name: OODA 循环
+  card_type: model
+  mechanism: {primary: M2, secondary: [M10]}
+  definition: 观察-定向-决策-行动的循环；谁能更快完成循环并切换，谁就占据主动。
+  example: 对手突然降价，你快速观察市场反应、判断意图、决定跟或不跟、执行后再观察。
+  signals: [局势变化快, 你需要连续应对]
+  scripts: [「先看清，再定向，别急着动。」, 「行动完再看一轮。」]
+  defense: [「我是不是被对方的循环带着走？」, 「我的观察是不是被过滤了？」]
+  recognize: [局势变化快, 你需要连续应对]
+  misjudge: [只做一次循环就停, 观察与定向脱节]
+  failure_modes: [只看不做, 定向错误, 循环断掉]
+  action: [保持观察, 快速定向, 小步决策, 行动后再观察]
+  params: {cycle_time: 短, accuracy: 中}
+  counter: [对手扰乱你的观察或定向]
+  related: [M2 节奏, M10 情报]
+  source: {book: OODA, chapter: 公开简报（未逐页核对）, source_type: 二手提炼, verified: false}
+  ethics: green
+  confidence: medium
+  review_status: reviewed-v1
+  v2_status: operational-v2
+
+- id: model-tempo
+  name: 快节奏
+  card_type: model
+  mechanism: {primary: M2, secondary: [M9]}
+  definition: 比对手更快地行动与调整，让对手始终跟不上；快不是乱，是有节奏。
+  example: 对手还在开会讨论，你已经把方案发给客户。
+  signals: [对手反应慢, 你有信息与执行优势]
+  scripts: [「快慢结合，不瞎快。」, 「压短决策链。」]
+  defense: [「我是不是在追对方的节奏？」, 「快得有没有质量？」]
+  recognize: [对手反应慢, 你有信息与执行优势]
+  misjudge: [为快而快, 忽略质量与后果]
+  failure_modes: [快而乱, 质量下降, 被拖入对方节奏]
+  action: [压缩决策链, 预设动作, 快慢结合]
+  params: {tempo: 高, quality: 中}
+  counter: [对手以静制动或拖慢你]
+  related: [M2 节奏, M9 信号]
+  source: {book: OODA, chapter: 公开简报（未逐页核对）, source_type: 二手提炼, verified: false}
+  ethics: green
+  confidence: medium
+  review_status: reviewed-v1
+  v2_status: operational-v2
+
+- id: model-orientation
+  name: 定向
+  card_type: model
+  mechanism: {primary: M12, secondary: [M10]}
+  definition: 用经验、框架与信息解释观察到的现象；定向错了，后面全错。
+  example: 用过去成功的经验套新市场，结果完全误判。
+  signals: [你对局势的解释与事实不符, 旧经验套新局]
+  scripts: [「多框架对照。」, 「主动找反例。」]
+  defense: [「我的解释和事实对得上吗？」, 「旧经验还适用吗？」]
+  recognize: [你对局势的解释与事实不符, 旧经验套新局]
+  misjudge: [用旧框架硬套, 忽略反常信号]
+  failure_modes: [定向错误, 忽略反常, 越走越偏]
+  action: [多框架对照, 主动找反例, 更新认知]
+  params: {frameworks: 2–3 个, update: 中}
+  counter: [对手制造假象扭曲你的定向]
+  related: [M12 框架, M10 情报]
+  source: {book: OODA, chapter: 公开简报（未逐页核对）, source_type: 二手提炼, verified: false}
+  ethics: green
+  confidence: medium
+  review_status: reviewed-v1
+  v2_status: operational-v2
+
+- id: model-loop-disruption
+  name: 扰乱对手循环
+  card_type: model
+  mechanism: {primary: M10, secondary: [M2]}
+  definition: 让对方观察不清、定向混乱、决策变慢、行动迟疑，从而赢得时间差。
+  example: 释放混乱信号，让对手团队开会开了三天还没决策。
+  signals: [对手依赖稳定信息, 你有扰动手段]
+  scripts: [「制造不确定。」, 「留谈判出口，别把人逼死。」]
+  defense: [「这是不是对手在扰乱我？」, 「我的信息源可靠吗？」]
+  recognize: [对手依赖稳定信息, 你有扰动手段]
+  misjudge: [扰动过度引发升级, 忽略伦理]
+  failure_modes: [扰动反噬, 引发升级, 越过伦理红线]
+  action: [制造不确定, 打乱其节奏, 保留谈判出口]
+  params: {disruption: 中, cost: 中}
+  counter: [对手稳定情绪、恢复节奏]
+  related: [M10 情报, M2 节奏]
+  source: {book: OODA, chapter: 公开简报（未逐页核对）, source_type: 二手提炼, verified: false}
+  ethics: gray
+  confidence: low
+  review_status: reviewed-v1
+  v2_status: operational-v2

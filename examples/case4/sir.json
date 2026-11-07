@@ -1,0 +1,42 @@
+{
+  "schema_version": "sir-0.3",
+  "situation_id": "s-case4-001",
+  "round": 1,
+  "goal": {
+    "goal_id": "goal-case4-001",
+    "type": "attack",
+    "ultimate": "职业发展不被卡住",
+    "direct": "两周内进入晋升名单，拿到技术主管",
+    "success_criteria": ["进入晋升名单", "或明确下一轮晋升条件"],
+    "unacceptable": ["被边缘化", "团队核心成员离职"],
+    "non_goals": ["不贬低老李", "不造假数据"],
+    "relationship_budget": 1,
+    "time_window": "两周内（老板定人前）",
+    "constraints": ["不越级", "不违反流程"],
+    "confidence": 0.8
+  },
+  "actors": [
+    {"id": "A", "role": "me", "goal": "晋升", "resources": ["刚上线项目"], "credibility": "high", "decision_maker": false, "source": "user"},
+    {"id": "B", "role": "opponent", "goal": "晋升", "resources": ["频繁汇报"], "credibility": "unknown", "decision_maker": false, "source": "user"},
+    {"id": "C", "role": "superior", "goal": "选合适的人", "resources": ["拍板权"], "credibility": "high", "decision_maker": true, "evaluation_criteria": ["项目贡献", "团队评价"], "source": "inferred"},
+    {"id": "D", "role": "third_party", "goal": "团队稳定", "resources": ["评价权"], "credibility": "medium", "decision_maker": false, "source": "inferred"}
+  ],
+  "facts": [
+    {"id": "f1", "text": "两个候选人", "status": "provable", "source": "user", "confidence": 0.9},
+    {"id": "f2", "text": "老李频繁跟老板汇报", "status": "claim", "source": "user", "confidence": 0.7},
+    {"id": "f3", "text": "老李把我项目亮点说成他的", "status": "claim", "source": "user", "confidence": 0.6},
+    {"id": "f4", "text": "我的项目刚上线", "status": "provable", "source": "user", "confidence": 0.9},
+    {"id": "f5", "text": "团队里有人对我不满", "status": "claim", "source": "user", "confidence": 0.6}
+  ],
+  "unknowns": ["老板真实标准", "老李汇报了什么", "团队评价分布"],
+  "info_gaps": [
+    {"gap_id": "g1", "type": "structure", "field": "C.criteria_weight", "impact": 3, "uncertainty": 3, "cost": 1, "how": ["直接提问"], "questions": ["这次晋升，项目贡献和团队评价各占多少？"], "ask_who": "opponent", "risk": "显得急", "ethics": "green"},
+    {"gap_id": "g2", "type": "intent", "field": "D.evaluation", "impact": 3, "uncertainty": 2, "cost": 2, "how": ["一对一沟通"], "questions": ["你觉得我最近哪块可以做得更好？"], "ask_who": "third_party", "risk": "得到负面反馈", "ethics": "green"}
+  ],
+  "structure": {"primary": "competition", "secondary": "authority"},
+  "tags": {"power": "even", "info": "one_sided", "time": "them_urgent", "relation": "repeated", "third_party": "audience", "reversibility": "irreversible", "stakes": "high"},
+  "completeness": {"score": 0.65, "missing_required": ["老板真实标准", "团队评价"]},
+  "legal_risks": [],
+  "opponent_profiles": [],
+  "self_state": {"emotion_intensity": 3, "stress": 3, "biases": ["face", "loss_aversion"], "motivation": "result", "inner_needs": ["认可", "公平"], "source": "inferred"}
+}

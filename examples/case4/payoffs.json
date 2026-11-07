@@ -1,0 +1,11 @@
+[
+  {"player": "A", "action": "整理成果汇报", "opp_action": "继续抢功", "value": 5, "source": "assumption"},
+  {"player": "A", "action": "整理成果汇报", "opp_action": "拉票", "value": 6, "source": "assumption"},
+  {"player": "A", "action": "整理成果汇报", "opp_action": "正常竞争", "value": 7, "source": "assumption"},
+  {"player": "A", "action": "争取团队支持", "opp_action": "继续抢功", "value": 4, "source": "assumption"},
+  {"player": "A", "action": "争取团队支持", "opp_action": "拉票", "value": 6, "source": "assumption"},
+  {"player": "A", "action": "争取团队支持", "opp_action": "正常竞争", "value": 8, "source": "assumption"},
+  {"player": "A", "action": "找老板谈发展", "opp_action": "继续抢功", "value": 5, "source": "assumption"},
+  {"player": "A", "action": "找老板谈发展", "opp_action": "拉票", "value": 5, "source": "assumption"},
+  {"player": "A", "action": "找老板谈发展", "opp_action": "正常竞争", "value": 7, "source": "assumption"}
+]

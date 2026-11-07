@@ -1,0 +1,13 @@
+{
+  "goal_id": "goal-case4-001",
+  "type": "attack",
+  "ultimate": "职业发展不被卡住",
+  "direct": "两周内进入晋升名单，拿到技术主管",
+  "success_criteria": ["进入晋升名单", "或明确下一轮晋升条件"],
+  "unacceptable": ["被边缘化", "团队核心成员离职"],
+  "non_goals": ["不贬低老李", "不造假数据"],
+  "relationship_budget": 1,
+  "time_window": "两周内（老板定人前）",
+  "constraints": ["不越级", "不违反流程"],
+  "confidence": 0.8
+}

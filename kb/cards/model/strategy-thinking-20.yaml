@@ -1,0 +1,424 @@
+# 西方/现代博弈模型卡 · 第 1 批（v2 操作升级）
+# 来源：《策略思维》(Dixit & Nalebuff) —— 二手提炼；v2 未取得原书全文，未逐页核对
+# v2 升级：每卡补 example / signals / scripts / failure_modes / 参数默认值 / related
+# 字段：id / name / card_type / mechanism / definition / example / signals / scripts / recognize / misjudge / failure_modes / action / params / counter / related / source / ethics / confidence / review_status / v2_status
+
+- id: model-backward-induction
+  name: 逆向归纳
+  card_type: foundation
+  mechanism: {primary: M0, secondary: [M6]}
+  definition: 从最后一轮开始，先算对方在末轮的最优选择，再倒推自己前一轮该做什么。
+  example: 谈年度合同，先想「最后一个月对方还会不会履约」，再决定现在要不要押款。
+  signals: [对方在末轮有翻脸迹象, 期限明确且只剩几轮, 对方开始谈「最后一次」]
+  scripts: [「我们先把最后一步怎么收尾说清楚。」, 「如果到期前一周出现变化，按哪条走？」]
+  recognize: [有明确轮次或截止时间, 双方理性且知道彼此理性]
+  misjudge: [忽略对方非理性/面子因素, 轮次太多导致倒推不可行]
+  failure_modes: [对方故意装不理性, 信息不全时倒推失真, 过度自信地算死对方]
+  action: [先写清最后一轮双方选项与收益, 逐轮倒推最优反应, 倒推结果不利就改规则/轮次]
+  params: {horizon: 2–6 轮, discount: 0.8–1.0}
+  counter: [对方故意表现非理性，使倒推失效]
+  related: [M6 承诺, 重复博弈]
+  source: {book: 策略思维, chapter: 概念条目（章节待核）, source_type: 二手提炼, verified: false}
+  ethics: green
+  confidence: medium
+  review_status: reviewed-v1
+  v2_status: operational-v2
+
+- id: model-nash-equilibrium
+  name: 纳什均衡
+  card_type: foundation
+  mechanism: {primary: M0, secondary: [M1]}
+  definition: 一组策略组合（可含混合策略），任何一方单独改变策略都不会更好；是「谁都不想先动」的稳定点。
+  example: 两家公司都不敢先降价，因为谁先降谁先亏，形成僵持。
+  signals: [双方都在观望, 谁先动谁吃亏, 出现「你不改我也不改」]
+  scripts: [「我们各自的最优反应是什么？」, 「如果我先动，你会怎么跟？」]
+  recognize: [双方都在猜对方, 存在僵持]
+  misjudge: [把均衡当唯一结果, 把坏均衡当无解]
+  failure_modes: [多均衡时误判对方选择, 忽略非理性参与人, 把均衡当「应该」]
+  action: [列策略与收益找相互最优反应, 多均衡时用聚焦点/先例协调, 不利就改收益结构]
+  params: {players: 2, strategies: 2–4}
+  counter: [对方主动打破均衡求更大收益]
+  related: [M1 信息, 聚焦点]
+  source: {book: 策略思维, chapter: 概念条目（章节待核）, source_type: 二手提炼, verified: false}
+  ethics: green
+  confidence: high
+  review_status: reviewed-v1
+  v2_status: operational-v2
+
+- id: model-prisoners-dilemma
+  name: 囚徒困境
+  card_type: model
+  mechanism: {primary: M6, secondary: [M11]}
+  definition: 双方合作对整体最好，但各自都有背叛诱因；一次性博弈里背叛是占优策略。
+  example: 两个同事合作项目，谁先甩锅谁轻松，结果项目黄了双方都受损。
+  signals: [一次性合作, 背叛能立刻占便宜, 追责困难]
+  scripts: [「这次合作结束后还会再合作吗？」, 「如果一方中途退出，代价是什么？」]
+  recognize: [合作能做大蛋糕但先背叛者占便宜, 一次性/匿名/难追责]
+  misjudge: [以为说好合作就够, 忽略重复博弈能改变激励]
+  failure_modes: [把一次性当长期, 只靠信任不设约束, 报复过度导致双输]
+  action: [判断一次性还是重复, 一次性降低背叛收益/引入担保, 重复建立对等规则]
+  params: {payoff: 合作3/背叛5/双输0, horizon: 1 或长期}
+  counter: [对方先合作后背叛骗信任]
+  related: [M6 承诺, 以牙还牙]
+  source: {book: 策略思维, chapter: 概念条目（章节待核）, source_type: 二手提炼, verified: false}
+  ethics: green
+  confidence: high
+  review_status: reviewed-v1
+  v2_status: operational-v2
+
+- id: model-chicken
+  name: 斗鸡博弈
+  card_type: model
+  mechanism: {primary: M9, secondary: [M6]}
+  definition: 两强相撞，谁先退谁丢面子，都不退则两败；比的是谁更敢承担撞车风险。
+  example: 两个部门争同一个预算，谁先松口谁显得弱势，硬顶则项目一起黄。
+  signals: [双方加码, 退让被解读为软弱, 出现不可逆动作]
+  scripts: [「我们都要面子，那就把台阶一起搭好。」, 「再往前一步，代价你算过吗？」]
+  recognize: [双方比狠, 退让被视为软弱]
+  misjudge: [高估自己承受力, 忽略退一步换条件的可能]
+  failure_modes: [情绪化加码, 误判对方底线, 没有退路]
+  action: [先算两败代价设止损线, 用承诺/规则改变对方预期, 给对方留台阶]
+  params: {crash_cost: 高, face_cost: 中–高}
+  counter: [对方比你还敢撞或假装敢]
+  related: [M9 信号, 边缘政策]
+  source: {book: 策略思维, chapter: 概念条目（章节待核）, source_type: 二手提炼, verified: false}
+  ethics: green
+  confidence: medium
+  review_status: reviewed-v1
+  v2_status: operational-v2
+
+- id: model-stag-hunt
+  name: 猎鹿博弈
+  card_type: model
+  mechanism: {primary: M3, secondary: [M6]}
+  definition: 合作猎鹿收益最大，但若有人去追兔子（短期小利）就合作失败；考验信任与协调。
+  example: 团队一起冲大项目，有人中途接私活赚快钱，项目崩了。
+  signals: [合作收益高但需多人同步, 出现短期小利诱惑, 有人开始保留]
+  scripts: [「大目标成了大家分多少？中途去追兔子怎么算？」, 「我们先把同步节点定下来。」]
+  recognize: [合作收益高但需同步, 存在先拿小利诱因]
+  misjudge: [以为口头承诺足够, 忽略谁最容易违约]
+  failure_modes: [搭便车, 阶段性放弃, 没有违约可见机制]
+  action: [找出最易违约方先补激励, 拆同步小节点, 设违约可见机制]
+  params: {stags: 合作收益10, rabbits: 短期小利3}
+  counter: [对方表面合作暗中追兔子]
+  related: [M3 联盟, 智猪博弈]
+  source: {book: 策略思维, chapter: 概念条目（章节待核）, source_type: 二手提炼, verified: false}
+  ethics: green
+  confidence: medium
+  review_status: reviewed-v1
+  v2_status: operational-v2
+
+- id: model-boxed-pigs
+  name: 智猪博弈
+  card_type: model
+  mechanism: {primary: M5, secondary: [M11]}
+  definition: 大猪按按钮、小猪先吃；小猪搭便车反而更划算，强者往往被迫承担更多成本。
+  example: 老员工牵头救火，新人跟着拿功劳；老员工不干项目就黄。
+  signals: [收益不均成本共担, 有人不干也能分到, 强者持续兜底]
+  scripts: [「这次谁出力，谁分多少，先讲清楚。」, 「我可以多做，但分配要改。」]
+  recognize: [收益不均/成本共担, 存在搭便车]
+  misjudge: [强者一味付出, 弱者误判可一直搭]
+  failure_modes: [强者心累退出, 弱者被踢出局, 分配机制崩溃]
+  action: [判断谁更需要合作, 强者设投入门槛, 弱者保持可替代性]
+  params: {cost: 行动成本高, share: 分配差距大}
+  counter: [强者另起炉灶]
+  related: [M5 交换, 激励设计]
+  source: {book: 策略思维, chapter: 概念条目（章节待核）, source_type: 二手提炼, verified: false}
+  ethics: green
+  confidence: medium
+  review_status: reviewed-v1
+  v2_status: operational-v2
+
+- id: model-mixed-strategy
+  name: 混合策略
+  card_type: foundation
+  mechanism: {primary: M0, secondary: [M1]}
+  definition: 随机化自己的选择，让对方无法预测；在零和或对抗中按概率出招。
+  example: 谈判中不固定先报价还是先试探，让对方摸不清套路。
+  signals: [对方在观察你的规律, 固定套路被针对, 你的下一步可被预测]
+  scripts: [「这次换个顺序来。」, 「我们按条件触发，不按固定节奏。」]
+  recognize: [对方在观察规律, 固定套路会被针对]
+  misjudge: [以为随机就是随便, 忽略概率要按收益算]
+  failure_modes: [伪随机被识破, 随机到关键决策上, 失去一致性]
+  action: [按收益算让对手无差异的概率, 用外部随机源执行, 定期检查规律]
+  params: {p: 0.3–0.7 视收益}
+  counter: [对方也随机化或收集你的历史]
+  related: [M1 信息, 信号]
+  source: {book: 策略思维, chapter: 概念条目（章节待核）, source_type: 二手提炼, verified: false}
+  ethics: green
+  confidence: medium
+  review_status: reviewed-v1
+  v2_status: operational-v2
+
+- id: model-commitment
+  name: 承诺与可信威胁
+  card_type: model
+  mechanism: {primary: M6, secondary: [M9]}
+  definition: 主动限制自己的选择，让对方相信你会执行；可信承诺能改变对方的最优反应。
+  example: 公开在群里承诺交付日期，把面子押上去，逼自己按时完成。
+  signals: [口头威胁不被当真, 你需要对方相信你会做, 有反悔空间]
+  scripts: [「这件事我已经公开说了，改不了。」, 「条件触发就执行，没有例外。」]
+  recognize: [需要对方相信你会执行, 口头威胁不被当真]
+  misjudge: [承诺太容易反悔, 承诺过度把自己逼死]
+  failure_modes: [承诺不可信, 承诺超出能力, 没有退出机制]
+  action: [用不可逆动作提高可信度, 只承诺真能执行的事, 给对方可验证信号]
+  params: {cost_of_break: 中–高, visibility: 公开}
+  counter: [对方测试你的承诺]
+  related: [M6 承诺, 人质与绑定]
+  source: {book: 策略思维, chapter: 概念条目（章节待核）, source_type: 二手提炼, verified: false}
+  ethics: green
+  confidence: high
+  review_status: reviewed-v1
+  v2_status: operational-v2
+
+- id: model-brinkmanship
+  name: 边缘政策
+  card_type: model
+  mechanism: {primary: M6, secondary: [M9]}
+  definition: 故意把局势推到危险边缘，让对方先眨眼；风险共担，比谁更不怕掉下去。
+  example: 供应商拖到最后一天才发货，赌你不敢换供应商。
+  signals: [双方都不愿真两败, 比谁更敢冒险, 出现失控可能]
+  scripts: [「再往前一步就一起承担后果。」, 「我们设个安全阀，别真掉下去。」]
+  recognize: [双方都不愿两败, 比风险承受力]
+  misjudge: [高估对方会退, 忽略意外失控]
+  failure_modes: [误判导致真撞, 情绪化升级, 没有回撤机制]
+  action: [算掉下去的真实代价, 小步升级保留回撤, 设安全阀与沟通渠道]
+  params: {risk: 0.1–0.3, cost: 高}
+  counter: [对方也升级或误判]
+  related: [M6 承诺, 斗鸡博弈]
+  source: {book: 策略思维, chapter: 概念条目（章节待核）, source_type: 二手提炼, verified: false}
+  ethics: gray
+  confidence: medium
+  review_status: reviewed-v1
+  v2_status: operational-v2
+
+- id: model-signaling
+  name: 信号
+  card_type: model
+  mechanism: {primary: M1, secondary: [M9]}
+  definition: 用有成本的动作传递真实信息；低成本的空话不算信号。
+  example: 愿意先付定金证明诚意，比口头保证更可信。
+  signals: [你需要证明自己的类型/实力/决心, 对方在观察你的动作]
+  scripts: [「我先押一笔，你看我是不是认真的。」, 「这个投入，做不到的人不会做。」]
+  recognize: [需要证明类型/实力/决心, 对方在观察]
+  misjudge: [把廉价表态当信号, 忽略信号成本与可伪造性]
+  failure_modes: [信号成本不够, 被模仿, 信号与现实不符]
+  action: [选对方难模仿的成本型动作, 观察对方信号成本, 多信号交叉验证]
+  params: {signal_cost: 中–高, mimic_cost: 高}
+  counter: [对方模仿高成本信号或放假信号]
+  related: [M1 信息, 筛选]
+  source: {book: 策略思维, chapter: 概念条目（章节待核）, source_type: 二手提炼, verified: false}
+  ethics: green
+  confidence: high
+  review_status: reviewed-v1
+  v2_status: operational-v2
+
+- id: model-screening
+  name: 筛选
+  card_type: model
+  mechanism: {primary: M1, secondary: [M10]}
+  definition: 设计不同选项，让对方按自身类型自选，从而暴露信息。
+  example: 招聘给「高薪高压」与「稳定低薪」两个选项，自选暴露偏好。
+  signals: [你不了解对方类型, 直接问会说谎]
+  scripts: [「两个方案你更倾向哪个？代价不同。」, 「选这个的人通常要承担更多。」]
+  recognize: [不了解对方类型但对方自己知道, 直接问会说谎]
+  misjudge: [选项设计得所有类型都选同一个, 忽略自选成本]
+  failure_modes: [选项无区分度, 被识破反选, 成本设计失衡]
+  action: [设计高类型愿选/低类型不愿选的选项, 让选项对应不同代价, 观察选择]
+  params: {types: 2–3, menu: 2–3}
+  counter: [对方识破后故意选错位选项]
+  related: [M1 信息, 逆向选择]
+  source: {book: 策略思维, chapter: 概念条目（章节待核）, source_type: 二手提炼, verified: false}
+  ethics: green
+  confidence: medium
+  review_status: reviewed-v1
+  v2_status: operational-v2
+
+- id: model-adverse-selection
+  name: 逆向选择
+  card_type: model
+  mechanism: {primary: M1, secondary: [M5]}
+  definition: 信息不对称下，劣质方更愿意交易，优质方退出，市场平均质量下降。
+  example: 二手车市场好车卖不上价，最后只剩问题车。
+  signals: [一方掌握质量信息, 报价统一无法区分好坏, 优质方退出]
+  scripts: [「能不能提供第三方检测/试用期？」, 「不同质量我们分档定价。」]
+  recognize: [一方掌握质量信息, 统一价格无法区分]
+  misjudge: [以为价格能反映质量, 忽略优质方退出]
+  failure_modes: [劣币驱逐良币, 认证造假, 过度折价]
+  action: [引入第三方认证/担保/试用, 差异化合同让类型自选, 先小规模验证]
+  params: {quality_spread: 大, price: 统一}
+  counter: [对方伪装优质]
+  related: [M1 信息, 筛选]
+  source: {book: 策略思维, chapter: 概念条目（章节待核）, source_type: 二手提炼, verified: false}
+  ethics: green
+  confidence: medium
+  review_status: reviewed-v1
+  v2_status: operational-v2
+
+- id: model-moral-hazard
+  name: 道德风险
+  card_type: model
+  mechanism: {primary: M1, secondary: [M6]}
+  definition: 一方行为不可观察，另一方承担后果，前者倾向少投入或冒险。
+  example: 外包方拿了预付款后偷工减料，你验收时才发现。
+  signals: [委托方看不到努力, 后果由委托方承担, 过程不透明]
+  scripts: [「我们按节点验收，款分阶段付。」, 「过程指标也要看，不只看结果。」]
+  recognize: [行为不可观察, 后果由对方承担]
+  misjudge: [只靠信任不设监督, 监督过度成本高]
+  failure_modes: [偷工减料, 隐藏信息, 监督成本失控]
+  action: [让代理方共担风险, 设可观察过程指标, 用长期关系约束]
+  params: {effort: 低, share: 风险共担 20–50%}
+  counter: [代理方隐藏/伪造过程]
+  related: [M1 信息, 委托代理]
+  source: {book: 策略思维, chapter: 概念条目（章节待核）, source_type: 二手提炼, verified: false}
+  ethics: green
+  confidence: medium
+  review_status: reviewed-v1
+  v2_status: operational-v2
+
+- id: model-principal-agent
+  name: 委托代理
+  card_type: model
+  mechanism: {primary: M1, secondary: [M6]}
+  definition: 委托人设计激励合同，让代理人按委托人目标行动；核心是信息与激励相容。
+  example: 老板给销售提成，但销售只冲短期单量不管售后。
+  signals: [你让别人替你办事, 目标不完全一致, 结果难观测]
+  scripts: [「你我都想赚钱，但指标要包含售后。」, 「达标怎么奖，越线怎么罚，先定好。」]
+  recognize: [别人替你办事, 目标不一致, 结果难观测]
+  misjudge: [只给钱不给信息权限, 激励与目标错位]
+  failure_modes: [指标造假, 激励扭曲, 代理人只做考核项]
+  action: [明确可观测结果指标, 设计自利也顺带实现你目标的激励, 保留检查与退出权]
+  params: {incentive: 20–40% 浮动, monitoring: 低–中}
+  counter: [代理人钻指标空子]
+  related: [M1 信息, 道德风险, 激励设计]
+  source: {book: 策略思维, chapter: 概念条目（章节待核）, source_type: 二手提炼, verified: false}
+  ethics: green
+  confidence: medium
+  review_status: reviewed-v1
+  v2_status: operational-v2
+
+- id: model-repeated-games
+  name: 重复博弈
+  card_type: model
+  mechanism: {primary: M6, secondary: [M11]}
+  definition: 同样的博弈重复进行，未来惩罚/回报会改变当下的最优选择；合作更可能。
+  example: 老客户这次压价，你让一步因为还要做长期生意。
+  signals: [双方还会长期打交道, 这次行为影响未来, 临近结束]
+  scripts: [「这次我让，下次你得补回来。」, 「我们长期合作，别为这一单伤和气。」]
+  recognize: [长期打交道, 本次影响未来]
+  misjudge: [把长期当一次性, 忽略最后一次效应]
+  failure_modes: [最后一轮背叛, 误判关系长度, 过度让步]
+  action: [明确未来还会合作, 设对等规则, 临近结束更谨慎]
+  params: {discount: 0.9–0.99, rounds: 5+}
+  counter: [对方在最后一轮背叛]
+  related: [M6 承诺, 以牙还牙]
+  source: {book: 策略思维, chapter: 概念条目（章节待核）, source_type: 二手提炼, verified: false}
+  ethics: green
+  confidence: high
+  review_status: reviewed-v1
+  v2_status: operational-v2
+
+- id: model-tit-for-tat
+  name: 以牙还牙
+  card_type: model
+  mechanism: {primary: M6, secondary: [M9]}
+  definition: 第一轮合作，之后照对方上一轮的做法回应；简单、可预测、能建立合作。
+  example: 同事第一次配合你，你全力配合；他甩锅一次，你下次保留。
+  signals: [重复互动, 对方在试探底线]
+  scripts: [「这次我先配合你，下次看你。」, 「你怎么对我，我怎么对你。」]
+  recognize: [重复互动需要规则, 对方试探]
+  misjudge: [在噪音环境互相报复, 对一次性对手使用]
+  failure_modes: [误解引发报复循环, 无原则宽容, 对一次性对手失效]
+  action: [先释放合作信号, 背叛时对等回应, 对方回头就恢复]
+  params: {forgiveness: 1 次, retaliation: 对等}
+  counter: [对方制造误判引发报复]
+  related: [M6 承诺, 宽容]
+  source: {book: 策略思维, chapter: 概念条目（章节待核）, source_type: 二手提炼, verified: false}
+  ethics: green
+  confidence: high
+  review_status: reviewed-v1
+  v2_status: operational-v2
+
+- id: model-reputation
+  name: 声誉
+  card_type: model
+  mechanism: {primary: M9, secondary: [M6]}
+  definition: 过去行为形成的预期，会影响对方未来如何对待你；声誉是长期资产。
+  example: 你在行业里以「说话算数」出名，谈合作时对方更愿意先让步。
+  signals: [还要在同一圈子混, 对方在观察你如何对待别人]
+  scripts: [「这个圈子里我还要做人，不会为这点钱砸招牌。」, 「我说到做到，你可以去问。」]
+  recognize: [还要在同一圈子/市场, 对方在观察]
+  misjudge: [为小利毁长期声誉, 把人设当声誉]
+  failure_modes: [人设崩塌, 一次失信被放大, 圈子太小传得快]
+  action: [明确想建立的声誉类型, 用可观察行为兑现, 及时纠正破坏行为]
+  params: {visibility: 高, consistency: 高}
+  counter: [对方散布负面信息]
+  related: [M9 信号, 重复博弈]
+  source: {book: 策略思维, chapter: 概念条目（章节待核）, source_type: 二手提炼, verified: false}
+  ethics: green
+  confidence: medium
+  review_status: reviewed-v1
+  v2_status: operational-v2
+
+- id: model-bargaining
+  name: 讨价还价
+  card_type: model
+  mechanism: {primary: M5, secondary: [M2]}
+  definition: 双方就分配进行谈判，结果取决于底线、耐心、替代方案与承诺能力。
+  example: 房东开价 6000，你查到同小区 5200，最后 5400 成交。
+  signals: [存在可分配利益, 双方都有替代方案, 在同一个数字上拉锯]
+  scripts: [「同小区同户型最近成交在 5200–5400。」, 「如果今天定，我能接受 5400。」]
+  recognize: [存在可分配利益, 双方都有替代方案]
+  misjudge: [只谈价格不谈多议题, 暴露底线]
+  failure_modes: [先亮底线, 让步过快, 没有BATNA]
+  action: [先算双方 BATNA, 多议题打包, 条件式让步]
+  params: {batna: 强/弱, patience: 高/低}
+  counter: [对方用最后通牒或拖延]
+  related: [M5 交换, BATNA]
+  source: {book: 策略思维, chapter: 概念条目（章节待核）, source_type: 二手提炼, verified: false}
+  ethics: green
+  confidence: high
+  review_status: reviewed-v1
+  v2_status: operational-v2
+
+- id: model-auction
+  name: 拍卖与赢家诅咒
+  card_type: model
+  mechanism: {primary: M5, secondary: [M1]}
+  definition: 竞价机制下，出价最高者中标；在共同价值拍卖中，赢家常因高估而亏损（赢家诅咒）。
+  example: 抢项目时越报越低，中标后发现成本兜不住。
+  signals: [多人竞价, 价值不确定, 出价最高者最乐观]
+  scripts: [「先算成本上限，超过就走。」, 「别人报价里可能包含我不知道的信息。」]
+  recognize: [多人竞价/价值不确定, 最高出价者最乐观]
+  misjudge: [把中标当成功, 忽略他人报价信息]
+  failure_modes: [赢家诅咒, 情绪抬价, 成本估算错误]
+  action: [先独立估值再参考他人, 设最高出价严格执行, 优先信息优势标的]
+  params: {value_range: 宽, bidders: 3+}
+  counter: [对方抬价或设局]
+  related: [M5 交换, 逆向选择]
+  source: {book: 策略思维, chapter: 概念条目（章节待核）, source_type: 二手提炼, verified: false}
+  ethics: green
+  confidence: medium
+  review_status: reviewed-v1
+  v2_status: operational-v2
+
+- id: model-mechanism-design
+  name: 激励设计（机制设计）
+  card_type: model
+  mechanism: {primary: M5, secondary: [M3]}
+  definition: 先设计规则与激励，让对方在自利驱动下做出你想要的行为；规则比说服更可靠。
+  example: 团队按「客户续约率」而不是「签单额」发奖金，大家开始重视售后。
+  signals: [需要影响一群人, 靠号召/道德约束效果差]
+  scripts: [「我们把考核改成续约率，大家自然会把售后做好。」, 「说真话的人不吃亏，规则就这么定。」]
+  recognize: [要影响一群人, 号召效果差]
+  misjudge: [只设目标不设激励, 激励与目标错位]
+  failure_modes: [指标造假, 规则被钻空子, 激励成本过高]
+  action: [明确目标行为与可观测指标, 让说真话/好好干成为最优, 预留防钻空子校验]
+  params: {incentive: 中, penalty: 低–中, observability: 高}
+  counter: [对方钻空子或合谋]
+  related: [M5 交换, 委托代理]
+  source: {book: 策略思维, chapter: 概念条目（章节待核）, source_type: 二手提炼, verified: false}
+  ethics: green
+  confidence: medium
+  review_status: reviewed-v1
+  v2_status: operational-v2

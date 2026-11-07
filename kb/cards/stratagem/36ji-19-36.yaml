@@ -1,0 +1,327 @@
+# 三十六计卡 · 第 19–36 计（v1）
+# 来源：kb/raw/sanshiliuji.txt（三十六计原文）；机制索引：kb/index/36ji-mechanism-index.json
+# 字段：id / name / set / card_type / mechanism / plain / use_when / example / actions / signals / counter / detect / risk / ethics / related / source / review_status
+
+- id: strat-fudi-chouxin
+  name: 釜底抽薪
+  set: 混战计
+  card_type: stratagem
+  mechanism: {primary: M4, secondary: [M11]}
+  plain: 不跟对手拼正面，先断其力量根基。
+  use_when: [竞争, 对手力量依赖某个根基, 正面硬拼代价高]
+  example: 不跟对手抢单，先切断其关键供应。
+  actions: [找力量根基, 断供/断合法性/断联盟, 留谈判空间]
+  signals: [对手开始护根基, 对手成本突然上升]
+  counter: [对手备份, 对手换根基]
+  detect: [对方是否在动你的根基, 你的关键依赖是否被盯上]
+  risk: [根基判断错, 断根引发全面冲突]
+  ethics: gray
+  related: [model-center-of-gravity, model-dependence-relation]
+  source: {book: 三十六计, chapter: 第十九计, source_type: 原文释义, verified: false}
+  review_status: draft-v1
+
+- id: strat-hunshui-moyu
+  name: 浑水摸鱼
+  set: 混战计
+  card_type: stratagem
+  mechanism: {primary: M5, secondary: [M7]}
+  plain: 局面越乱，越容易拿到平时拿不到的东西。
+  use_when: [竞争, 局面混乱, 各方注意力分散]
+  example: 行业洗牌时低价收资产/客户。
+  actions: [制造或利用混乱, 快速出手, 见好就收]
+  signals: [各方忙于内斗, 规则暂时失效]
+  counter: [对手清场, 混乱反噬]
+  detect: [对方是否在搅浑水, 乱局中谁获利最大]
+  risk: [水浑自己也看不清, 失控]
+  ethics: gray
+  related: []
+  source: {book: 三十六计, chapter: 第二十计, source_type: 原文释义, verified: false}
+  review_status: draft-v1
+
+- id: strat-jinchan-tuoqiao
+  name: 金蝉脱壳
+  set: 混战计
+  card_type: stratagem
+  mechanism: {primary: M8, secondary: [M1]}
+  plain: 表面维持原状，实际抽身/转移。
+  use_when: [竞争, 需要脱身但被盯住, 撤出成本高]
+  example: 表面继续做项目，实际把核心人撤走。
+  actions: [维持表面, 转移核心, 找好退路]
+  signals: [对方表面正常但核心在撤, 对方开始找退路]
+  counter: [对手识破伪装, 对手切断退路]
+  detect: [对方是否在假装继续, 核心资源是否在转移]
+  risk: [脱壳后无退路, 被识破]
+  ethics: green
+  related: []
+  source: {book: 三十六计, chapter: 第二十一计, source_type: 原文释义, verified: false}
+  review_status: draft-v1
+
+- id: strat-guanmen-zhuozei
+  name: 关门捉贼
+  set: 混战计
+  card_type: stratagem
+  mechanism: {primary: M4, secondary: [M6]}
+  plain: 对手已入局，断其退路再收。
+  use_when: [竞争, 对手已进入你的范围, 可断退路]
+  example: 先让对方承诺投入，再收紧条件。
+  actions: [诱其进入, 断退路, 留一条可控出口]
+  signals: [对方已投入, 对方开始找退路]
+  counter: [困兽犹斗, 对手留后手]
+  detect: [对方是否在诱你深入, 你的退路是否被断]
+  risk: [困兽反扑, 断得太死引发对抗]
+  ethics: gray
+  related: [model-commitment]
+  source: {book: 三十六计, chapter: 第二十二计, source_type: 原文释义, verified: false}
+  review_status: draft-v1
+
+- id: strat-yuanjiao-jingong
+  name: 远交近攻
+  set: 混战计
+  card_type: stratagem
+  mechanism: {primary: M3, secondary: [M7]}
+  plain: 与远处/次要方结盟，集中对付近处/主要对手。
+  use_when: [多方博弈, 对手多, 资源有限]
+  example: 先稳住次要部门，集中争取关键部门。
+  actions: [区分远近对手, 与远者结盟, 集中打近者]
+  signals: [对手在拉远交, 次要方态度变化]
+  counter: [对手反联盟, 远交变强]
+  detect: [对方是否在孤立你, 你的盟友是否被拉走]
+  risk: [远交养虎, 近攻失败]
+  ethics: gray
+  related: [model-coalition]
+  source: {book: 三十六计, chapter: 第二十三计, source_type: 原文释义, verified: false}
+  review_status: draft-v1
+
+- id: strat-jiadao-faguo
+  name: 假道伐虢
+  set: 混战计
+  card_type: stratagem
+  mechanism: {primary: M3, secondary: [M5]}
+  plain: 借道/借资源接近目标，抵达后再图。
+  use_when: [竞争, 目标被第三方隔开, 可借道]
+  example: 借合作项目进入对手核心领域。
+  actions: [找可借的通道, 保持表面合理, 到达后快速行动]
+  signals: [对方借你的资源接近你的核心, 借道方开始越界]
+  counter: [对方设防, 对方拒绝借道]
+  detect: [对方借道的目的, 借道后是否越界]
+  risk: [借道被拒, 借道者反被疑]
+  ethics: gray
+  related: [model-coalition]
+  source: {book: 三十六计, chapter: 第二十四计, source_type: 原文释义, verified: false}
+  review_status: draft-v1
+
+- id: strat-touliang-huanzhu
+  name: 偷梁换柱
+  set: 并战计
+  card_type: stratagem
+  mechanism: {primary: M8, secondary: [M3]}
+  plain: 暗中替换对手/联盟的核心，改变其性质。
+  use_when: [竞争, 对手/联盟依赖某个核心, 可替换]
+  example: 换掉合作方的关键负责人，改变合作方向。
+  actions: [找核心, 逐步替换, 控制过渡]
+  signals: [核心岗位变动, 合作方向突然改变]
+  counter: [对方查人事, 对方设制衡]
+  detect: [对方是否在换你的核心, 你的关键岗位是否被渗透]
+  risk: [被察觉, 替换后失控]
+  ethics: gray
+  related: [model-cooptation]
+  source: {book: 三十六计, chapter: 第二十五计, source_type: 原文释义, verified: false}
+  review_status: draft-v1
+
+- id: strat-zhisang-mahuai
+  name: 指桑骂槐
+  set: 并战计
+  card_type: stratagem
+  mechanism: {primary: M9, secondary: [M12]}
+  plain: 不明说，借敲打第三方来警告/立威。
+  use_when: [权威, 不宜直接冲突, 需要立威]
+  example: 在会上批评一个相似案例，让真正对象听懂。
+  actions: [选第三方案例, 话说得可进可退, 观察对象反应]
+  signals: [对方借别人敲打你, 你开始对号入座]
+  counter: [对方装不懂, 对方直接质问]
+  detect: [对方是否在指桑骂槐, 你是不是那个桑]
+  risk: [误伤第三方, 被识破]
+  ethics: gray
+  related: [model-reputation]
+  source: {book: 三十六计, chapter: 第二十六计, source_type: 原文释义, verified: false}
+  review_status: draft-v1
+
+- id: strat-jiachi-budian
+  name: 假痴不癫
+  set: 并战计
+  card_type: stratagem
+  mechanism: {primary: M1, secondary: [M8]}
+  plain: 装傻、示弱，隐藏真实能力与意图。
+  use_when: [竞争, 对手警惕高, 需要隐藏实力]
+  example: 明明看懂了，先装作不懂，听对方多说。
+  actions: [示弱, 观察, 在关键时点亮底]
+  signals: [对方突然示弱, 对方装不懂]
+  counter: [对方试探, 对方不吃这套]
+  detect: [对方是否在装傻, 他的真实能力如何]
+  risk: [装傻过头失去机会, 被试探识破]
+  ethics: gray
+  related: [model-signaling]
+  source: {book: 三十六计, chapter: 第二十七计, source_type: 原文释义, verified: false}
+  review_status: draft-v1
+
+- id: strat-shangwu-chouti
+  name: 上屋抽梯
+  set: 并战计
+  card_type: stratagem
+  mechanism: {primary: M6, secondary: [M4]}
+  plain: 诱对手上楼，再抽走梯子，使其进退两难。
+  use_when: [竞争, 对手可被诱导投入, 需锁定其选择]
+  example: 先给对方资源让其投入，再收紧条件。
+  actions: [给甜头, 诱其投入, 抽梯/锁定]
+  signals: [对方投入越来越多, 对方退路变少]
+  counter: [对方留后手, 对方不上钩]
+  detect: [对方是否在给你甜头, 你的退路是否还在]
+  risk: [对方不上钩, 抽梯引发死斗]
+  ethics: gray
+  related: [model-commitment]
+  source: {book: 三十六计, chapter: 第二十八计, source_type: 原文释义, verified: false}
+  review_status: draft-v1
+
+- id: strat-shushang-kaihua
+  name: 树上开花
+  set: 并战计
+  card_type: stratagem
+  mechanism: {primary: M9, secondary: [M3]}
+  plain: 借势造声势，让弱小的看起来强大。
+  use_when: [竞争, 实力弱, 需要借势]
+  example: 借大平台/大客户背书，放大自己的可信度。
+  actions: [借势, 造可见声势, 用事实兜底]
+  signals: [对方突然声势很大, 对方在借谁的势]
+  counter: [对方看实力, 对方戳破虚势]
+  detect: [对方的声势有多少实物支撑, 借的势是否真实]
+  risk: [虚势被戳破, 借势反噬]
+  ethics: gray
+  related: [model-social-proof, model-reputation]
+  source: {book: 三十六计, chapter: 第二十九计, source_type: 原文释义, verified: false}
+  review_status: draft-v1
+
+- id: strat-fanke-weizhu
+  name: 反客为主
+  set: 并战计
+  card_type: stratagem
+  mechanism: {primary: M8, secondary: [M3]}
+  plain: 从客位逐步夺取主导权。
+  use_when: [竞争, 你处于客位, 可逐步渗透]
+  example: 先从协助角色切入，再逐步接管关键流程。
+  actions: [先进入, 逐步接管关键环节, 最后定规则]
+  signals: [对方开始接管你的流程, 对方权限变大]
+  counter: [对方限制权限, 对方设制衡]
+  detect: [对方是否在逐步接管, 你的核心权限是否被拿走]
+  risk: [过早暴露, 被反制]
+  ethics: gray
+  related: [model-cooptation, model-framing-power]
+  source: {book: 三十六计, chapter: 第三十计, source_type: 原文释义, verified: false}
+  review_status: draft-v1
+
+- id: strat-meiren-ji
+  name: 美人计
+  set: 败战计
+  card_type: stratagem
+  mechanism: {primary: M5, secondary: [M7]}
+  plain: 用对方软肋/欲望影响其判断。
+  use_when: [竞争, 对手有明显软肋, 仅限历史解析与防御识别]
+  example: 历史上用美色/情感削弱对手意志。
+  actions: [仅作历史解析, 现实只做防御识别]
+  signals: [对方刻意用情感/欲望接近]
+  counter: [自律与制度, 识别诱惑]
+  detect: [对方是否在利用你的欲望/软肋]
+  risk: [伦理红线, 违法风险]
+  ethics: red
+  related: [model-liking]
+  source: {book: 三十六计, chapter: 第三十一计, source_type: 原文释义, verified: false}
+  review_status: draft-v1
+
+- id: strat-kongcheng-ji
+  name: 空城计
+  set: 败战计
+  card_type: stratagem
+  mechanism: {primary: M1, secondary: [M9]}
+  plain: 虚弱时故意示强，让对手不敢进攻。
+  use_when: [竞争, 我弱, 对手多疑]
+  example: 资源不足时表现得从容，让对手犹豫。
+  actions: [保持镇定, 制造有底牌的样子, 找机会补实]
+  signals: [对方过于镇定, 对方在虚张声势]
+  counter: [对方小规模试探, 对方直接进攻]
+  detect: [对方的镇定是否有实力支撑, 用小试探验证]
+  risk: [被试探识破, 虚而示虚失效]
+  ethics: gray
+  related: [model-signaling]
+  source: {book: 三十六计, chapter: 第三十二计, source_type: 原文释义, verified: false}
+  review_status: draft-v1
+
+- id: strat-fanjian-ji
+  name: 反间计
+  set: 败战计
+  card_type: stratagem
+  mechanism: {primary: M7, secondary: [M1]}
+  plain: 利用/制造对手内部信息差，使其互疑。
+  use_when: [竞争, 对手内部有信息差, 仅限防御识别与合法信息管理]
+  example: 让对手误以为内部有人泄密。
+  actions: [仅作防御识别, 现实操作禁止]
+  signals: [对手内部开始互查, 信息突然对不上]
+  counter: [多源核实, 保护信息源]
+  detect: [对方是否在制造你内部矛盾, 信息是否被污染]
+  risk: [伦理红线, 诽谤/不正当竞争风险]
+  ethics: red
+  related: []
+  source: {book: 三十六计, chapter: 第三十三计, source_type: 原文释义, verified: false}
+  review_status: draft-v1
+
+- id: strat-kurou-ji
+  name: 苦肉计
+  set: 败战计
+  card_type: stratagem
+  mechanism: {primary: M6, secondary: [M1]}
+  plain: 自伤/付出代价，换取对方信任。
+  use_when: [竞争, 需要取信对手, 仅限历史解析与防御识别]
+  example: 历史上自伤取信，再行反间。
+  actions: [仅作历史解析, 现实只做防御识别]
+  signals: [对方突然自曝其短/自伤]
+  counter: [看长期行为, 不轻信代价]
+  detect: [对方的自伤是否为了取信你]
+  risk: [伦理红线, 自伤失控]
+  ethics: red
+  related: [model-commitment]
+  source: {book: 三十六计, chapter: 第三十四计, source_type: 原文释义, verified: false}
+  review_status: draft-v1
+
+- id: strat-lianhuan-ji
+  name: 连环计
+  set: 败战计
+  card_type: stratagem
+  mechanism: {primary: M5, secondary: [M4]}
+  plain: 多计叠加、环环相扣，让对手顾此失彼。
+  use_when: [竞争, 单一手段不够, 有多步操作空间]
+  example: 先用一计牵制，再用一计取利，最后收尾。
+  actions: [设计多步, 确保每步衔接, 留断点预案]
+  signals: [对方动作像有后续, 多个异常同时出现]
+  counter: [断其一环, 打乱节奏]
+  detect: [对方是否在多线布局, 哪一环最脆弱]
+  risk: [一环断全盘崩, 复杂度失控]
+  ethics: gray
+  related: []
+  source: {book: 三十六计, chapter: 第三十五计, source_type: 原文释义, verified: false}
+  review_status: draft-v1
+
+- id: strat-zou-weishang
+  name: 走为上
+  set: 败战计
+  card_type: stratagem
+  mechanism: {primary: M8, secondary: [M11]}
+  plain: 劣势且无胜算时，主动撤退保存实力。
+  use_when: [竞争, 劣势, 无胜算, 需止损]
+  example: 项目明显救不回来，及时止损退出。
+  actions: [判断无胜算, 体面撤退, 保存核心]
+  signals: [对方开始撤退, 对方在保存核心]
+  counter: [追击, 不给退路]
+  detect: [对方是否在假装坚持实际撤退, 你的退路是否还在]
+  risk: [走成溃败, 士气受损]
+  ethics: green
+  related: [model-walk-away]
+  source: {book: 三十六计, chapter: 第三十六计, source_type: 原文释义, verified: false}
+  review_status: draft-v1

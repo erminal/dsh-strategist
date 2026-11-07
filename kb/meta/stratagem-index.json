@@ -1,0 +1,403 @@
+{
+  "version": "0.1",
+  "updated": "2026-11-07",
+  "total": 36,
+  "cards": [
+    {
+      "id": "strat-mantian-guohai",
+      "name": "瞒天过海",
+      "set": "胜战计",
+      "primary": "M1",
+      "secondary": [
+        "M12"
+      ],
+      "ethics": "gray",
+      "file": "36ji-1-18.yaml"
+    },
+    {
+      "id": "strat-weiwei-jiuzhao",
+      "name": "围魏救赵",
+      "set": "胜战计",
+      "primary": "M4",
+      "secondary": [
+        "M2"
+      ],
+      "ethics": "green",
+      "file": "36ji-1-18.yaml"
+    },
+    {
+      "id": "strat-jiedao-sharen",
+      "name": "借刀杀人",
+      "set": "胜战计",
+      "primary": "M3",
+      "secondary": [
+        "M7"
+      ],
+      "ethics": "gray",
+      "file": "36ji-1-18.yaml"
+    },
+    {
+      "id": "strat-yiyi-dailao",
+      "name": "以逸待劳",
+      "set": "胜战计",
+      "primary": "M2",
+      "secondary": [
+        "M11"
+      ],
+      "ethics": "green",
+      "file": "36ji-1-18.yaml"
+    },
+    {
+      "id": "strat-chenhuo-dajie",
+      "name": "趁火打劫",
+      "set": "胜战计",
+      "primary": "M5",
+      "secondary": [
+        "M11"
+      ],
+      "ethics": "gray",
+      "file": "36ji-1-18.yaml"
+    },
+    {
+      "id": "strat-shengdong-jixi",
+      "name": "声东击西",
+      "set": "胜战计",
+      "primary": "M1",
+      "secondary": [
+        "M9"
+      ],
+      "ethics": "gray",
+      "file": "36ji-1-18.yaml"
+    },
+    {
+      "id": "strat-wuzhong-shengyou",
+      "name": "无中生有",
+      "set": "敌战计",
+      "primary": "M1",
+      "secondary": [
+        "M12"
+      ],
+      "ethics": "gray",
+      "file": "36ji-1-18.yaml"
+    },
+    {
+      "id": "strat-andu-chencang",
+      "name": "暗渡陈仓",
+      "set": "敌战计",
+      "primary": "M1",
+      "secondary": [
+        "M2"
+      ],
+      "ethics": "gray",
+      "file": "36ji-1-18.yaml"
+    },
+    {
+      "id": "strat-gean-guanhuo",
+      "name": "隔岸观火",
+      "set": "敌战计",
+      "primary": "M3",
+      "secondary": [
+        "M2"
+      ],
+      "ethics": "gray",
+      "file": "36ji-1-18.yaml"
+    },
+    {
+      "id": "strat-xiaoli-cangdao",
+      "name": "笑里藏刀",
+      "set": "敌战计",
+      "primary": "M1",
+      "secondary": [
+        "M9"
+      ],
+      "ethics": "gray",
+      "file": "36ji-1-18.yaml"
+    },
+    {
+      "id": "strat-lidai-taozhang",
+      "name": "李代桃僵",
+      "set": "敌战计",
+      "primary": "M5",
+      "secondary": [
+        "M8"
+      ],
+      "ethics": "green",
+      "file": "36ji-1-18.yaml"
+    },
+    {
+      "id": "strat-shunshou-qianyang",
+      "name": "顺手牵羊",
+      "set": "敌战计",
+      "primary": "M5",
+      "secondary": [
+        "M10"
+      ],
+      "ethics": "gray",
+      "file": "36ji-1-18.yaml"
+    },
+    {
+      "id": "strat-dacao-jingshe",
+      "name": "打草惊蛇",
+      "set": "攻战计",
+      "primary": "M10",
+      "secondary": [
+        "M1"
+      ],
+      "ethics": "green",
+      "file": "36ji-1-18.yaml"
+    },
+    {
+      "id": "strat-jieshi-huanhun",
+      "name": "借尸还魂",
+      "set": "攻战计",
+      "primary": "M12",
+      "secondary": [
+        "M3"
+      ],
+      "ethics": "gray",
+      "file": "36ji-1-18.yaml"
+    },
+    {
+      "id": "strat-diaohu-lishan",
+      "name": "调虎离山",
+      "set": "攻战计",
+      "primary": "M2",
+      "secondary": [
+        "M4"
+      ],
+      "ethics": "gray",
+      "file": "36ji-1-18.yaml"
+    },
+    {
+      "id": "strat-yuqin-guzong",
+      "name": "欲擒故纵",
+      "set": "攻战计",
+      "primary": "M2",
+      "secondary": [
+        "M6"
+      ],
+      "ethics": "green",
+      "file": "36ji-1-18.yaml"
+    },
+    {
+      "id": "strat-paozhuan-yinyu",
+      "name": "抛砖引玉",
+      "set": "攻战计",
+      "primary": "M5",
+      "secondary": [
+        "M1"
+      ],
+      "ethics": "green",
+      "file": "36ji-1-18.yaml"
+    },
+    {
+      "id": "strat-qinzei-qinwang",
+      "name": "擒贼擒王",
+      "set": "攻战计",
+      "primary": "M4",
+      "secondary": [
+        "M9"
+      ],
+      "ethics": "gray",
+      "file": "36ji-1-18.yaml"
+    },
+    {
+      "id": "strat-fudi-chouxin",
+      "name": "釜底抽薪",
+      "set": "混战计",
+      "primary": "M4",
+      "secondary": [
+        "M11"
+      ],
+      "ethics": "gray",
+      "file": "36ji-19-36.yaml"
+    },
+    {
+      "id": "strat-hunshui-moyu",
+      "name": "浑水摸鱼",
+      "set": "混战计",
+      "primary": "M5",
+      "secondary": [
+        "M7"
+      ],
+      "ethics": "gray",
+      "file": "36ji-19-36.yaml"
+    },
+    {
+      "id": "strat-jinchan-tuoqiao",
+      "name": "金蝉脱壳",
+      "set": "混战计",
+      "primary": "M8",
+      "secondary": [
+        "M1"
+      ],
+      "ethics": "green",
+      "file": "36ji-19-36.yaml"
+    },
+    {
+      "id": "strat-guanmen-zhuozei",
+      "name": "关门捉贼",
+      "set": "混战计",
+      "primary": "M4",
+      "secondary": [
+        "M6"
+      ],
+      "ethics": "gray",
+      "file": "36ji-19-36.yaml"
+    },
+    {
+      "id": "strat-yuanjiao-jingong",
+      "name": "远交近攻",
+      "set": "混战计",
+      "primary": "M3",
+      "secondary": [
+        "M7"
+      ],
+      "ethics": "gray",
+      "file": "36ji-19-36.yaml"
+    },
+    {
+      "id": "strat-jiadao-faguo",
+      "name": "假道伐虢",
+      "set": "混战计",
+      "primary": "M3",
+      "secondary": [
+        "M5"
+      ],
+      "ethics": "gray",
+      "file": "36ji-19-36.yaml"
+    },
+    {
+      "id": "strat-touliang-huanzhu",
+      "name": "偷梁换柱",
+      "set": "并战计",
+      "primary": "M8",
+      "secondary": [
+        "M3"
+      ],
+      "ethics": "gray",
+      "file": "36ji-19-36.yaml"
+    },
+    {
+      "id": "strat-zhisang-mahuai",
+      "name": "指桑骂槐",
+      "set": "并战计",
+      "primary": "M9",
+      "secondary": [
+        "M12"
+      ],
+      "ethics": "gray",
+      "file": "36ji-19-36.yaml"
+    },
+    {
+      "id": "strat-jiachi-budian",
+      "name": "假痴不癫",
+      "set": "并战计",
+      "primary": "M1",
+      "secondary": [
+        "M8"
+      ],
+      "ethics": "gray",
+      "file": "36ji-19-36.yaml"
+    },
+    {
+      "id": "strat-shangwu-chouti",
+      "name": "上屋抽梯",
+      "set": "并战计",
+      "primary": "M6",
+      "secondary": [
+        "M4"
+      ],
+      "ethics": "gray",
+      "file": "36ji-19-36.yaml"
+    },
+    {
+      "id": "strat-shushang-kaihua",
+      "name": "树上开花",
+      "set": "并战计",
+      "primary": "M9",
+      "secondary": [
+        "M3"
+      ],
+      "ethics": "gray",
+      "file": "36ji-19-36.yaml"
+    },
+    {
+      "id": "strat-fanke-weizhu",
+      "name": "反客为主",
+      "set": "并战计",
+      "primary": "M8",
+      "secondary": [
+        "M3"
+      ],
+      "ethics": "gray",
+      "file": "36ji-19-36.yaml"
+    },
+    {
+      "id": "strat-meiren-ji",
+      "name": "美人计",
+      "set": "败战计",
+      "primary": "M5",
+      "secondary": [
+        "M7"
+      ],
+      "ethics": "red",
+      "file": "36ji-19-36.yaml"
+    },
+    {
+      "id": "strat-kongcheng-ji",
+      "name": "空城计",
+      "set": "败战计",
+      "primary": "M1",
+      "secondary": [
+        "M9"
+      ],
+      "ethics": "gray",
+      "file": "36ji-19-36.yaml"
+    },
+    {
+      "id": "strat-fanjian-ji",
+      "name": "反间计",
+      "set": "败战计",
+      "primary": "M7",
+      "secondary": [
+        "M1"
+      ],
+      "ethics": "red",
+      "file": "36ji-19-36.yaml"
+    },
+    {
+      "id": "strat-kurou-ji",
+      "name": "苦肉计",
+      "set": "败战计",
+      "primary": "M6",
+      "secondary": [
+        "M1"
+      ],
+      "ethics": "red",
+      "file": "36ji-19-36.yaml"
+    },
+    {
+      "id": "strat-lianhuan-ji",
+      "name": "连环计",
+      "set": "败战计",
+      "primary": "M5",
+      "secondary": [
+        "M4"
+      ],
+      "ethics": "gray",
+      "file": "36ji-19-36.yaml"
+    },
+    {
+      "id": "strat-zou-weishang",
+      "name": "走为上",
+      "set": "败战计",
+      "primary": "M8",
+      "secondary": [
+        "M11"
+      ],
+      "ethics": "green",
+      "file": "36ji-19-36.yaml"
+    }
+  ]
+}

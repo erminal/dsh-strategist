@@ -1,0 +1,243 @@
+# 统一变体卡 · 第三批（V6–V12，16 个）
+# 来源：kb/index/unified-variants.json
+# 字段：id / name / mechanism / members / definition / use_when / actions / signals / counter / detect / failure_modes / ethics / related / status
+
+- id: var-consistency
+  name: 承诺一致与互惠原则
+  mechanism: {primary: M6, secondary: [M12]}
+  members: [model-commitment-consistency, model-reciprocity-principle]
+  definition: 人会为先前承诺保持一致，也会因受惠产生回报压力；适度的社交压力能推动决定。
+  use_when: [对方已公开表态, 对方先给了好处]
+  actions: [用小承诺引导, 先给再取, 留边界不绑架]
+  signals: [对方拿你过去的表态说事, 对方先送小恩小惠]
+  counter: [对方用小步套牢你, 用好处绑架你]
+  detect: [自己是否因为面子/人情而答应]
+  failure_modes: [为面子硬撑, 被小恩小惠套住]
+  ethics: gray
+  related: [var-commitment]
+  status: unified-v1
+
+- id: var-offdef
+  name: 攻防转换
+  mechanism: {primary: M6, secondary: [M8]}
+  members: [model-offense-defense]
+  definition: 攻与防各有优势，关键是时机与转换；防御蓄力，进攻扩大战果。
+  use_when: [局势从攻转守或从守转攻]
+  actions: [设转换条件, 防御时蓄力, 进攻时留后路]
+  signals: [对方开始收缩/扩张]
+  counter: [对方在你转换时突袭]
+  detect: [自己是否只会一种姿态]
+  failure_modes: [恋战, 转换太慢]
+  ethics: green
+  related: [var-exit]
+  status: unified-v1
+
+- id: var-selfharm
+  name: 自伤取信（red）
+  mechanism: {primary: M6, secondary: [M1]}
+  members: [strat-kurou-ji]
+  definition: 自伤/付出代价换取对方信任；仅历史解析与防御识别，现实禁用。
+  use_when: [仅历史解析/防御识别]
+  actions: [只做识别与防御, 不提供现实操作]
+  signals: [对方突然自曝其短/自伤]
+  counter: [看长期行为, 不轻信代价]
+  detect: [对方的自伤是否为了取信你]
+  failure_modes: [伦理红线, 自伤失控]
+  ethics: red
+  related: [var-commitment]
+  status: unified-v1
+
+- id: var-divide
+  name: 分化与离间（red）
+  mechanism: {primary: M7, secondary: [M1]}
+  members: [model-divide-and-rule, strat-fanjian-ji]
+  definition: 制造对手内部不信任或利用真实分歧，削弱其合力；现实操作涉红线，只做防御识别。
+  use_when: [对手联盟稳固, 内部有潜在矛盾]
+  actions: [只做防御识别, 现实操作不提供]
+  signals: [对手内部开始互查, 信息对不上]
+  counter: [多源核实, 保护信息源]
+  detect: [对方是否在挑拨你们, 信息是否被污染]
+  failure_modes: [诽谤/不正当竞争风险]
+  ethics: red
+  related: [var-coalition]
+  status: unified-v1
+
+- id: var-people
+  name: 人与问题分开
+  mechanism: {primary: M7, secondary: [M12]}
+  members: [model-separate-people]
+  definition: 把情绪、关系与实质问题分开，避免把对人的不满带进条款。
+  use_when: [谈判中情绪升温, 对方人身攻击]
+  actions: [先处理情绪, 用中性语言, 私下沟通敏感点]
+  signals: [对方开始人身攻击, 气氛升温]
+  counter: [对方故意把人和问题绑一起]
+  detect: [自己是否在用让步换关系]
+  failure_modes: [情绪带入条款, 关系裂缝扩大]
+  ethics: green
+  related: [var-framing]
+  status: unified-v1
+
+- id: var-resistance
+  name: 抵抗管理
+  mechanism: {primary: M8, secondary: [M9]}
+  members: [model-resistance, model-resistance-management]
+  definition: 抵抗是信号不是终点；先判断来源（利益/程序/情绪/权力），再选择交换、参与或施压。
+  use_when: [推行受阻, 出现消极执行]
+  actions: [诊断抵抗来源, 给表达渠道, 用交换化解]
+  signals: [表面同意实际拖延, 公开异议]
+  counter: [对方把异议升级为对抗]
+  detect: [抵抗是利益问题还是情绪问题]
+  failure_modes: [高压反弹, 表面服从]
+  ethics: green
+  related: [var-convert]
+  status: unified-v1
+
+- id: var-convert
+  name: 转换与夺权
+  mechanism: {primary: M8, secondary: [M3]}
+  members: [strat-touliang-huanzhu, strat-fanke-weizhu]
+  definition: 从客位逐步接管关键环节，或换掉核心改变性质；渐进比硬夺更稳。
+  use_when: [你处于客位, 对手依赖某个核心]
+  actions: [先进入, 逐步接管关键流程, 控制过渡, 设制衡]
+  signals: [核心岗位变动, 对方权限变大]
+  counter: [对方限制权限, 查人事]
+  detect: [对方是否在逐步接管你的核心]
+  failure_modes: [过早暴露, 替换后失控]
+  ethics: gray
+  related: [var-cooptation]
+  status: unified-v1
+
+- id: var-prestige
+  name: 立威与声誉
+  mechanism: {primary: M9, secondary: [M12]}
+  members: [model-reputation, model-authority-principle, model-fear-vs-love, strat-zhisang-mahuai, strat-shushang-kaihua]
+  definition: 用可观察行为建立可靠/强硬/公平的预期；立威要不越界，借势要有实物。
+  use_when: [需要维持权威, 对方在试探]
+  actions: [选想建立的声誉类型, 用行为兑现, 借势要备事实, 不羞辱人]
+  signals: [对方开始试探, 对方借势造势]
+  counter: [对方攻击声誉, 对方戳破虚势]
+  detect: [自己是被怕还是被尊重, 对方的声望有多少实物]
+  failure_modes: [越界成恨, 虚势被戳破, 人设崩塌]
+  ethics: gray
+  related: [var-framing, var-liking]
+  status: unified-v1
+
+- id: var-liking
+  name: 喜好与影响力
+  mechanism: {primary: M9, secondary: [M12]}
+  members: [model-liking, model-influence-tactics]
+  definition: 人更容易答应喜欢或相似的人；好感可以被放大，也可以被利用。
+  use_when: [对方刻意拉近关系, 需要推动决定]
+  actions: [建立真实好感, 把关系与交易分开, 先软后硬]
+  signals: [对方刻意讨好/赞美]
+  counter: [对方用讨好套让步, 施压过度]
+  detect: [自己是否因喜欢而忽略条款]
+  failure_modes: [因喜欢让步, 被讨好套住]
+  ethics: gray
+  related: [var-prestige, var-temptation]
+  status: unified-v1
+
+- id: var-intel
+  name: 试探与情报
+  mechanism: {primary: M10, secondary: [M12]}
+  members: [model-ach, model-mirror-imaging, model-counsel-information, strat-dacao-jingshe]
+  definition: 用最小成本获取信息：主动试探、多假设分析、多源谏言，避免镜像与单源失真。
+  use_when: [信息不足, 需要看清对方]
+  actions: [设计小试探, 列 3–5 个假设, 多源核对, 找反例]
+  signals: [对方反应过度, 信息矛盾]
+  counter: [对方反向试探, 喂假信息]
+  detect: [自己是否在镜像对方, 是否只信一个来源]
+  failure_modes: [打草惊蛇, 只验证一个假设, 信息失真]
+  ethics: green
+  related: [var-fabrication]
+  status: unified-v1
+
+- id: var-surprise
+  name: 出敌不意与扰乱
+  mechanism: {primary: M10, secondary: [M2]}
+  members: [model-surprise, model-loop-disruption]
+  definition: 在对手未预料的时间/方式行动，或打乱其观察-定向循环，赢得时间差。
+  use_when: [对手有固定预期, 你有信息/节奏优势]
+  actions: [隐藏意图, 选意外时机, 确保后续, 留谈判出口]
+  signals: [对手节奏被打乱, 对手开始误判]
+  counter: [对手保持警戒, 对手稳定情绪]
+  detect: [对方是否在扰乱你, 你的信息源可靠吗]
+  failure_modes: [奇袭无后续, 扰动引发升级]
+  ethics: gray
+  related: [var-tempo, var-signal]
+  status: unified-v1
+
+- id: var-attrition
+  name: 消耗与摩擦
+  mechanism: {primary: M11, secondary: [M2]}
+  members: [model-attrition, model-arms-race, model-friction, model-economy-of-force, model-limited-conflict]
+  definition: 不比谁打得漂亮，比谁撑得久；拼资源、补给与意志，同时控制代价。
+  use_when: [双方都难速胜, 资源成为关键]
+  actions: [算消耗速度, 保护补给, 找对方更痛点, 设代价上限]
+  signals: [双方开始拼资源, 利润/士气下滑]
+  counter: [对方速战速决, 把你拖入更高成本领域]
+  detect: [自己撑得住吗, 对方是否在拖垮你]
+  failure_modes: [自耗过快, 被拖垮, 摩擦失控]
+  ethics: green
+  related: [var-tempo]
+  status: unified-v1
+
+- id: var-legitimacy
+  name: 合法性与形象
+  mechanism: {primary: M12, secondary: [M9]}
+  members: [model-legitimacy, model-legitimacy-princely, model-appearance-management]
+  definition: 用制度、惯例、功绩与一致的形象获得认可；合法性降低阻力。
+  use_when: [被质疑「凭什么」, 需要正当理由]
+  actions: [找制度依据, 走正式程序, 用行为兑现形象, 危机时坦诚]
+  signals: [对方质疑程序/动机]
+  counter: [对方攻击合法性, 揭穿形象不一致]
+  detect: [自己的依据是否事后找的, 形象与行为是否一致]
+  failure_modes: [程序瑕疵, 人设崩塌]
+  ethics: green
+  related: [var-framing]
+  status: unified-v1
+
+- id: var-agenda
+  name: 议程与目的
+  mechanism: {primary: M12, secondary: [M1]}
+  members: [model-agenda-setting, model-political-aim]
+  definition: 决定讨论什么、按什么顺序讨论，以及为什么而战；议程权是隐性权力。
+  use_when: [议题被少数人定, 手段偏离目的]
+  actions: [提前提交议题, 争取排序, 定期回看目的]
+  signals: [你的议题排不上, 手段越来越激烈]
+  counter: [对方拖堂/塞无关议题, 用升级拖你偏离目的]
+  detect: [议程是谁定的, 现在还在服务最初目的吗]
+  failure_modes: [议题被压, 目的漂移]
+  ethics: gray
+  related: [var-framing, var-fortune]
+  status: unified-v1
+
+- id: var-bias
+  name: 认知偏差
+  mechanism: {primary: M12, secondary: [M10]}
+  members: [model-confirmation-bias, model-anchoring-bias, model-availability-bias, model-groupthink, model-orientation, model-psychological-disruption]
+  definition: 判断会被确认偏误、锚定、可得性、群体思维与旧框架扭曲；先识别，再纠偏。
+  use_when: [信息不足但有结论, 群体一致]
+  actions: [主动找反证, 独立估值, 找基础概率, 指定反方, 多框架对照]
+  signals: [只看到支持证据, 会上没人反对]
+  counter: [对方利用你的偏差喂料/设锚]
+  detect: [自己是否只找支持证据, 是否被一个案例带跑]
+  failure_modes: [确认偏误, 群体盲区, 定向错误]
+  ethics: green
+  related: [var-intel]
+  status: unified-v1
+
+- id: var-socialproof
+  name: 社会认同
+  mechanism: {primary: M12, secondary: [M5]}
+  members: [model-social-proof]
+  definition: 不确定时参考多数人的行为；「大家都这样」会降低判断门槛。
+  use_when: [你不确定, 对方强调多数选择]
+  actions: [看数据来源, 用真实案例, 识别伪造口碑]
+  signals: [对方强调「都在买/都同意」]
+  counter: [对方伪造多数意见]
+  detect: [样本是谁, 数据能核吗]
+  failure_modes: [从众踩坑, 样本偏差]
+  ethics: gray
+  related: [var-prestige]
+  status: unified-v1

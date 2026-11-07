@@ -1,0 +1,172 @@
+# 西方/现代博弈模型卡 · 第 5 批：谈判分析（v2 操作升级）
+# 来源：《谈判分析》(Raiffa) —— 二手提炼；v2 未取得原书全文，未逐页核对
+# v2 升级：每卡补 example / signals / scripts / failure_modes / 参数默认值 / related
+# 字段：id / name / card_type / mechanism / definition / example / signals / scripts / recognize / misjudge / failure_modes / action / params / counter / related / source / ethics / confidence / review_status / v2_status
+
+- id: model-reservation-price
+  name: 保留价
+  card_type: model
+  mechanism: {primary: M5, secondary: [M8]}
+  definition: 你愿意接受的最低/最高条件；低于它就该走，高于它才有协议空间。
+  example: 你最低能接受 5000，对方报 4800，直接走人。
+  signals: [需要判断某个报价能不能接受, 对方在压价]
+  scripts: [「低于 5000 我不签。」, 「这个数以下免谈，不是讨价还价。」]
+  recognize: [需要判断某个报价能不能接受, 对方在压价]
+  misjudge: [没算保留价就上桌, 把期望当保留价]
+  failure_modes: [保留价算错, 被情绪压低, 事后反悔]
+  action: [提前算清保留价, 用它判断是否离场, 不轻易暴露]
+  params: {reservation: 5000, batna: 中}
+  counter: [对方用情绪或时间压力让你降低保留价]
+  related: [M5 交换, BATNA]
+  source: {book: 谈判分析, chapter: 概念条目（章节待核）, source_type: 二手提炼, verified: false}
+  ethics: green
+  confidence: high
+  review_status: reviewed-v1
+  v2_status: operational-v2
+
+- id: model-risk-preference
+  name: 风险偏好
+  card_type: model
+  mechanism: {primary: M5, secondary: [M6]}
+  definition: 不同人对不确定收益的态度不同；风险厌恶者愿意为确定性付溢价。
+  example: 对方怕浮动价，你给固定价，换他多让一点。
+  signals: [结果不确定, 对方在犹豫, 你可以提供确定性]
+  scripts: [「你更想要确定，还是可能更高？」, 「固定价我让一点，你多给一点。」]
+  recognize: [结果不确定, 对方在犹豫, 你可以提供确定性]
+  misjudge: [假设对方和你一样风险中性, 忽略损失厌恶]
+  failure_modes: [误判对方风险态度, 确定性溢价给太多, 忽略长期]
+  action: [识别对方风险态度, 用确定性换让步, 给区间而非单点]
+  params: {risk_attitude: 厌恶/中性/偏好, certainty_premium: 5–15%}
+  counter: [对方伪装风险偏好]
+  related: [M5 交换, 损失厌恶]
+  source: {book: 谈判分析, chapter: 概念条目（章节待核）, source_type: 二手提炼, verified: false}
+  ethics: green
+  confidence: medium
+  review_status: reviewed-v1
+  v2_status: operational-v2
+
+- id: model-time-preference
+  name: 时间偏好
+  card_type: model
+  mechanism: {primary: M2, secondary: [M5]}
+  definition: 谁更急，谁就让步更多；耐心本身就是谈判力。
+  example: 你急着月底前签约，对方拖到月底压价。
+  signals: [有截止时间, 一方明显更急]
+  scripts: [「我这边有时间表。」, 「拖下去对谁都不好，我们定个节点。」]
+  recognize: [有截止时间, 一方明显更急]
+  misjudge: [暴露自己的时间压力, 把对方拖延当没兴趣]
+  failure_modes: [暴露截止日, 被拖到最后一刻, 慌乱让步]
+  action: [隐藏时间压力, 用截止时间施压, 计算等待成本]
+  params: {deadline: 中, patience: 高/低}
+  counter: [对方用拖延消耗你]
+  related: [M2 节奏, 让步节奏]
+  source: {book: 谈判分析, chapter: 概念条目（章节待核）, source_type: 二手提炼, verified: false}
+  ethics: green
+  confidence: high
+  review_status: reviewed-v1
+  v2_status: operational-v2
+
+- id: model-multi-issue-tradeoff
+  name: 多议题权衡
+  card_type: model
+  mechanism: {primary: M5, secondary: [M12]}
+  definition: 不同议题对双方重要性不同，用权重差异换条件，把零和变正和。
+  example: 你更在乎价格，对方更在乎账期，正好交换。
+  signals: [多个条款可谈, 双方优先级不同]
+  scripts: [「价格我让，账期你给我。」, 「先说说你最在乎哪条。」]
+  recognize: [多个条款可谈, 双方优先级不同]
+  misjudge: [把所有议题当同等重要, 逐项零和谈]
+  failure_modes: [优先级估错, 打包失衡, 对方隐藏偏好]
+  action: [列议题与权重, 用低权重换高权重, 设计组合方案]
+  params: {issues: 3–5 个, weights: 差异明显}
+  counter: [对方隐藏真实优先级]
+  related: [M5 交换, 多议题打包]
+  source: {book: 谈判分析, chapter: 概念条目（章节待核）, source_type: 二手提炼, verified: false}
+  ethics: green
+  confidence: high
+  review_status: reviewed-v1
+  v2_status: operational-v2
+
+- id: model-pareto-frontier
+  name: 帕累托前沿
+  card_type: model
+  mechanism: {primary: M5, secondary: [M12]}
+  definition: 在不损害任何一方的前提下无法再改进的方案集合；谈判目标是把方案推到前沿。
+  example: 双方各让一步后，发现还能通过调整服务范围让双方都更好。
+  signals: [存在双赢改进空间, 双方只盯着一个数字]
+  scripts: [「有没有让双方都更好的方案？」, 「别停在低效点，再看看组合。」]
+  recognize: [存在双赢改进空间, 双方只盯着一个数字]
+  misjudge: [以为零和, 忽略可改进空间]
+  failure_modes: [停在低效点, 找不到改进项, 对方拒绝]
+  action: [找双赢改进, 用多议题组合, 避免在低效方案上签字]
+  params: {frontier: 改进空间, efficiency: 中–高}
+  counter: [对方坚持零和分配]
+  related: [M5 交换, 整合式谈判]
+  source: {book: 谈判分析, chapter: 概念条目（章节待核）, source_type: 二手提炼, verified: false}
+  ethics: green
+  confidence: medium
+  review_status: reviewed-v1
+  v2_status: operational-v2
+
+- id: model-integrative-bargaining
+  name: 整合式谈判
+  card_type: model
+  mechanism: {primary: M5, secondary: [M12]}
+  definition: 以做大蛋糕为目标，通过交换不同偏好实现双赢；与分配式谈判相对。
+  example: 两家公司不只谈价格，还谈联合营销，把市场做大。
+  signals: [双方有不同优先级, 存在合作空间]
+  scripts: [「除了分蛋糕，我们能不能一起做大？」, 「你的优先级是什么，我看看怎么换。」]
+  recognize: [双方有不同优先级, 存在合作空间]
+  misjudge: [一上来就分蛋糕, 忽略信息交换]
+  failure_modes: [对方只想着分, 信息不交换, 双赢变让利]
+  action: [先交换优先级信息, 设计互惠方案, 保留分配式手段兜底]
+  params: {value_creation: 高, value_claiming: 中}
+  counter: [对方用整合话术套你的信息]
+  related: [M5 交换, 帕累托前沿]
+  source: {book: 谈判分析, chapter: 概念条目（章节待核）, source_type: 二手提炼, verified: false}
+  ethics: green
+  confidence: high
+  review_status: reviewed-v1
+  v2_status: operational-v2
+
+- id: model-distributive-bargaining
+  name: 分配式谈判
+  card_type: model
+  mechanism: {primary: M5, secondary: [M2]}
+  definition: 在固定蛋糕上分多分少；核心是底线、耐心、承诺与信息。
+  example: 预算就 10 万，两个部门谈怎么分。
+  signals: [蛋糕固定, 双方在同一个数字上争]
+  scripts: [「预算就这么多，我们谈比例。」, 「这个数你拿多少，我拿多少？」]
+  recognize: [蛋糕固定, 双方在同一个数字上争]
+  misjudge: [在分配式场景谈双赢, 暴露底线]
+  failure_modes: [先亮底线, 让对方定规则, 谈崩]
+  action: [算清保留价, 控制让步节奏, 用承诺锁定立场]
+  params: {pie: 固定, reservation: 中}
+  counter: [对方用最后通牒]
+  related: [M5 交换, 保留价]
+  source: {book: 谈判分析, chapter: 概念条目（章节待核）, source_type: 二手提炼, verified: false}
+  ethics: green
+  confidence: high
+  review_status: reviewed-v1
+  v2_status: operational-v2
+
+- id: model-post-settlement
+  name: 事后和解
+  card_type: model
+  mechanism: {primary: M5, secondary: [M8]}
+  definition: 达成初步协议后，再找双方都能更好的调整；常用于修复谈崩或优化结果。
+  example: 合同签完发现交付周期还能调，双方再谈一次都受益。
+  signals: [协议已达成但双方都不太满意, 存在改进空间]
+  scripts: [「签完我们再复盘一下。」, 「有个微调能让双方都更好，要不要谈？」]
+  recognize: [协议已达成但双方都不太满意, 存在改进空间]
+  misjudge: [签完就结束, 忽略后续优化]
+  failure_modes: [对方借机重新开价, 优化变让利, 关系受损]
+  action: [协议后复盘, 提出双方都能更好的微调, 保留关系]
+  params: {gain: 中, trust: 中–高}
+  counter: [对方借机重新开价]
+  related: [M5 交换, 帕累托前沿]
+  source: {book: 谈判分析, chapter: 概念条目（章节待核）, source_type: 二手提炼, verified: false}
+  ethics: green
+  confidence: medium
+  review_status: reviewed-v1
+  v2_status: operational-v2

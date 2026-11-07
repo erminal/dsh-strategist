@@ -1,0 +1,814 @@
+{
+  "version": "2.3",
+  "updated": "2026-11-07",
+  "reviewed": "v1",
+  "v2": "all",
+  "total": 102,
+  "batches": [
+    {
+      "batch": "冲突的战略",
+      "file": "conflict-strategy-8.yaml",
+      "count": 8,
+      "cards": [
+        {
+          "id": "model-schelling-point",
+          "name": "聚焦点",
+          "card_type": "model",
+          "mechanism": "M1",
+          "v2_status": "operational-v2"
+        },
+        {
+          "id": "model-deterrence",
+          "name": "威慑",
+          "card_type": "model",
+          "mechanism": "M6",
+          "v2_status": "operational-v2"
+        },
+        {
+          "id": "model-credible-threat",
+          "name": "可信威胁",
+          "card_type": "model",
+          "mechanism": "M6",
+          "v2_status": "operational-v2"
+        },
+        {
+          "id": "model-retaliation-ladder",
+          "name": "报复与升级阶梯",
+          "card_type": "model",
+          "mechanism": "M9",
+          "v2_status": "operational-v2"
+        },
+        {
+          "id": "model-limited-conflict",
+          "name": "冲突控制与有限冲突",
+          "card_type": "model",
+          "mechanism": "M11",
+          "v2_status": "operational-v2"
+        },
+        {
+          "id": "model-arms-race",
+          "name": "军备竞赛",
+          "card_type": "model",
+          "mechanism": "M11",
+          "v2_status": "operational-v2"
+        },
+        {
+          "id": "model-hostage",
+          "name": "人质与绑定",
+          "card_type": "model",
+          "mechanism": "M6",
+          "v2_status": "operational-v2"
+        },
+        {
+          "id": "model-bargaining-commitment",
+          "name": "谈判中的承诺",
+          "card_type": "model",
+          "mechanism": "M6",
+          "v2_status": "operational-v2"
+        }
+      ]
+    },
+    {
+      "batch": "合作的进化",
+      "file": "evolution-of-cooperation-6.yaml",
+      "count": 6,
+      "cards": [
+        {
+          "id": "model-shadow-of-future",
+          "name": "未来的影子",
+          "card_type": "model",
+          "mechanism": "M6",
+          "v2_status": "operational-v2"
+        },
+        {
+          "id": "model-reciprocity-norm",
+          "name": "互惠",
+          "card_type": "model",
+          "mechanism": "M6",
+          "v2_status": "operational-v2"
+        },
+        {
+          "id": "model-cooperation-cluster",
+          "name": "合作集群",
+          "card_type": "model",
+          "mechanism": "M3",
+          "v2_status": "operational-v2"
+        },
+        {
+          "id": "model-forgiveness",
+          "name": "宽容（噪音中的合作）",
+          "card_type": "model",
+          "mechanism": "M6",
+          "v2_status": "operational-v2"
+        },
+        {
+          "id": "model-defection-incentive",
+          "name": "背叛诱因",
+          "card_type": "model",
+          "mechanism": "M6",
+          "v2_status": "operational-v2"
+        },
+        {
+          "id": "model-evolution-of-cooperation",
+          "name": "合作演化",
+          "card_type": "model",
+          "mechanism": "M6",
+          "v2_status": "operational-v2"
+        }
+      ]
+    },
+    {
+      "batch": "谈判力",
+      "file": "getting-to-yes-10.yaml",
+      "count": 10,
+      "cards": [
+        {
+          "id": "model-interests-vs-positions",
+          "name": "利益与立场",
+          "card_type": "model",
+          "mechanism": "M12",
+          "v2_status": "operational-v2"
+        },
+        {
+          "id": "model-batna",
+          "name": "BATNA（最佳替代方案）",
+          "card_type": "model",
+          "mechanism": "M5",
+          "v2_status": "operational-v2"
+        },
+        {
+          "id": "model-zopa",
+          "name": "ZOPA（可达成区间）",
+          "card_type": "model",
+          "mechanism": "M5",
+          "v2_status": "operational-v2"
+        },
+        {
+          "id": "model-objective-criteria",
+          "name": "客观标准",
+          "card_type": "model",
+          "mechanism": "M12",
+          "v2_status": "operational-v2"
+        },
+        {
+          "id": "model-separate-people",
+          "name": "人与问题分开",
+          "card_type": "model",
+          "mechanism": "M7",
+          "v2_status": "operational-v2"
+        },
+        {
+          "id": "model-options-brainstorm",
+          "name": "创造选项",
+          "card_type": "model",
+          "mechanism": "M5",
+          "v2_status": "operational-v2"
+        },
+        {
+          "id": "model-anchor",
+          "name": "锚定",
+          "card_type": "model",
+          "mechanism": "M12",
+          "v2_status": "operational-v2"
+        },
+        {
+          "id": "model-concession-pacing",
+          "name": "让步节奏",
+          "card_type": "model",
+          "mechanism": "M5",
+          "v2_status": "operational-v2"
+        },
+        {
+          "id": "model-package-deal",
+          "name": "多议题打包",
+          "card_type": "model",
+          "mechanism": "M5",
+          "v2_status": "operational-v2"
+        },
+        {
+          "id": "model-walk-away",
+          "name": "离场与底线",
+          "card_type": "model",
+          "mechanism": "M8",
+          "v2_status": "operational-v2"
+        }
+      ]
+    },
+    {
+      "batch": "间接路线",
+      "file": "indirect-approach-6.yaml",
+      "count": 6,
+      "cards": [
+        {
+          "id": "model-indirect-approach",
+          "name": "间接路线",
+          "card_type": "model",
+          "mechanism": "M4",
+          "v2_status": "operational-v2"
+        },
+        {
+          "id": "model-surprise",
+          "name": "出敌不意",
+          "card_type": "model",
+          "mechanism": "M10",
+          "v2_status": "operational-v2"
+        },
+        {
+          "id": "model-psychological-disruption",
+          "name": "心理扰乱",
+          "card_type": "model",
+          "mechanism": "M12",
+          "v2_status": "operational-v2"
+        },
+        {
+          "id": "model-maneuver",
+          "name": "机动",
+          "card_type": "model",
+          "mechanism": "M2",
+          "v2_status": "operational-v2"
+        },
+        {
+          "id": "model-economy-of-force",
+          "name": "节约兵力",
+          "card_type": "model",
+          "mechanism": "M11",
+          "v2_status": "operational-v2"
+        },
+        {
+          "id": "model-dislocation",
+          "name": "打乱平衡",
+          "card_type": "model",
+          "mechanism": "M4",
+          "v2_status": "operational-v2"
+        }
+      ]
+    },
+    {
+      "batch": "影响力",
+      "file": "influence-6.yaml",
+      "count": 6,
+      "cards": [
+        {
+          "id": "model-reciprocity-principle",
+          "name": "互惠原则",
+          "card_type": "model",
+          "mechanism": "M6",
+          "v2_status": "operational-v2"
+        },
+        {
+          "id": "model-commitment-consistency",
+          "name": "承诺一致",
+          "card_type": "model",
+          "mechanism": "M6",
+          "v2_status": "operational-v2"
+        },
+        {
+          "id": "model-social-proof",
+          "name": "社会认同",
+          "card_type": "model",
+          "mechanism": "M12",
+          "v2_status": "operational-v2"
+        },
+        {
+          "id": "model-authority-principle",
+          "name": "权威",
+          "card_type": "model",
+          "mechanism": "M9",
+          "v2_status": "operational-v2"
+        },
+        {
+          "id": "model-liking",
+          "name": "喜好",
+          "card_type": "model",
+          "mechanism": "M9",
+          "v2_status": "operational-v2"
+        },
+        {
+          "id": "model-scarcity",
+          "name": "稀缺",
+          "card_type": "model",
+          "mechanism": "M5",
+          "v2_status": "operational-v2"
+        }
+      ]
+    },
+    {
+      "batch": "谈判分析",
+      "file": "negotiation-analysis-8.yaml",
+      "count": 8,
+      "cards": [
+        {
+          "id": "model-reservation-price",
+          "name": "保留价",
+          "card_type": "model",
+          "mechanism": "M5",
+          "v2_status": "operational-v2"
+        },
+        {
+          "id": "model-risk-preference",
+          "name": "风险偏好",
+          "card_type": "model",
+          "mechanism": "M5",
+          "v2_status": "operational-v2"
+        },
+        {
+          "id": "model-time-preference",
+          "name": "时间偏好",
+          "card_type": "model",
+          "mechanism": "M2",
+          "v2_status": "operational-v2"
+        },
+        {
+          "id": "model-multi-issue-tradeoff",
+          "name": "多议题权衡",
+          "card_type": "model",
+          "mechanism": "M5",
+          "v2_status": "operational-v2"
+        },
+        {
+          "id": "model-pareto-frontier",
+          "name": "帕累托前沿",
+          "card_type": "model",
+          "mechanism": "M5",
+          "v2_status": "operational-v2"
+        },
+        {
+          "id": "model-integrative-bargaining",
+          "name": "整合式谈判",
+          "card_type": "model",
+          "mechanism": "M5",
+          "v2_status": "operational-v2"
+        },
+        {
+          "id": "model-distributive-bargaining",
+          "name": "分配式谈判",
+          "card_type": "model",
+          "mechanism": "M5",
+          "v2_status": "operational-v2"
+        },
+        {
+          "id": "model-post-settlement",
+          "name": "事后和解",
+          "card_type": "model",
+          "mechanism": "M5",
+          "v2_status": "operational-v2"
+        }
+      ]
+    },
+    {
+      "batch": "战争论",
+      "file": "on-war-8.yaml",
+      "count": 8,
+      "cards": [
+        {
+          "id": "model-center-of-gravity",
+          "name": "重心",
+          "card_type": "model",
+          "mechanism": "M4",
+          "v2_status": "operational-v2"
+        },
+        {
+          "id": "model-friction",
+          "name": "摩擦",
+          "card_type": "model",
+          "mechanism": "M11",
+          "v2_status": "operational-v2"
+        },
+        {
+          "id": "model-concentration-of-force",
+          "name": "集中优势",
+          "card_type": "model",
+          "mechanism": "M4",
+          "v2_status": "operational-v2"
+        },
+        {
+          "id": "model-political-aim",
+          "name": "政治目的",
+          "card_type": "model",
+          "mechanism": "M12",
+          "v2_status": "operational-v2"
+        },
+        {
+          "id": "model-offense-defense",
+          "name": "攻防转换",
+          "card_type": "model",
+          "mechanism": "M6",
+          "v2_status": "operational-v2"
+        },
+        {
+          "id": "model-escalation",
+          "name": "升级",
+          "card_type": "model",
+          "mechanism": "M9",
+          "v2_status": "operational-v2"
+        },
+        {
+          "id": "model-attrition",
+          "name": "消耗战",
+          "card_type": "model",
+          "mechanism": "M11",
+          "v2_status": "operational-v2"
+        },
+        {
+          "id": "model-decisive-battle",
+          "name": "决战",
+          "card_type": "model",
+          "mechanism": "M4",
+          "v2_status": "operational-v2"
+        }
+      ]
+    },
+    {
+      "batch": "OODA",
+      "file": "ooda-4.yaml",
+      "count": 4,
+      "cards": [
+        {
+          "id": "model-ooda-loop",
+          "name": "OODA 循环",
+          "card_type": "model",
+          "mechanism": "M2",
+          "v2_status": "operational-v2"
+        },
+        {
+          "id": "model-tempo",
+          "name": "快节奏",
+          "card_type": "model",
+          "mechanism": "M2",
+          "v2_status": "operational-v2"
+        },
+        {
+          "id": "model-orientation",
+          "name": "定向",
+          "card_type": "model",
+          "mechanism": "M12",
+          "v2_status": "operational-v2"
+        },
+        {
+          "id": "model-loop-disruption",
+          "name": "扰乱对手循环",
+          "card_type": "model",
+          "mechanism": "M10",
+          "v2_status": "operational-v2"
+        }
+      ]
+    },
+    {
+      "batch": "组织政治",
+      "file": "organizational-politics-8.yaml",
+      "count": 8,
+      "cards": [
+        {
+          "id": "model-coalition",
+          "name": "联盟",
+          "card_type": "model",
+          "mechanism": "M3",
+          "v2_status": "operational-v2"
+        },
+        {
+          "id": "model-resource-dependence",
+          "name": "资源依赖",
+          "card_type": "model",
+          "mechanism": "M3",
+          "v2_status": "operational-v2"
+        },
+        {
+          "id": "model-information-control",
+          "name": "信息控制",
+          "card_type": "model",
+          "mechanism": "M1",
+          "v2_status": "operational-v2"
+        },
+        {
+          "id": "model-agenda-setting",
+          "name": "议程设置",
+          "card_type": "model",
+          "mechanism": "M12",
+          "v2_status": "operational-v2"
+        },
+        {
+          "id": "model-legitimacy",
+          "name": "合法性",
+          "card_type": "model",
+          "mechanism": "M12",
+          "v2_status": "operational-v2"
+        },
+        {
+          "id": "model-cooptation",
+          "name": "吸纳与收编",
+          "card_type": "model",
+          "mechanism": "M3",
+          "v2_status": "operational-v2"
+        },
+        {
+          "id": "model-org-bargaining",
+          "name": "组织内谈判",
+          "card_type": "model",
+          "mechanism": "M5",
+          "v2_status": "operational-v2"
+        },
+        {
+          "id": "model-resistance",
+          "name": "抵抗与异议",
+          "card_type": "model",
+          "mechanism": "M8",
+          "v2_status": "operational-v2"
+        }
+      ]
+    },
+    {
+      "batch": "权力",
+      "file": "power-6.yaml",
+      "count": 6,
+      "cards": [
+        {
+          "id": "model-sources-of-power",
+          "name": "权力来源",
+          "card_type": "model",
+          "mechanism": "M3",
+          "v2_status": "operational-v2"
+        },
+        {
+          "id": "model-dependence-relation",
+          "name": "依赖关系",
+          "card_type": "model",
+          "mechanism": "M3",
+          "v2_status": "operational-v2"
+        },
+        {
+          "id": "model-influence-tactics",
+          "name": "影响力战术",
+          "card_type": "model",
+          "mechanism": "M9",
+          "v2_status": "operational-v2"
+        },
+        {
+          "id": "model-coalition-building",
+          "name": "建联盟",
+          "card_type": "model",
+          "mechanism": "M3",
+          "v2_status": "operational-v2"
+        },
+        {
+          "id": "model-framing-power",
+          "name": "框架控制",
+          "card_type": "model",
+          "mechanism": "M12",
+          "v2_status": "operational-v2"
+        },
+        {
+          "id": "model-resistance-management",
+          "name": "抵抗管理",
+          "card_type": "model",
+          "mechanism": "M8",
+          "v2_status": "operational-v2"
+        }
+      ]
+    },
+    {
+      "batch": "情报分析心理学",
+      "file": "psychology-of-intelligence-6.yaml",
+      "count": 6,
+      "cards": [
+        {
+          "id": "model-confirmation-bias",
+          "name": "确认偏误",
+          "card_type": "model",
+          "mechanism": "M12",
+          "v2_status": "operational-v2"
+        },
+        {
+          "id": "model-anchoring-bias",
+          "name": "锚定偏差",
+          "card_type": "model",
+          "mechanism": "M12",
+          "v2_status": "operational-v2"
+        },
+        {
+          "id": "model-availability-bias",
+          "name": "可得性偏差",
+          "card_type": "model",
+          "mechanism": "M12",
+          "v2_status": "operational-v2"
+        },
+        {
+          "id": "model-ach",
+          "name": "竞争性假设分析（ACH）",
+          "card_type": "model",
+          "mechanism": "M10",
+          "v2_status": "operational-v2"
+        },
+        {
+          "id": "model-mirror-imaging",
+          "name": "镜像思维",
+          "card_type": "model",
+          "mechanism": "M10",
+          "v2_status": "operational-v2"
+        },
+        {
+          "id": "model-groupthink",
+          "name": "群体思维",
+          "card_type": "model",
+          "mechanism": "M12",
+          "v2_status": "operational-v2"
+        }
+      ]
+    },
+    {
+      "batch": "策略思维",
+      "file": "strategy-thinking-20.yaml",
+      "count": 20,
+      "cards": [
+        {
+          "id": "model-backward-induction",
+          "name": "逆向归纳",
+          "card_type": "foundation",
+          "mechanism": "M0",
+          "v2_status": "operational-v2"
+        },
+        {
+          "id": "model-nash-equilibrium",
+          "name": "纳什均衡",
+          "card_type": "foundation",
+          "mechanism": "M0",
+          "v2_status": "operational-v2"
+        },
+        {
+          "id": "model-prisoners-dilemma",
+          "name": "囚徒困境",
+          "card_type": "model",
+          "mechanism": "M6",
+          "v2_status": "operational-v2"
+        },
+        {
+          "id": "model-chicken",
+          "name": "斗鸡博弈",
+          "card_type": "model",
+          "mechanism": "M9",
+          "v2_status": "operational-v2"
+        },
+        {
+          "id": "model-stag-hunt",
+          "name": "猎鹿博弈",
+          "card_type": "model",
+          "mechanism": "M3",
+          "v2_status": "operational-v2"
+        },
+        {
+          "id": "model-boxed-pigs",
+          "name": "智猪博弈",
+          "card_type": "model",
+          "mechanism": "M5",
+          "v2_status": "operational-v2"
+        },
+        {
+          "id": "model-mixed-strategy",
+          "name": "混合策略",
+          "card_type": "foundation",
+          "mechanism": "M0",
+          "v2_status": "operational-v2"
+        },
+        {
+          "id": "model-commitment",
+          "name": "承诺与可信威胁",
+          "card_type": "model",
+          "mechanism": "M6",
+          "v2_status": "operational-v2"
+        },
+        {
+          "id": "model-brinkmanship",
+          "name": "边缘政策",
+          "card_type": "model",
+          "mechanism": "M6",
+          "v2_status": "operational-v2"
+        },
+        {
+          "id": "model-signaling",
+          "name": "信号",
+          "card_type": "model",
+          "mechanism": "M1",
+          "v2_status": "operational-v2"
+        },
+        {
+          "id": "model-screening",
+          "name": "筛选",
+          "card_type": "model",
+          "mechanism": "M1",
+          "v2_status": "operational-v2"
+        },
+        {
+          "id": "model-adverse-selection",
+          "name": "逆向选择",
+          "card_type": "model",
+          "mechanism": "M1",
+          "v2_status": "operational-v2"
+        },
+        {
+          "id": "model-moral-hazard",
+          "name": "道德风险",
+          "card_type": "model",
+          "mechanism": "M1",
+          "v2_status": "operational-v2"
+        },
+        {
+          "id": "model-principal-agent",
+          "name": "委托代理",
+          "card_type": "model",
+          "mechanism": "M1",
+          "v2_status": "operational-v2"
+        },
+        {
+          "id": "model-repeated-games",
+          "name": "重复博弈",
+          "card_type": "model",
+          "mechanism": "M6",
+          "v2_status": "operational-v2"
+        },
+        {
+          "id": "model-tit-for-tat",
+          "name": "以牙还牙",
+          "card_type": "model",
+          "mechanism": "M6",
+          "v2_status": "operational-v2"
+        },
+        {
+          "id": "model-reputation",
+          "name": "声誉",
+          "card_type": "model",
+          "mechanism": "M9",
+          "v2_status": "operational-v2"
+        },
+        {
+          "id": "model-bargaining",
+          "name": "讨价还价",
+          "card_type": "model",
+          "mechanism": "M5",
+          "v2_status": "operational-v2"
+        },
+        {
+          "id": "model-auction",
+          "name": "拍卖与赢家诅咒",
+          "card_type": "model",
+          "mechanism": "M5",
+          "v2_status": "operational-v2"
+        },
+        {
+          "id": "model-mechanism-design",
+          "name": "激励设计（机制设计）",
+          "card_type": "model",
+          "mechanism": "M5",
+          "v2_status": "operational-v2"
+        }
+      ]
+    },
+    {
+      "batch": "君主论",
+      "file": "the-prince-6.yaml",
+      "count": 6,
+      "cards": [
+        {
+          "id": "model-legitimacy-princely",
+          "name": "合法性基础",
+          "card_type": "model",
+          "mechanism": "M12",
+          "v2_status": "operational-v2"
+        },
+        {
+          "id": "model-virtu-fortuna",
+          "name": "能力与机运",
+          "card_type": "model",
+          "mechanism": "M2",
+          "v2_status": "operational-v2"
+        },
+        {
+          "id": "model-fear-vs-love",
+          "name": "恐惧与爱戴",
+          "card_type": "model",
+          "mechanism": "M9",
+          "v2_status": "operational-v2"
+        },
+        {
+          "id": "model-divide-and-rule",
+          "name": "分化",
+          "card_type": "model",
+          "mechanism": "M7",
+          "v2_status": "operational-v2"
+        },
+        {
+          "id": "model-appearance-management",
+          "name": "形象管理",
+          "card_type": "model",
+          "mechanism": "M12",
+          "v2_status": "operational-v2"
+        },
+        {
+          "id": "model-counsel-information",
+          "name": "谏议与信息",
+          "card_type": "model",
+          "mechanism": "M10",
+          "v2_status": "operational-v2"
+        }
+      ]
+    }
+  ]
+}

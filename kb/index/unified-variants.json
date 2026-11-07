@@ -1,0 +1,1304 @@
+{
+  "version": "0.1",
+  "updated": "2026-11-07",
+  "groups": [
+    {
+      "id": "V0",
+      "name": "基础分析工具",
+      "mech": "M0",
+      "members": [
+        "model-backward-induction",
+        "model-nash-equilibrium",
+        "model-mixed-strategy"
+      ],
+      "dist": "分析概念，不参与策略检索",
+      "ethics": "green",
+      "member_names": [
+        "逆向归纳",
+        "纳什均衡",
+        "混合策略"
+      ],
+      "count": 3,
+      "card_id": "var-foundation",
+      "card_status": "unified-v1",
+      "principles": [],
+      "principle_count": 0,
+      "mechanism": {
+        "primary": "M0",
+        "secondary": []
+      }
+    },
+    {
+      "id": "V1-1",
+      "name": "信号与示形",
+      "mech": "M1",
+      "members": [
+        "model-signaling",
+        "strat-shengdong-jixi",
+        "strat-jiachi-budian",
+        "strat-kongcheng-ji"
+      ],
+      "dist": "用有成本/可见动作传递或伪装信息",
+      "ethics": "gray",
+      "member_names": [
+        "信号",
+        "声东击西",
+        "假痴不癫",
+        "空城计"
+      ],
+      "count": 4,
+      "card_id": "var-signal",
+      "card_status": "unified-v1",
+      "principles": [],
+      "principle_count": 0,
+      "mechanism": {
+        "primary": "M1",
+        "secondary": [
+          "M9",
+          "M8"
+        ]
+      }
+    },
+    {
+      "id": "V1-2",
+      "name": "信息遮蔽",
+      "mech": "M1",
+      "members": [
+        "model-information-control",
+        "strat-mantian-guohai",
+        "strat-andu-chencang",
+        "strat-xiaoli-cangdao"
+      ],
+      "dist": "控制披露节奏/隐藏真实意图",
+      "ethics": "gray",
+      "member_names": [
+        "信息控制",
+        "瞒天过海",
+        "暗渡陈仓",
+        "笑里藏刀"
+      ],
+      "count": 4,
+      "card_id": "var-info-conceal",
+      "card_status": "unified-v1",
+      "principles": [
+        "prin-xingren-woxing"
+      ],
+      "principle_count": 1,
+      "mechanism": {
+        "primary": "M1",
+        "secondary": [
+          "M12",
+          "M2",
+          "M9"
+        ]
+      }
+    },
+    {
+      "id": "V1-3",
+      "name": "虚构与假象",
+      "mech": "M1",
+      "members": [
+        "strat-wuzhong-shengyou"
+      ],
+      "dist": "制造不存在的假象改变对手判断",
+      "ethics": "gray",
+      "member_names": [
+        "无中生有"
+      ],
+      "count": 1,
+      "card_id": "var-fabrication",
+      "card_status": "unified-v1",
+      "principles": [],
+      "principle_count": 0,
+      "mechanism": {
+        "primary": "M1",
+        "secondary": [
+          "M12"
+        ]
+      }
+    },
+    {
+      "id": "V1-4",
+      "name": "筛选与信息暴露",
+      "mech": "M1",
+      "members": [
+        "model-screening",
+        "model-adverse-selection"
+      ],
+      "dist": "用选项设计让对方自选暴露类型",
+      "ethics": "green",
+      "member_names": [
+        "筛选",
+        "逆向选择"
+      ],
+      "count": 2,
+      "card_id": "var-screening",
+      "card_status": "unified-v1",
+      "principles": [],
+      "principle_count": 0,
+      "mechanism": {
+        "primary": "M1",
+        "secondary": []
+      }
+    },
+    {
+      "id": "V1-5",
+      "name": "委托代理与道德风险",
+      "mech": "M1",
+      "members": [
+        "model-moral-hazard",
+        "model-principal-agent"
+      ],
+      "dist": "行为不可观察时的激励与监督",
+      "ethics": "green",
+      "member_names": [
+        "道德风险",
+        "委托代理"
+      ],
+      "count": 2,
+      "card_id": "var-agency",
+      "card_status": "unified-v1",
+      "principles": [],
+      "principle_count": 0,
+      "mechanism": {
+        "primary": "M1",
+        "secondary": []
+      }
+    },
+    {
+      "id": "V1-6",
+      "name": "协调与聚焦点",
+      "mech": "M1",
+      "members": [
+        "model-schelling-point"
+      ],
+      "dist": "多均衡下的无沟通协调",
+      "ethics": "green",
+      "member_names": [
+        "聚焦点"
+      ],
+      "count": 1,
+      "card_id": "var-focal",
+      "card_status": "unified-v1",
+      "principles": [],
+      "principle_count": 0,
+      "mechanism": {
+        "primary": "M1",
+        "secondary": []
+      }
+    },
+    {
+      "id": "V2-1",
+      "name": "节奏与消耗",
+      "mech": "M2",
+      "members": [
+        "model-time-preference",
+        "model-tempo",
+        "model-ooda-loop",
+        "strat-yiyi-dailao"
+      ],
+      "dist": "谁更急/谁控节奏",
+      "ethics": "green",
+      "member_names": [
+        "时间偏好",
+        "快节奏",
+        "OODA 循环",
+        "以逸待劳"
+      ],
+      "count": 4,
+      "card_id": "var-tempo",
+      "card_status": "unified-v1",
+      "principles": [
+        "prin-zhiren-buzhiren",
+        "prin-yindi-bianhua",
+        "prin-zhizhi"
+      ],
+      "principle_count": 3,
+      "mechanism": {
+        "primary": "M2",
+        "secondary": [
+          "M11"
+        ]
+      }
+    },
+    {
+      "id": "V2-2",
+      "name": "调动与机动",
+      "mech": "M2",
+      "members": [
+        "model-maneuver",
+        "strat-diaohu-lishan",
+        "strat-yuqin-guzong"
+      ],
+      "dist": "把对手调离有利位置",
+      "ethics": "gray",
+      "member_names": [
+        "机动",
+        "调虎离山",
+        "欲擒故纵"
+      ],
+      "count": 3,
+      "card_id": "var-maneuver",
+      "card_status": "unified-v1",
+      "principles": [
+        "prin-jiudi-zhibian"
+      ],
+      "principle_count": 1,
+      "mechanism": {
+        "primary": "M2",
+        "secondary": [
+          "M4",
+          "M6"
+        ]
+      }
+    },
+    {
+      "id": "V2-3",
+      "name": "能力与机运",
+      "mech": "M2",
+      "members": [
+        "model-virtu-fortuna"
+      ],
+      "dist": "准备与窗口",
+      "ethics": "green",
+      "member_names": [
+        "能力与机运"
+      ],
+      "count": 1,
+      "card_id": "var-fortune",
+      "card_status": "unified-v1",
+      "principles": [],
+      "principle_count": 0,
+      "mechanism": {
+        "primary": "M2",
+        "secondary": []
+      }
+    },
+    {
+      "id": "V3-1",
+      "name": "联盟与第三方杠杆",
+      "mech": "M3",
+      "members": [
+        "model-coalition",
+        "model-coalition-building",
+        "model-cooperation-cluster",
+        "model-stag-hunt",
+        "strat-jiedao-sharen",
+        "strat-yuanjiao-jingong",
+        "strat-jiadao-faguo",
+        "strat-gean-guanhuo"
+      ],
+      "dist": "借第三方力量/改变力量对比",
+      "ethics": "gray",
+      "member_names": [
+        "联盟",
+        "建联盟",
+        "合作集群",
+        "猎鹿博弈",
+        "借刀杀人",
+        "远交近攻",
+        "假道伐虢",
+        "隔岸观火"
+      ],
+      "count": 8,
+      "card_id": "var-coalition",
+      "card_status": "unified-v1",
+      "principles": [
+        "prin-buzhan-quren"
+      ],
+      "principle_count": 1,
+      "mechanism": {
+        "primary": "M3",
+        "secondary": [
+          "M7",
+          "M5",
+          "M2"
+        ]
+      }
+    },
+    {
+      "id": "V3-2",
+      "name": "资源依赖与权力源",
+      "mech": "M3",
+      "members": [
+        "model-resource-dependence",
+        "model-dependence-relation",
+        "model-sources-of-power"
+      ],
+      "dist": "依赖不对称与不可替代性",
+      "ethics": "green",
+      "member_names": [
+        "资源依赖",
+        "依赖关系",
+        "权力来源"
+      ],
+      "count": 3,
+      "card_id": "var-dependence",
+      "card_status": "unified-v1",
+      "principles": [],
+      "principle_count": 0,
+      "mechanism": {
+        "primary": "M3",
+        "secondary": []
+      }
+    },
+    {
+      "id": "V3-3",
+      "name": "吸纳与收编",
+      "mech": "M3",
+      "members": [
+        "model-cooptation"
+      ],
+      "dist": "把对手拉进决策圈",
+      "ethics": "gray",
+      "member_names": [
+        "吸纳与收编"
+      ],
+      "count": 1,
+      "card_id": "var-cooptation",
+      "card_status": "unified-v1",
+      "principles": [],
+      "principle_count": 0,
+      "mechanism": {
+        "primary": "M3",
+        "secondary": []
+      }
+    },
+    {
+      "id": "V4-1",
+      "name": "重心与关键点",
+      "mech": "M4",
+      "members": [
+        "model-center-of-gravity",
+        "model-concentration-of-force",
+        "model-decisive-battle",
+        "strat-weiwei-jiuzhao",
+        "strat-qinzei-qinwang",
+        "strat-fudi-chouxin"
+      ],
+      "dist": "打支点/集中优势/决战",
+      "ethics": "gray",
+      "member_names": [
+        "重心",
+        "集中优势",
+        "决战",
+        "围魏救赵",
+        "擒贼擒王",
+        "釜底抽薪"
+      ],
+      "count": 6,
+      "card_id": "var-keypoint",
+      "card_status": "unified-v1",
+      "principles": [
+        "prin-xianwei-bukesheng",
+        "prin-zhenghe-qisheng",
+        "prin-bishi-jixu",
+        "prin-gongqi-bijiu",
+        "prin-wozhuan-difen",
+        "prin-quansheng",
+        "prin-libuyai"
+      ],
+      "principle_count": 7,
+      "mechanism": {
+        "primary": "M4",
+        "secondary": [
+          "M2",
+          "M9",
+          "M11"
+        ]
+      }
+    },
+    {
+      "id": "V4-2",
+      "name": "间接与打乱",
+      "mech": "M4",
+      "members": [
+        "model-indirect-approach",
+        "model-dislocation"
+      ],
+      "dist": "绕开正面/制造失衡",
+      "ethics": "gray",
+      "member_names": [
+        "间接路线",
+        "打乱平衡"
+      ],
+      "count": 2,
+      "card_id": "var-indirect",
+      "card_status": "unified-v1",
+      "principles": [
+        "prin-yiyu-weizhi"
+      ],
+      "principle_count": 1,
+      "mechanism": {
+        "primary": "M4",
+        "secondary": []
+      }
+    },
+    {
+      "id": "V4-3",
+      "name": "断退路与包围",
+      "mech": "M4",
+      "members": [
+        "strat-guanmen-zhuozei"
+      ],
+      "dist": "断其退路再收",
+      "ethics": "gray",
+      "member_names": [
+        "关门捉贼"
+      ],
+      "count": 1,
+      "card_id": "var-encircle",
+      "card_status": "unified-v1",
+      "principles": [],
+      "principle_count": 0,
+      "mechanism": {
+        "primary": "M4",
+        "secondary": [
+          "M6"
+        ]
+      }
+    },
+    {
+      "id": "V5-1",
+      "name": "诱饵与小利",
+      "mech": "M5",
+      "members": [
+        "strat-paozhuan-yinyu",
+        "strat-shunshou-qianyang",
+        "strat-lidai-taozhang",
+        "strat-lianhuan-ji"
+      ],
+      "dist": "以小引大/弃小保大/多计组合",
+      "ethics": "gray",
+      "member_names": [
+        "抛砖引玉",
+        "顺手牵羊",
+        "李代桃僵",
+        "连环计"
+      ],
+      "count": 4,
+      "card_id": "var-bait",
+      "card_status": "unified-v1",
+      "principles": [],
+      "principle_count": 0,
+      "mechanism": {
+        "primary": "M5",
+        "secondary": [
+          "M1",
+          "M10",
+          "M8",
+          "M4"
+        ]
+      }
+    },
+    {
+      "id": "V5-2",
+      "name": "机会窗口",
+      "mech": "M5",
+      "members": [
+        "strat-chenhuo-dajie",
+        "strat-hunshui-moyu"
+      ],
+      "dist": "趁危机/乱局取利",
+      "ethics": "gray",
+      "member_names": [
+        "趁火打劫",
+        "浑水摸鱼"
+      ],
+      "count": 2,
+      "card_id": "var-opportunity",
+      "card_status": "unified-v1",
+      "principles": [],
+      "principle_count": 0,
+      "mechanism": {
+        "primary": "M5",
+        "secondary": [
+          "M11",
+          "M7"
+        ]
+      }
+    },
+    {
+      "id": "V5-3",
+      "name": "谈判分配",
+      "mech": "M5",
+      "members": [
+        "model-batna",
+        "model-zopa",
+        "model-reservation-price",
+        "model-bargaining",
+        "model-distributive-bargaining"
+      ],
+      "dist": "固定蛋糕的底线与分配",
+      "ethics": "green",
+      "member_names": [
+        "BATNA（最佳替代方案）",
+        "ZOPA（可达成区间）",
+        "保留价",
+        "讨价还价",
+        "分配式谈判"
+      ],
+      "count": 5,
+      "card_id": "var-negotiation-dist",
+      "card_status": "unified-v1",
+      "principles": [],
+      "principle_count": 0,
+      "mechanism": {
+        "primary": "M5",
+        "secondary": []
+      }
+    },
+    {
+      "id": "V5-4",
+      "name": "谈判整合",
+      "mech": "M5",
+      "members": [
+        "model-integrative-bargaining",
+        "model-multi-issue-tradeoff",
+        "model-package-deal",
+        "model-options-brainstorm",
+        "model-pareto-frontier",
+        "model-post-settlement",
+        "model-concession-pacing"
+      ],
+      "dist": "多议题做大蛋糕",
+      "ethics": "green",
+      "member_names": [
+        "整合式谈判",
+        "多议题权衡",
+        "多议题打包",
+        "创造选项",
+        "帕累托前沿",
+        "事后和解",
+        "让步节奏"
+      ],
+      "count": 7,
+      "card_id": "var-negotiation-int",
+      "card_status": "unified-v1",
+      "principles": [],
+      "principle_count": 0,
+      "mechanism": {
+        "primary": "M5",
+        "secondary": []
+      }
+    },
+    {
+      "id": "V5-5",
+      "name": "风险偏好",
+      "mech": "M5",
+      "members": [
+        "model-risk-preference"
+      ],
+      "dist": "确定性溢价",
+      "ethics": "green",
+      "member_names": [
+        "风险偏好"
+      ],
+      "count": 1,
+      "card_id": "var-risk",
+      "card_status": "unified-v1",
+      "principles": [],
+      "principle_count": 0,
+      "mechanism": {
+        "primary": "M5",
+        "secondary": []
+      }
+    },
+    {
+      "id": "V5-6",
+      "name": "激励与机制设计",
+      "mech": "M5",
+      "members": [
+        "model-mechanism-design",
+        "model-boxed-pigs"
+      ],
+      "dist": "规则让自利行为对齐目标",
+      "ethics": "green",
+      "member_names": [
+        "激励设计（机制设计）",
+        "智猪博弈"
+      ],
+      "count": 2,
+      "card_id": "var-incentive",
+      "card_status": "unified-v1",
+      "principles": [],
+      "principle_count": 0,
+      "mechanism": {
+        "primary": "M5",
+        "secondary": []
+      }
+    },
+    {
+      "id": "V5-7",
+      "name": "拍卖与赢家诅咒",
+      "mech": "M5",
+      "members": [
+        "model-auction"
+      ],
+      "dist": "共同价值竞价",
+      "ethics": "green",
+      "member_names": [
+        "拍卖与赢家诅咒"
+      ],
+      "count": 1,
+      "card_id": "var-auction",
+      "card_status": "unified-v1",
+      "principles": [],
+      "principle_count": 0,
+      "mechanism": {
+        "primary": "M5",
+        "secondary": []
+      }
+    },
+    {
+      "id": "V5-8",
+      "name": "稀缺",
+      "mech": "M5",
+      "members": [
+        "model-scarcity"
+      ],
+      "dist": "限时限量制造紧迫",
+      "ethics": "gray",
+      "member_names": [
+        "稀缺"
+      ],
+      "count": 1,
+      "card_id": "var-scarcity",
+      "card_status": "unified-v1",
+      "principles": [],
+      "principle_count": 0,
+      "mechanism": {
+        "primary": "M5",
+        "secondary": []
+      }
+    },
+    {
+      "id": "V5-9",
+      "name": "组织内谈判",
+      "mech": "M5",
+      "members": [
+        "model-org-bargaining"
+      ],
+      "dist": "跨部门筹码交换",
+      "ethics": "green",
+      "member_names": [
+        "组织内谈判"
+      ],
+      "count": 1,
+      "card_id": "var-orgbargain",
+      "card_status": "unified-v1",
+      "principles": [],
+      "principle_count": 0,
+      "mechanism": {
+        "primary": "M5",
+        "secondary": []
+      }
+    },
+    {
+      "id": "V5-10",
+      "name": "诱惑软肋（red）",
+      "mech": "M5",
+      "members": [
+        "strat-meiren-ji"
+      ],
+      "dist": "仅历史解析与防御识别",
+      "ethics": "red",
+      "member_names": [
+        "美人计"
+      ],
+      "count": 1,
+      "card_id": "var-temptation",
+      "card_status": "unified-v1",
+      "principles": [],
+      "principle_count": 0,
+      "mechanism": {
+        "primary": "M5",
+        "secondary": [
+          "M7"
+        ]
+      }
+    },
+    {
+      "id": "V6-1",
+      "name": "承诺与可信威胁",
+      "mech": "M6",
+      "members": [
+        "model-commitment",
+        "model-credible-threat",
+        "model-hostage",
+        "model-bargaining-commitment",
+        "strat-shangwu-chouti"
+      ],
+      "dist": "自缚/锁定以取信",
+      "ethics": "gray",
+      "member_names": [
+        "承诺与可信威胁",
+        "可信威胁",
+        "人质与绑定",
+        "谈判中的承诺",
+        "上屋抽梯"
+      ],
+      "count": 5,
+      "card_id": "var-commitment",
+      "card_status": "unified-v1",
+      "principles": [
+        "prin-wangdi-cun",
+        "prin-xiansheng-houqiu"
+      ],
+      "principle_count": 2,
+      "mechanism": {
+        "primary": "M6",
+        "secondary": [
+          "M4"
+        ]
+      }
+    },
+    {
+      "id": "V6-2",
+      "name": "威慑与升级",
+      "mech": "M6",
+      "members": [
+        "model-deterrence",
+        "model-retaliation-ladder",
+        "model-escalation",
+        "model-brinkmanship",
+        "model-chicken"
+      ],
+      "dist": "让对方相信代价大于收益",
+      "ethics": "gray",
+      "member_names": [
+        "威慑",
+        "报复与升级阶梯",
+        "升级",
+        "边缘政策",
+        "斗鸡博弈"
+      ],
+      "count": 5,
+      "card_id": "var-deterrence",
+      "card_status": "unified-v1",
+      "principles": [],
+      "principle_count": 0,
+      "mechanism": {
+        "primary": "M6",
+        "secondary": []
+      }
+    },
+    {
+      "id": "V6-3",
+      "name": "重复与互惠",
+      "mech": "M6",
+      "members": [
+        "model-repeated-games",
+        "model-tit-for-tat",
+        "model-reciprocity-norm",
+        "model-shadow-of-future",
+        "model-forgiveness",
+        "model-defection-incentive",
+        "model-evolution-of-cooperation",
+        "model-prisoners-dilemma"
+      ],
+      "dist": "未来权重/对等回报",
+      "ethics": "green",
+      "member_names": [
+        "重复博弈",
+        "以牙还牙",
+        "互惠",
+        "未来的影子",
+        "宽容（噪音中的合作）",
+        "背叛诱因",
+        "合作演化",
+        "囚徒困境"
+      ],
+      "count": 8,
+      "card_id": "var-repeated",
+      "card_status": "unified-v1",
+      "principles": [],
+      "principle_count": 0,
+      "mechanism": {
+        "primary": "M6",
+        "secondary": []
+      }
+    },
+    {
+      "id": "V6-4",
+      "name": "承诺一致与互惠原则",
+      "mech": "M6",
+      "members": [
+        "model-commitment-consistency",
+        "model-reciprocity-principle"
+      ],
+      "dist": "社交压力型承诺/回报",
+      "ethics": "gray",
+      "member_names": [
+        "承诺一致",
+        "互惠原则"
+      ],
+      "count": 2,
+      "card_id": "var-consistency",
+      "card_status": "unified-v1",
+      "principles": [],
+      "principle_count": 0,
+      "mechanism": {
+        "primary": "M6",
+        "secondary": []
+      }
+    },
+    {
+      "id": "V6-5",
+      "name": "攻防转换",
+      "mech": "M6",
+      "members": [
+        "model-offense-defense"
+      ],
+      "dist": "攻守姿态切换",
+      "ethics": "green",
+      "member_names": [
+        "攻防转换"
+      ],
+      "count": 1,
+      "card_id": "var-offdef",
+      "card_status": "unified-v1",
+      "principles": [],
+      "principle_count": 0,
+      "mechanism": {
+        "primary": "M6",
+        "secondary": []
+      }
+    },
+    {
+      "id": "V6-6",
+      "name": "自伤取信（red）",
+      "mech": "M6",
+      "members": [
+        "strat-kurou-ji"
+      ],
+      "dist": "仅历史解析与防御识别",
+      "ethics": "red",
+      "member_names": [
+        "苦肉计"
+      ],
+      "count": 1,
+      "card_id": "var-selfharm",
+      "card_status": "unified-v1",
+      "principles": [],
+      "principle_count": 0,
+      "mechanism": {
+        "primary": "M6",
+        "secondary": [
+          "M1"
+        ]
+      }
+    },
+    {
+      "id": "V7-1",
+      "name": "分化与离间",
+      "mech": "M7",
+      "members": [
+        "model-divide-and-rule",
+        "strat-fanjian-ji"
+      ],
+      "dist": "制造对手内部不信任",
+      "ethics": "red",
+      "member_names": [
+        "分化",
+        "反间计"
+      ],
+      "count": 2,
+      "card_id": "var-divide",
+      "card_status": "unified-v1",
+      "principles": [],
+      "principle_count": 0,
+      "mechanism": {
+        "primary": "M7",
+        "secondary": [
+          "M1"
+        ]
+      }
+    },
+    {
+      "id": "V7-2",
+      "name": "人与问题分开",
+      "mech": "M7",
+      "members": [
+        "model-separate-people"
+      ],
+      "dist": "情绪与条款分离",
+      "ethics": "green",
+      "member_names": [
+        "人与问题分开"
+      ],
+      "count": 1,
+      "card_id": "var-people",
+      "card_status": "unified-v1",
+      "principles": [],
+      "principle_count": 0,
+      "mechanism": {
+        "primary": "M7",
+        "secondary": []
+      }
+    },
+    {
+      "id": "V8-1",
+      "name": "退出与止损",
+      "mech": "M8",
+      "members": [
+        "model-walk-away",
+        "strat-zou-weishang",
+        "strat-jinchan-tuoqiao"
+      ],
+      "dist": "保存实力/脱身",
+      "ethics": "green",
+      "member_names": [
+        "离场与底线",
+        "走为上",
+        "金蝉脱壳"
+      ],
+      "count": 3,
+      "card_id": "var-exit",
+      "card_status": "unified-v1",
+      "principles": [],
+      "principle_count": 0,
+      "mechanism": {
+        "primary": "M8",
+        "secondary": [
+          "M11",
+          "M1"
+        ]
+      }
+    },
+    {
+      "id": "V8-2",
+      "name": "抵抗管理",
+      "mech": "M8",
+      "members": [
+        "model-resistance",
+        "model-resistance-management"
+      ],
+      "dist": "识别并化解抵抗",
+      "ethics": "green",
+      "member_names": [
+        "抵抗与异议",
+        "抵抗管理"
+      ],
+      "count": 2,
+      "card_id": "var-resistance",
+      "card_status": "unified-v1",
+      "principles": [],
+      "principle_count": 0,
+      "mechanism": {
+        "primary": "M8",
+        "secondary": []
+      }
+    },
+    {
+      "id": "V8-3",
+      "name": "转换与夺权",
+      "mech": "M8",
+      "members": [
+        "strat-touliang-huanzhu",
+        "strat-fanke-weizhu"
+      ],
+      "dist": "换核心/渐进夺主导",
+      "ethics": "gray",
+      "member_names": [
+        "偷梁换柱",
+        "反客为主"
+      ],
+      "count": 2,
+      "card_id": "var-convert",
+      "card_status": "unified-v1",
+      "principles": [],
+      "principle_count": 0,
+      "mechanism": {
+        "primary": "M8",
+        "secondary": [
+          "M3"
+        ]
+      }
+    },
+    {
+      "id": "V9-1",
+      "name": "立威与声誉",
+      "mech": "M9",
+      "members": [
+        "model-reputation",
+        "model-authority-principle",
+        "model-fear-vs-love",
+        "strat-zhisang-mahuai",
+        "strat-shushang-kaihua"
+      ],
+      "dist": "通过信号建立威慑/威望",
+      "ethics": "gray",
+      "member_names": [
+        "声誉",
+        "权威",
+        "恐惧与爱戴",
+        "指桑骂槐",
+        "树上开花"
+      ],
+      "count": 5,
+      "card_id": "var-prestige",
+      "card_status": "unified-v1",
+      "principles": [],
+      "principle_count": 0,
+      "mechanism": {
+        "primary": "M9",
+        "secondary": [
+          "M12",
+          "M3"
+        ]
+      }
+    },
+    {
+      "id": "V9-2",
+      "name": "喜好与影响力",
+      "mech": "M9",
+      "members": [
+        "model-liking",
+        "model-influence-tactics"
+      ],
+      "dist": "关系与好感影响决策",
+      "ethics": "gray",
+      "member_names": [
+        "喜好",
+        "影响力战术"
+      ],
+      "count": 2,
+      "card_id": "var-liking",
+      "card_status": "unified-v1",
+      "principles": [],
+      "principle_count": 0,
+      "mechanism": {
+        "primary": "M9",
+        "secondary": []
+      }
+    },
+    {
+      "id": "V10-1",
+      "name": "试探与情报",
+      "mech": "M10",
+      "members": [
+        "model-ach",
+        "model-mirror-imaging",
+        "model-counsel-information",
+        "strat-dacao-jingshe"
+      ],
+      "dist": "主动试探/多假设分析",
+      "ethics": "green",
+      "member_names": [
+        "竞争性假设分析（ACH）",
+        "镜像思维",
+        "谏议与信息",
+        "打草惊蛇"
+      ],
+      "count": 4,
+      "card_id": "var-intel",
+      "card_status": "unified-v1",
+      "principles": [
+        "prin-zhibi-zhiji",
+        "prin-yongjian"
+      ],
+      "principle_count": 2,
+      "mechanism": {
+        "primary": "M10",
+        "secondary": [
+          "M1"
+        ]
+      }
+    },
+    {
+      "id": "V10-2",
+      "name": "出敌不意与扰乱",
+      "mech": "M10",
+      "members": [
+        "model-surprise",
+        "model-loop-disruption"
+      ],
+      "dist": "打乱对手循环",
+      "ethics": "gray",
+      "member_names": [
+        "出敌不意",
+        "扰乱对手循环"
+      ],
+      "count": 2,
+      "card_id": "var-surprise",
+      "card_status": "unified-v1",
+      "principles": [],
+      "principle_count": 0,
+      "mechanism": {
+        "primary": "M10",
+        "secondary": []
+      }
+    },
+    {
+      "id": "V11-1",
+      "name": "消耗与摩擦",
+      "mech": "M11",
+      "members": [
+        "model-attrition",
+        "model-arms-race",
+        "model-friction",
+        "model-economy-of-force",
+        "model-limited-conflict"
+      ],
+      "dist": "拼资源/控代价",
+      "ethics": "green",
+      "member_names": [
+        "消耗战",
+        "军备竞赛",
+        "摩擦",
+        "节约兵力",
+        "冲突控制与有限冲突"
+      ],
+      "count": 5,
+      "card_id": "var-attrition",
+      "card_status": "unified-v1",
+      "principles": [
+        "prin-bingguisheng"
+      ],
+      "principle_count": 1,
+      "mechanism": {
+        "primary": "M11",
+        "secondary": []
+      }
+    },
+    {
+      "id": "V12-1",
+      "name": "框架与叙事",
+      "mech": "M12",
+      "members": [
+        "model-framing-power",
+        "model-objective-criteria",
+        "model-interests-vs-positions",
+        "model-anchor",
+        "strat-jieshi-huanhun"
+      ],
+      "dist": "定义问题/参照点/合法性外壳",
+      "ethics": "gray",
+      "member_names": [
+        "框架控制",
+        "客观标准",
+        "利益与立场",
+        "锚定",
+        "借尸还魂"
+      ],
+      "count": 5,
+      "card_id": "var-framing",
+      "card_status": "unified-v1",
+      "principles": [
+        "prin-shangbing-famou"
+      ],
+      "principle_count": 1,
+      "mechanism": {
+        "primary": "M12",
+        "secondary": [
+          "M3"
+        ]
+      }
+    },
+    {
+      "id": "V12-2",
+      "name": "合法性与形象",
+      "mech": "M12",
+      "members": [
+        "model-legitimacy",
+        "model-legitimacy-princely",
+        "model-appearance-management"
+      ],
+      "dist": "被认可的理由与形象一致",
+      "ethics": "green",
+      "member_names": [
+        "合法性",
+        "合法性基础",
+        "形象管理"
+      ],
+      "count": 3,
+      "card_id": "var-legitimacy",
+      "card_status": "unified-v1",
+      "principles": [],
+      "principle_count": 0,
+      "mechanism": {
+        "primary": "M12",
+        "secondary": []
+      }
+    },
+    {
+      "id": "V12-3",
+      "name": "议程与目的",
+      "mech": "M12",
+      "members": [
+        "model-agenda-setting",
+        "model-political-aim"
+      ],
+      "dist": "讨论什么/为什么而战",
+      "ethics": "gray",
+      "member_names": [
+        "议程设置",
+        "政治目的"
+      ],
+      "count": 2,
+      "card_id": "var-agenda",
+      "card_status": "unified-v1",
+      "principles": [],
+      "principle_count": 0,
+      "mechanism": {
+        "primary": "M12",
+        "secondary": []
+      }
+    },
+    {
+      "id": "V12-4",
+      "name": "认知偏差",
+      "mech": "M12",
+      "members": [
+        "model-confirmation-bias",
+        "model-anchoring-bias",
+        "model-availability-bias",
+        "model-groupthink",
+        "model-orientation",
+        "model-psychological-disruption"
+      ],
+      "dist": "判断被扭曲的方式",
+      "ethics": "green",
+      "member_names": [
+        "确认偏误",
+        "锚定偏差",
+        "可得性偏差",
+        "群体思维",
+        "定向",
+        "心理扰乱"
+      ],
+      "count": 6,
+      "card_id": "var-bias",
+      "card_status": "unified-v1",
+      "principles": [],
+      "principle_count": 0,
+      "mechanism": {
+        "primary": "M12",
+        "secondary": []
+      }
+    },
+    {
+      "id": "V12-5",
+      "name": "社会认同",
+      "mech": "M12",
+      "members": [
+        "model-social-proof"
+      ],
+      "dist": "从众降低判断门槛",
+      "ethics": "gray",
+      "member_names": [
+        "社会认同"
+      ],
+      "count": 1,
+      "card_id": "var-socialproof",
+      "card_status": "unified-v1",
+      "principles": [],
+      "principle_count": 0,
+      "mechanism": {
+        "primary": "M12",
+        "secondary": []
+      }
+    }
+  ]
+}

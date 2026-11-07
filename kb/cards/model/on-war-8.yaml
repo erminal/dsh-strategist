@@ -1,0 +1,181 @@
+# 西方/现代博弈模型卡 · 第 10 批：战争论（v2 操作升级）
+# 来源：《战争论》(Clausewitz) —— 二手提炼；v2 未取得原书全文，未逐页核对
+# 说明：军事理论，映射到人际/职场博弈时只取结构逻辑，不照搬暴力手段。
+# v2 升级：每卡补 example / signals / scripts / defense（灰色卡）/ failure_modes / 参数默认值 / related
+# 字段：id / name / card_type / mechanism / definition / example / signals / scripts / defense / recognize / misjudge / failure_modes / action / params / counter / related / source / ethics / confidence / review_status / v2_status
+
+- id: model-center-of-gravity
+  name: 重心
+  card_type: model
+  mechanism: {primary: M4, secondary: [M11]}
+  definition: 对手力量与意志的支点；打掉重心，对手整体会失衡。
+  example: 对手再强也依赖一个大客户，攻下这个客户比正面拼价更有效。
+  signals: [对手强大但依赖某个核心, 正面硬拼代价高]
+  scripts: [「他的重心在哪？」, 「不拼全线，集中打这一个点。」]
+  defense: [「我的重心有没有被盯上？」, 「如果被集中打，我撑得住吗？」]
+  recognize: [对手强大但依赖某个核心, 正面硬拼代价高]
+  misjudge: [把重心当目标清单, 打错支点]
+  failure_modes: [支点判断错, 打击成本过高, 连带伤害大]
+  action: [找真正的支点（人/资源/合法性）, 集中力量打一点, 评估连带后果]
+  params: {gravity: 中–高, cost: 中–高}
+  counter: [对手保护重心或设置假重心]
+  related: [M4 关键点, 集中优势]
+  source: {book: 战争论, chapter: 概念条目（章节待核）, source_type: 二手提炼, verified: false}
+  ethics: gray
+  confidence: medium
+  review_status: reviewed-v1
+  v2_status: operational-v2
+
+- id: model-friction
+  name: 摩擦
+  card_type: model
+  mechanism: {primary: M11, secondary: [M2]}
+  definition: 计划执行中不可避免的损耗、延误与意外；真实行动总比纸面慢、贵、乱。
+  example: 方案看着完美，执行时审批拖了两周、信息传丢两次。
+  signals: [计划很顺但执行卡住, 信息传递失真]
+  scripts: [「留 20% 缓冲。」, 「减少环节，关键节点留冗余。」]
+  defense: [「我的延误会被对手利用吗？」, 「哪个环节最容易断？」]
+  recognize: [计划很顺但执行卡住, 信息传递失真]
+  misjudge: [低估执行成本, 把延误当意外]
+  failure_modes: [低估执行成本, 环节太多, 没有冗余]
+  action: [预留缓冲, 减少环节, 关键节点留冗余]
+  params: {friction: 中–高, buffer: 20%}
+  counter: [对手利用你的延误]
+  related: [M11 资源, 消耗战]
+  source: {book: 战争论, chapter: 概念条目（章节待核）, source_type: 二手提炼, verified: false}
+  ethics: green
+  confidence: high
+  review_status: reviewed-v1
+  v2_status: operational-v2
+
+- id: model-concentration-of-force
+  name: 集中优势
+  card_type: model
+  mechanism: {primary: M4, secondary: [M11]}
+  definition: 在关键点形成局部优势，而不是平均用力；整体弱也能在局部强。
+  example: 资源有限，砍掉两个次要项目，只保一个关键项目。
+  signals: [资源有限, 处处防守导致处处薄弱]
+  scripts: [「砍掉次要的，集中资源。」, 「这个点我们做到最强。」]
+  defense: [「对手是否在逼我分兵？」, 「我的关键点防守够吗？」]
+  recognize: [资源有限, 处处防守导致处处薄弱]
+  misjudge: [平均分配, 在多个点同时开战]
+  failure_modes: [分兵, 选错关键点, 放弃过多]
+  action: [选关键点, 集中资源, 主动放弃次要战场]
+  params: {ratio: 局部 3:1, focus: 1–2 个}
+  counter: [对手逼你多点分兵]
+  related: [M4 关键点, 节约兵力]
+  source: {book: 战争论, chapter: 概念条目（章节待核）, source_type: 二手提炼, verified: false}
+  ethics: green
+  confidence: high
+  review_status: reviewed-v1
+  v2_status: operational-v2
+
+- id: model-political-aim
+  name: 政治目的
+  card_type: model
+  mechanism: {primary: M12, secondary: [M4]}
+  definition: 战争是政治的延续；手段服务于目的，目的变了手段也要变。
+  example: 本来是争一个项目，打着打着变成争一口气，忘了最初目标。
+  signals: [手段越来越激烈, 忘记最初要什么]
+  scripts: [「我们最初要什么？」, 「目的变了，手段也要变。」]
+  defense: [「对方是否用升级拖我偏离目的？」, 「现在还在服务最初目的吗？」]
+  recognize: [手段越来越激烈, 忘记最初要什么]
+  misjudge: [为打赢而打赢, 目的被手段替换]
+  failure_modes: [目的漂移, 为面子加码, 忘记止损]
+  action: [定期回看目的, 用目的校验手段, 目的达成即收手]
+  params: {aim: 清晰度, means: 强度}
+  counter: [对手用升级把你拖离目的]
+  related: [M12 框架, 目的澄清]
+  source: {book: 战争论, chapter: 概念条目（章节待核）, source_type: 二手提炼, verified: false}
+  ethics: green
+  confidence: high
+  review_status: reviewed-v1
+  v2_status: operational-v2
+
+- id: model-offense-defense
+  name: 攻防转换
+  card_type: model
+  mechanism: {primary: M6, secondary: [M8]}
+  definition: 攻与防各有优势，关键是时机与转换；防御可积蓄力量，进攻可扩大战果。
+  example: 从抢新客户转为守老客户，等对手烧钱烧累了再反攻。
+  signals: [局势从攻转守或从守转攻, 你犹豫要不要变]
+  scripts: [「现在该守还是攻？」, 「设个转换条件，到了就变。」]
+  defense: [「对手会不会在我转换时突袭？」, 「转换期是不是最脆弱？」]
+  recognize: [局势从攻转守或从守转攻, 你犹豫要不要变]
+  misjudge: [只会一种姿态, 转换过慢]
+  failure_modes: [恋战, 转换太慢, 转换期被打]
+  action: [设定转换条件, 防御时蓄力, 进攻时留后路]
+  params: {transition: 条件, strength: 对比}
+  counter: [对手在你转换时突袭]
+  related: [M6 承诺, M8 退出]
+  source: {book: 战争论, chapter: 概念条目（章节待核）, source_type: 二手提炼, verified: false}
+  ethics: green
+  confidence: medium
+  review_status: reviewed-v1
+  v2_status: operational-v2
+
+- id: model-escalation
+  name: 升级
+  card_type: model
+  mechanism: {primary: M9, secondary: [M6]}
+  definition: 冲突向更高强度、更大范围演进；升级可能逼退对方，也可能失控。
+  example: 对方抢客户，你先发函，再起诉，一步步加码。
+  signals: [双方都在加码, 出现不可逆动作]
+  scripts: [「设阶梯和停点。」, 「留一条降级通道。」]
+  defense: [「失控代价算过吗？」, 「对方是不是在诱我升级？」]
+  recognize: [双方都在加码, 出现不可逆动作]
+  misjudge: [以为升级可控, 忽略对方反应]
+  failure_modes: [跳级失控, 没有停点, 无法降级]
+  action: [设升级阶梯与停点, 保留降级通道, 计算失控代价]
+  params: {steps: 3–5 级, risk: 0.1–0.3}
+  counter: [对手跳级或误判]
+  related: [M9 信号, 报复与升级阶梯]
+  source: {book: 战争论, chapter: 概念条目（章节待核）, source_type: 二手提炼, verified: false}
+  ethics: gray
+  confidence: medium
+  review_status: reviewed-v1
+  v2_status: operational-v2
+
+- id: model-attrition
+  name: 消耗战
+  card_type: model
+  mechanism: {primary: M11, secondary: [M2]}
+  definition: 不比谁打得漂亮，比谁撑得久；拼资源、补给与意志。
+  example: 两家打价格战，看谁现金流先断。
+  signals: [双方都难速胜, 资源成为关键]
+  scripts: [「算清消耗速度。」, 「找对方更痛的那个消耗点。」]
+  defense: [「自己撑得住吗？」, 「对方是不是在拖到我断粮？」]
+  recognize: [双方都难速胜, 资源成为关键]
+  misjudge: [低估对方耐力, 忽略自身消耗]
+  failure_modes: [自耗过快, 补给断, 士气崩]
+  action: [算清消耗速度, 保护补给线, 找对方更痛的消耗点]
+  params: {burn_rate: 中, endurance: 6–12 个月}
+  counter: [对手速战速决]
+  related: [M11 资源, 军备竞赛]
+  source: {book: 战争论, chapter: 概念条目（章节待核）, source_type: 二手提炼, verified: false}
+  ethics: green
+  confidence: medium
+  review_status: reviewed-v1
+  v2_status: operational-v2
+
+- id: model-decisive-battle
+  name: 决战
+  card_type: model
+  mechanism: {primary: M4, secondary: [M11]}
+  definition: 集中力量寻求一次决定性胜利；但决战风险高，需条件成熟。
+  example: 一次关键投标梭哈全部资源。
+  signals: [有机会一战定局, 也承受不起失败]
+  scripts: [「胜算多少？」, 「决战前先留失败预案。」]
+  defense: [「对手是否在诱我决战？」, 「败了这一仗还有下一仗吗？」]
+  recognize: [有机会一战定局, 也承受不起失败]
+  misjudge: [条件不成熟就梭哈, 忽略退路]
+  failure_modes: [梭哈失败, 没有退路, 被诱战]
+  action: [评估胜算与代价, 决战前积累优势, 留失败预案]
+  params: {win_prob: ≥60%, cost: 高}
+  counter: [对手避战或设伏]
+  related: [M4 关键点, 集中优势]
+  source: {book: 战争论, chapter: 概念条目（章节待核）, source_type: 二手提炼, verified: false}
+  ethics: gray
+  confidence: medium
+  review_status: reviewed-v1
+  v2_status: operational-v2

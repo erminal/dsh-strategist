@@ -1,0 +1,184 @@
+# 统一变体卡 · 第一批 12 个高频变体（v1）
+# 来源：kb/index/unified-variants.json（47 变体索引）
+# 说明：把「同机制不同做法」的成员卡合并为一张统一卡；成员卡作为分支保留。
+# 字段：id / name / mechanism / members / definition / use_when / actions / signals / counter / detect / failure_modes / ethics / related / status
+
+- id: var-signal
+  name: 信号与示形
+  mechanism: {primary: M1, secondary: [M9]}
+  members: [model-signaling, strat-shengdong-jixi, strat-jiachi-budian, strat-kongcheng-ji]
+  definition: 用可见、有成本的动作传递或伪装信息，改变对手的判断与预期。
+  use_when: [对方在观察你, 你需要证明实力/决心, 或需要隐藏真实意图]
+  actions: [选对方难模仿的成本型信号, 用一个假方向调动注意力, 关键节点才亮真实底牌]
+  signals: [对方开始按你的示形调整, 对方把资源调向假方向]
+  counter: [对方交叉验证, 对方不跟你的节奏]
+  detect: [对方的示形是否有实物支撑, 用小试探验证真假]
+  failure_modes: [信号成本不够被识破, 虚势被戳破, 假动作后没有真动作]
+  ethics: gray
+  related: [var-info-conceal, var-commitment]
+  status: unified-v1
+
+- id: var-info-conceal
+  name: 信息遮蔽
+  mechanism: {primary: M1, secondary: [M12]}
+  members: [model-information-control, strat-mantian-guohai, strat-andu-chencang, strat-xiaoli-cangdao]
+  definition: 控制信息的产生、筛选与披露节奏，让对手只看到你希望他看到的。
+  use_when: [信息不对称, 长期关系, 需要隐藏真实动作]
+  actions: [控制披露节奏, 明暗双线并行, 表面保持稳定]
+  signals: [对方只掌握片面信息, 关键信息只经少数人之手]
+  counter: [对方查异常资源流, 对方多源核实]
+  detect: [对方给你的信息是否单一, 找第二渠道核对]
+  failure_modes: [暗线暴露, 被反喂假信息, 长期伪装成本过高]
+  ethics: gray
+  related: [var-signal, var-framing]
+  status: unified-v1
+
+- id: var-screening
+  name: 筛选与信息暴露
+  mechanism: {primary: M1, secondary: [M10]}
+  members: [model-screening, model-adverse-selection]
+  definition: 设计不同选项，让对方按自身类型自选，从而暴露真实信息。
+  use_when: [不了解对方类型, 直接问会说谎, 有可设计的选项/合同]
+  actions: [设计高类型愿选、低类型不愿选的选项, 观察选择而非听自述, 用试用/认证补信息]
+  signals: [对方的选择暴露偏好, 对方在选项间犹豫]
+  counter: [对方识破后故意反选, 对方伪装类型]
+  detect: [对方的选项是否在筛你, 你是不是被分到了某一类]
+  failure_modes: [选项无区分度, 被反向筛选, 认证造假]
+  ethics: green
+  related: [var-info-conceal]
+  status: unified-v1
+
+- id: var-tempo
+  name: 节奏与消耗
+  mechanism: {primary: M2, secondary: [M11]}
+  members: [model-time-preference, model-tempo, model-ooda-loop, strat-yiyi-dailao]
+  definition: 谁更急谁让步；控节奏、拖与快都是武器，关键是让对方跟着你的节奏走。
+  use_when: [有截止时间, 一方明显更急, 可拖可速]
+  actions: [隐藏自己的时间压力, 用截止时间施压, 拖到对方疲惫再出手, 快慢结合不瞎快]
+  signals: [对方开始催/拖, 对方节奏变乱]
+  counter: [对方速战速决, 对方也拖]
+  detect: [对方是否在拖你, 你的时间压力是否已暴露]
+  failure_modes: [拖久生变, 快而乱, 被拖到断粮]
+  ethics: green
+  related: [var-exit]
+  status: unified-v1
+
+- id: var-keypoint
+  name: 重心与关键点
+  mechanism: {primary: M4, secondary: [M11]}
+  members: [model-center-of-gravity, model-concentration-of-force, model-decisive-battle, strat-weiwei-jiuzhao, strat-qinzei-qinwang, strat-fudi-chouxin]
+  definition: 找到对手力量与意志的支点，集中力量打这一点，而不是平均用力。
+  use_when: [对手强但依赖某个核心, 资源有限]
+  actions: [画依赖图找支点, 集中资源打一点, 评估连带后果与退路]
+  signals: [对手开始护某个点, 对手资源回撤]
+  counter: [对手设假重心, 对手去中心化]
+  detect: [对方是否在打你的支点, 你的关键依赖是否被盯上]
+  failure_modes: [支点判断错, 集中失败, 连带伤害过大]
+  ethics: gray
+  related: [var-framing]
+  status: unified-v1
+
+- id: var-negotiation-dist
+  name: 谈判分配
+  mechanism: {primary: M5, secondary: [M2]}
+  members: [model-batna, model-zopa, model-reservation-price, model-bargaining, model-distributive-bargaining]
+  definition: 在固定蛋糕上分多分少，胜负取决于底线、耐心、替代方案与承诺能力。
+  use_when: [蛋糕固定, 双方在同一个数字上争]
+  actions: [先算 BATNA 与保留价, 探测 ZOPA 是否存在, 条件式让步, 必要时锁定立场]
+  signals: [对方压价, 对方拖延]
+  counter: [对方用最后通牒, 对方虚报保留价]
+  detect: [对方是否在探你的底线, 区间是否真的存在]
+  failure_modes: [先亮底线, 让步过快, 没有 BATNA]
+  ethics: green
+  related: [var-negotiation-int]
+  status: unified-v1
+
+- id: var-negotiation-int
+  name: 谈判整合
+  mechanism: {primary: M5, secondary: [M12]}
+  members: [model-integrative-bargaining, model-multi-issue-tradeoff, model-package-deal, model-options-brainstorm, model-pareto-frontier, model-post-settlement, model-concession-pacing]
+  definition: 用多议题交换把蛋糕做大，找到双方优先级差异，把零和变正和。
+  use_when: [多条款可谈, 双方优先级不同]
+  actions: [先交换优先级信息, 设计打包方案, 推到帕累托前沿, 事后继续优化]
+  signals: [对方只谈一个数字, 对方隐藏真实偏好]
+  counter: [对方用整合话术套你的信息, 对方坚持逐项谈]
+  detect: [对方是否在套你的优先级, 双赢是不是变成让你让利]
+  failure_modes: [双赢变让利, 打包失衡, 被套信息]
+  ethics: green
+  related: [var-negotiation-dist]
+  status: unified-v1
+
+- id: var-commitment
+  name: 承诺与可信威胁
+  mechanism: {primary: M6, secondary: [M9]}
+  members: [model-commitment, model-credible-threat, model-hostage, model-bargaining-commitment, strat-shangwu-chouti]
+  definition: 主动限制自己的选择（自缚/锁定），让对方相信你会执行，从而改变对方的最优反应。
+  use_when: [口头威胁不被当真, 你需要改变对方预期]
+  actions: [用不可逆动作提高可信度, 公开承诺, 设定触发条件, 保留解绑条件]
+  signals: [对方开始测试你的承诺]
+  counter: [对方测试你是否真会执行, 对方也锁定立场]
+  detect: [对方是否在锁定你/诱你上屋抽梯]
+  failure_modes: [承诺不可信, 承诺过度把自己逼死, 没有解绑条件]
+  ethics: gray
+  related: [var-deterrence, var-repeated]
+  status: unified-v1
+
+- id: var-deterrence
+  name: 威慑与升级
+  mechanism: {primary: M6, secondary: [M9]}
+  members: [model-deterrence, model-retaliation-ladder, model-escalation, model-brinkmanship, model-chicken]
+  definition: 让对方相信「动手的代价大于收益」；同时控制升级阶梯，避免失控。
+  use_when: [对方在权衡是否越界, 双方都不愿真两败]
+  actions: [明确红线与后果, 展示可执行的报复能力, 设升级阶梯与停点, 留降级通道]
+  signals: [对方试探红线, 对方开始加码]
+  counter: [对方跳级, 对方误判你的决心]
+  detect: [对方是否在升级逼你, 是否在诱你跳级]
+  failure_modes: [红线模糊, 说了不执行, 升级失控]
+  ethics: gray
+  related: [var-commitment]
+  status: unified-v1
+
+- id: var-repeated
+  name: 重复与互惠
+  mechanism: {primary: M6, secondary: [M11]}
+  members: [model-repeated-games, model-tit-for-tat, model-reciprocity-norm, model-shadow-of-future, model-forgiveness, model-defection-incentive, model-evolution-of-cooperation, model-prisoners-dilemma]
+  definition: 长期关系下合作更划算；用对等回报维持合作，用适度宽容避免报复循环。
+  use_when: [双方还会长期打交道, 未来很重要]
+  actions: [明确长期关系, 第一轮先合作, 对方背叛时对等回应, 对方回头就恢复]
+  signals: [对方守约/背叛, 对方开始为长期布局]
+  counter: [对方在最后一轮背叛, 对方搭便车]
+  detect: [对方是否在利用长期关系占便宜, 是不是最后一次]
+  failure_modes: [报复循环, 被当软柿子, 最后一轮被坑]
+  ethics: green
+  related: [var-commitment, var-exit]
+  status: unified-v1
+
+- id: var-exit
+  name: 退出与止损
+  mechanism: {primary: M8, secondary: [M11]}
+  members: [model-walk-away, strat-zou-weishang, strat-jinchan-tuoqiao]
+  definition: 劣势且无胜算时，保存实力、体面退出；退不是输，是留机会。
+  use_when: [劣势, 无胜算, 需要脱身]
+  actions: [提前设止损线, 体面撤退, 保存核心资源, 留回旋余地]
+  signals: [对方开始撤退/保存核心]
+  counter: [对方追击, 对方断你退路]
+  detect: [对方是否在假坚持真撤退, 你的退路是否还在]
+  failure_modes: [走成溃败, 舍不得沉没成本, 没有退路]
+  ethics: green
+  related: [var-tempo]
+  status: unified-v1
+
+- id: var-framing
+  name: 框架与叙事
+  mechanism: {primary: M12, secondary: [M5]}
+  members: [model-framing-power, model-objective-criteria, model-interests-vs-positions, model-anchor, strat-jieshi-huanhun]
+  definition: 定义问题的框架、参照点与合法性来源，让讨论朝有利于你的方向展开。
+  use_when: [讨论被对方框架主导, 需要正当性依据]
+  actions: [识别现有框架, 提出替代框架, 用客观标准支撑, 必要时借壳/借势]
+  signals: [对方换框架, 对方借名义造合法性]
+  counter: [对方否定你的框架合法性, 对方用极端锚点]
+  detect: [你是否在对方的框架里, 对方借的壳是否真实]
+  failure_modes: [框架被锁死, 借壳失控, 被指动机不纯]
+  ethics: gray
+  related: [var-info-conceal, var-keypoint]
+  status: unified-v1

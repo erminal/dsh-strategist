@@ -1,0 +1,130 @@
+# 西方/现代博弈模型卡 · 第 4 批：合作的进化（v2 操作升级）
+# 来源：《合作的进化》(Axelrod) —— 二手提炼；v2 未取得原书全文，未逐页核对
+# v2 升级：每卡补 example / signals / scripts / failure_modes / 参数默认值 / related
+# 字段：id / name / card_type / mechanism / definition / example / signals / scripts / recognize / misjudge / failure_modes / action / params / counter / related / source / ethics / confidence / review_status / v2_status
+
+- id: model-shadow-of-future
+  name: 未来的影子
+  card_type: model
+  mechanism: {primary: M6, secondary: [M11]}
+  definition: 双方预期未来还会长期互动时，当下合作更划算；未来越重要，合作越稳。
+  example: 老客户年年合作，这次压价你让一步，因为明年还有单。
+  signals: [长期关系, 这次行为影响未来, 有持续互动渠道]
+  scripts: [「我们长期做，这次我让。」, 「明年还得靠你，别为这一单伤和气。」]
+  recognize: [长期关系, 这次行为影响未来, 有持续互动渠道]
+  misjudge: [把长期关系当一次性, 忽略关系结束前的背叛诱因]
+  failure_modes: [误判关系长度, 最后一轮背叛, 过度让步]
+  action: [强调长期合作, 建立持续互动, 在临近结束时更谨慎]
+  params: {discount: 0.9–0.99, horizon: 5+ 轮}
+  counter: [对方认定这是最后一次]
+  related: [M6 承诺, 重复博弈]
+  source: {book: 合作的进化, chapter: 概念条目（章节待核）, source_type: 二手提炼, verified: false}
+  ethics: green
+  confidence: high
+  review_status: reviewed-v1
+  v2_status: operational-v2
+
+- id: model-reciprocity-norm
+  name: 互惠
+  card_type: model
+  mechanism: {primary: M6, secondary: [M5]}
+  definition: 你如何对待我，我就如何对待你；互惠是合作的基本规则，也是报复的依据。
+  example: 同事帮你顶了一次班，你下次主动还回去。
+  signals: [对方先释放善意或敌意, 你需要决定回应方式]
+  scripts: [「你这次帮我，下次我顶你。」, 「一报还一报，我不占你便宜。」]
+  recognize: [对方先释放善意或敌意, 你需要决定回应方式]
+  misjudge: [单方面持续付出, 对背叛不回应]
+  failure_modes: [只给不取被当软柿子, 只取不给被断交, 回应过度]
+  action: [对善意回报, 对背叛对等回应, 保持可预测]
+  params: {match: 对等, delay: 低}
+  counter: [对方利用你的互惠占便宜]
+  related: [M6 承诺, 以牙还牙]
+  source: {book: 合作的进化, chapter: 概念条目（章节待核）, source_type: 二手提炼, verified: false}
+  ethics: green
+  confidence: high
+  review_status: reviewed-v1
+  v2_status: operational-v2
+
+- id: model-cooperation-cluster
+  name: 合作集群
+  card_type: model
+  mechanism: {primary: M3, secondary: [M6]}
+  definition: 合作者在小圈子里先形成稳定合作，再逐步扩大；圈子越小越容易维持合作。
+  example: 先和几个靠谱同事形成互助小圈子，做出成绩再拉更多人。
+  signals: [小群体内合作, 需要扩大合作范围]
+  scripts: [「先从我们几个开始。」, 「做出样子，别人自然会加入。」]
+  recognize: [小群体内合作, 需要扩大合作范围]
+  misjudge: [一开始就追求大范围合作, 忽略小圈子示范作用]
+  failure_modes: [圈子封闭变派系, 扩张太快失控, 被对手渗透]
+  action: [先在可信小圈子建立合作, 用成功案例吸引更多人, 逐步扩大]
+  params: {cluster_size: 3–7 人, expansion: 慢}
+  counter: [对方渗透破坏小圈子]
+  related: [M3 联盟, 合作演化]
+  source: {book: 合作的进化, chapter: 概念条目（章节待核）, source_type: 二手提炼, verified: false}
+  ethics: green
+  confidence: medium
+  review_status: reviewed-v1
+  v2_status: operational-v2
+
+- id: model-forgiveness
+  name: 宽容（噪音中的合作）
+  card_type: model
+  mechanism: {primary: M6, secondary: [M11]}
+  definition: 对方偶发背叛可能来自误解或噪音；适度宽容能避免报复循环。
+  example: 同事一次延误是家里有事，不是故意，先不报复。
+  signals: [对方背叛但无恶意证据, 双方陷入互相报复]
+  scripts: [「这次算误会，下不为例。」, 「你回头我们就继续。」]
+  recognize: [对方背叛但无恶意证据, 双方陷入互相报复]
+  misjudge: [把偶发当故意, 无原则宽容被利用]
+  failure_modes: [宽容被当软弱, 报复循环, 误判对方意图]
+  action: [先判断是否误判, 对方回头就恢复合作, 设宽容次数上限]
+  params: {noise: 中, forgiveness_limit: 1–2 次}
+  counter: [对方把宽容当软弱]
+  related: [M6 承诺, 以牙还牙]
+  source: {book: 合作的进化, chapter: 概念条目（章节待核）, source_type: 二手提炼, verified: false}
+  ethics: green
+  confidence: medium
+  review_status: reviewed-v1
+  v2_status: operational-v2
+
+- id: model-defection-incentive
+  name: 背叛诱因
+  card_type: model
+  mechanism: {primary: M6, secondary: [M5]}
+  definition: 当背叛的短期收益大于合作长期收益时，背叛会发生；改变收益结构才能改变行为。
+  example: 项目快结束时有人抢功，因为之后不合作了。
+  signals: [对方有短期套利机会, 违约成本低]
+  scripts: [「这次背叛收益太高，得加约束。」, 「把违约成本写清楚。」]
+  recognize: [对方有短期套利机会, 违约成本低]
+  misjudge: [靠道德呼吁, 忽略收益差]
+  failure_modes: [惩罚不可信, 收益差没变, 只靠人情]
+  action: [提高违约成本, 降低背叛收益, 让合作收益更可见]
+  params: {temptation: 高, punishment: 中–高}
+  counter: [对方找到新的套利空间]
+  related: [M6 承诺, 激励设计]
+  source: {book: 合作的进化, chapter: 概念条目（章节待核）, source_type: 二手提炼, verified: false}
+  ethics: green
+  confidence: high
+  review_status: reviewed-v1
+  v2_status: operational-v2
+
+- id: model-evolution-of-cooperation
+  name: 合作演化
+  card_type: model
+  mechanism: {primary: M6, secondary: [M3]}
+  definition: 合作不是靠一次设计，而是靠「可识别、可回报、可惩罚」的机制在群体中演化出来。
+  example: 团队从互相甩锅，变成互相补位，靠的是让靠谱的人被看见。
+  signals: [群体中合作水平低, 需要长期机制]
+  scripts: [「让靠谱的人被看见。」, 「让背叛有代价。」]
+  recognize: [群体中合作水平低, 需要长期机制]
+  misjudge: [指望一次性说服, 忽略识别与传播机制]
+  failure_modes: [搭便车者模仿信号, 机制太复杂, 好人先退出]
+  action: [让合作者能被识别, 让合作有回报, 让背叛被看见]
+  params: {recognition: 中–高, payoff_gap: 中}
+  counter: [搭便车者模仿合作者信号]
+  related: [M6 承诺, 合作集群]
+  source: {book: 合作的进化, chapter: 概念条目（章节待核）, source_type: 二手提炼, verified: false}
+  ethics: green
+  confidence: medium
+  review_status: reviewed-v1
+  v2_status: operational-v2

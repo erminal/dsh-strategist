@@ -1,0 +1,27 @@
+{
+  "name": "dsh-strategist",
+  "version": "0.1.0",
+  "description": "中文博弈军师：本地知识库 + 拆解工具链 + 表单 + 可视化报告（DSH skill）",
+  "private": true,
+  "type": "module",
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "strategy",
+    "game-theory",
+    "chinese",
+    "skill"
+  ],
+  "files": [
+    "skills",
+    "tools",
+    "prompts",
+    "kb",
+    "docs",
+    "README.md"
+  ],
+  "engines": {
+    "python": ">=3.8"
+  },
+  "license": "GPL-3.0-only"
+}

@@ -1,0 +1,137 @@
+# 西方/现代博弈模型卡 · 第 9 批：情报分析心理学（v2 操作升级）
+# 来源：《情报分析心理学》(Heuer) —— 二手提炼；v2 未取得原书全文，未逐页核对
+# 用途：识别己方判断偏差，防止误判；不是给对手「心理画像」的操控工具。
+# v2 升级：每卡补 example / signals / scripts / defense / failure_modes / 参数默认值 / related
+# 字段：id / name / card_type / mechanism / definition / example / signals / scripts / defense / recognize / misjudge / failure_modes / action / params / counter / related / source / ethics / confidence / review_status / v2_status
+
+- id: model-confirmation-bias
+  name: 确认偏误
+  card_type: model
+  mechanism: {primary: M12, secondary: [M10]}
+  definition: 人倾向寻找支持自己已有判断的信息，忽略反证。
+  example: 你认定同事要抢功，之后只记得他抢功的事，忽略他帮过你。
+  signals: [你已经有结论, 只看到支持证据]
+  scripts: [「反过来找证据。」, 「如果我错了，会看到什么？」]
+  defense: [「我是不是只找支持自己的证据？」, 「有没有反例被我忽略？」]
+  recognize: [你已经有结论, 只看到支持证据]
+  misjudge: [把一致当正确, 忽略沉默证据]
+  failure_modes: [只找支持, 忽略反证, 越陷越深]
+  action: [主动找反证, 列「如果我错了会看到什么」, 请人唱反调]
+  params: {prior: 强, evidence: 偏差}
+  counter: [对方利用你的确认偏误喂料]
+  related: [M12 框架, 竞争性假设分析]
+  source: {book: 情报分析心理学, chapter: 概念条目（章节待核）, source_type: 二手提炼, verified: false}
+  ethics: green
+  confidence: high
+  review_status: reviewed-v1
+  v2_status: operational-v2
+
+- id: model-anchoring-bias
+  name: 锚定偏差
+  card_type: model
+  mechanism: {primary: M12, secondary: [M1]}
+  definition: 先接触到的数字或信息会成为判断基准，后续调整不足。
+  example: 对方先报 100 万，你围绕这个数砍，忘了自己独立估值只有 60 万。
+  signals: [对方先给一个数字, 你围绕它思考]
+  scripts: [「先独立估值，再看对方数字。」, 「换一个锚重新算。」]
+  defense: [「我的判断被谁的数字带偏了？」, 「没有这个锚我会怎么估？」]
+  recognize: [对方先给一个数字, 你围绕它思考]
+  misjudge: [把锚当参考区间, 调整幅度太小]
+  failure_modes: [被锚定, 调整不足, 忘记独立估值]
+  action: [先独立估值再看对方数字, 主动换锚, 用区间]
+  params: {anchor: 强, adjustment: 不足}
+  counter: [对方用极端锚点]
+  related: [M12 框架, 锚定（谈判战术）]
+  source: {book: 情报分析心理学, chapter: 概念条目（章节待核）, source_type: 二手提炼, verified: false}
+  ethics: green
+  confidence: high
+  review_status: reviewed-v1
+  v2_status: operational-v2
+
+- id: model-availability-bias
+  name: 可得性偏差
+  card_type: model
+  mechanism: {primary: M12, secondary: [M10]}
+  definition: 容易想起的事被高估概率；生动案例会压过统计数据。
+  example: 刚看到一个项目失败，就觉得所有类似项目都会失败。
+  signals: [你被一个案例吓到, 忽略基础概率]
+  scripts: [「找基础概率。」, 「这是个例还是规律？」]
+  defense: [「我是不是被一个鲜活案例带跑？」, 「数据怎么说？」]
+  recognize: [你被一个案例吓到, 忽略基础概率]
+  misjudge: [用个例代替分布]
+  failure_modes: [以偏概全, 高估风险, 错过机会]
+  action: [找基础概率, 区分案例与统计, 记录判断依据]
+  params: {salience: 高, base_rate: 低}
+  counter: [对方用极端案例施压]
+  related: [M12 框架, 确认偏误]
+  source: {book: 情报分析心理学, chapter: 概念条目（章节待核）, source_type: 二手提炼, verified: false}
+  ethics: green
+  confidence: medium
+  review_status: reviewed-v1
+  v2_status: operational-v2
+
+- id: model-ach
+  name: 竞争性假设分析（ACH）
+  card_type: model
+  mechanism: {primary: M10, secondary: [M12]}
+  definition: 同时列出多个假设，逐条对照证据，找「最不能被证据推翻」的假设，而不是先选一个再找理由。
+  example: 项目延期有多种原因，别先认定是某部门拖的，列 3 个假设再对照证据。
+  signals: [信息不足但有多个解释, 你已倾向一个结论]
+  scripts: [「先列 3–5 个假设。」, 「找最不能被证据推翻的那个。」]
+  defense: [「我是不是只验证了一个假设？」, 「还有别的解释吗？」]
+  recognize: [信息不足但有多个解释, 你已倾向一个结论]
+  misjudge: [只验证一个假设, 忽略证据缺口]
+  failure_modes: [先入为主, 证据矩阵漏项, 忽略不确定]
+  action: [列 3–5 个假设, 列证据矩阵, 找每个假设的漏洞, 标不确定]
+  params: {hypotheses: 3–5 个, evidence: 5+ 条}
+  counter: [对方故意提供误导证据]
+  related: [M10 情报, M12 框架]
+  source: {book: 情报分析心理学, chapter: 概念条目（章节待核）, source_type: 二手提炼, verified: false}
+  ethics: green
+  confidence: high
+  review_status: reviewed-v1
+  v2_status: operational-v2
+
+- id: model-mirror-imaging
+  name: 镜像思维
+  card_type: model
+  mechanism: {primary: M10, secondary: [M12]}
+  definition: 假设对方和自己想的一样；忽略对方的目标、信息与约束不同。
+  example: 你以为对方会按「理性最优」行动，其实他更怕丢面子。
+  signals: [你觉得对方「应该」会这么做, 你用自己的逻辑推对方]
+  scripts: [「站在对方位置重算一遍。」, 「对方的目标可能和我不同。」]
+  defense: [「我是不是假设对方和我一样？」, 「他真正怕什么？」]
+  recognize: [你觉得对方「应该」会这么做, 你用自己的逻辑推对方]
+  misjudge: [把己方逻辑当普适, 忽略文化差异]
+  failure_modes: [误判对方, 忽略信息差, 文化误读]
+  action: [站在对方位置重算一遍, 列出对方的目标与约束, 找第三方视角]
+  params: {assumption: 高, distance: 中}
+  counter: [对方故意迎合你的预期]
+  related: [M10 情报, 确认偏误]
+  source: {book: 情报分析心理学, chapter: 概念条目（章节待核）, source_type: 二手提炼, verified: false}
+  ethics: green
+  confidence: medium
+  review_status: reviewed-v1
+  v2_status: operational-v2
+
+- id: model-groupthink
+  name: 群体思维
+  card_type: model
+  mechanism: {primary: M12, secondary: [M3]}
+  definition: 群体追求一致，压制异议，导致判断质量下降。
+  example: 会上没人反对，方案很快通过，事后发现大漏洞。
+  signals: [会上没人反对, 决策很快达成]
+  scripts: [「指定一个人专门唱反调。」, 「匿名收集意见。」]
+  defense: [「沉默是同意还是不敢说？」, 「有没有人没被问到？」]
+  recognize: [会上没人反对, 决策很快达成]
+  misjudge: [把沉默当同意, 忽略从众压力]
+  failure_modes: [异议被压制, 决策冒进, 事后翻车]
+  action: [指定反方, 匿名收集意见, 引入外部视角]
+  params: {cohesion: 高, dissent: 低}
+  counter: [对手利用你的群体盲区]
+  related: [M12 框架, M3 联盟]
+  source: {book: 情报分析心理学, chapter: 概念条目（章节待核）, source_type: 二手提炼, verified: false}
+  ethics: green
+  confidence: high
+  review_status: reviewed-v1
+  v2_status: operational-v2

@@ -1,0 +1,5 @@
+{
+  "me_actions": ["整理成果汇报", "争取团队支持", "找老板谈发展"],
+  "opp_actions": ["继续抢功", "拉票", "正常竞争"],
+  "payoffs": "payoffs.json"
+}

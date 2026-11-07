@@ -1,0 +1,137 @@
+# 西方/现代博弈模型卡 · 第 12 批：君主论（v2 操作升级）
+# 来源：《君主论》(Machiavelli) —— 二手提炼；v2 未取得原书全文，未逐页核对
+# 说明：历史与政治分析；涉及权术的卡标 gray，不得用于欺诈、伤害、操控个人。
+# v2 升级：每卡补 example / signals / scripts / defense / failure_modes / 参数默认值 / related
+# 字段：id / name / card_type / mechanism / definition / example / signals / scripts / defense / recognize / misjudge / failure_modes / action / params / counter / related / source / ethics / confidence / review_status / v2_status
+
+- id: model-legitimacy-princely
+  name: 合法性基础
+  card_type: model
+  mechanism: {primary: M12, secondary: [M9]}
+  definition: 统治/领导不只靠力量，还靠被认可的理由（传统、法理、功绩、民意）。
+  example: 新主管被质疑「凭什么」，他用制度依据和过往业绩站住脚。
+  signals: [有人质疑你的资格, 权威不稳]
+  scripts: [「先拿制度依据。」, 「用结果说话，不用嗓门。」]
+  defense: [「我的合法性被攻击了吗？」, 「我靠什么被认可？」]
+  recognize: [有人质疑你的资格, 权威不稳]
+  misjudge: [只靠强制, 忽略认同]
+  failure_modes: [只压不服, 依据不足, 被质疑动机]
+  action: [建立可被认可的依据, 用功绩与规则支撑, 争取关键群体认同]
+  params: {basis: 制度/功绩, support: 中}
+  counter: [对手攻击你的合法性]
+  related: [M12 框架, M9 信号]
+  source: {book: 君主论, chapter: 概念条目（章节待核）, source_type: 二手提炼, verified: false}
+  ethics: green
+  confidence: medium
+  review_status: reviewed-v1
+  v2_status: operational-v2
+
+- id: model-virtu-fortuna
+  name: 能力与机运
+  card_type: model
+  mechanism: {primary: M2, secondary: [M9]}
+  definition: 成功一半靠能力（virtù），一半靠时机与运气（fortuna）；能做的是准备与抓住窗口。
+  example: 行业风口来了，有准备的人接住，没准备的人只能看着。
+  signals: [局势变化快, 机会与风险并存]
+  scripts: [「平时积累，窗口来了就上。」, 「别把运气当能力。」]
+  defense: [「我是不是把运气当能力？」, 「窗口关了怎么办？」]
+  recognize: [局势变化快, 机会与风险并存]
+  misjudge: [把运气当能力, 机会来时没准备]
+  failure_modes: [错过窗口, 高估能力, 没有备份]
+  action: [平时积累能力, 识别窗口, 窗口出现时果断行动]
+  params: {capability: 中, timing: 短窗口}
+  counter: [对手抢占窗口]
+  related: [M2 节奏, M9 信号]
+  source: {book: 君主论, chapter: 概念条目（章节待核）, source_type: 二手提炼, verified: false}
+  ethics: green
+  confidence: medium
+  review_status: reviewed-v1
+  v2_status: operational-v2
+
+- id: model-fear-vs-love
+  name: 恐惧与爱戴
+  card_type: model
+  mechanism: {primary: M9, secondary: [M6]}
+  definition: 让人怕比让人爱更可控，但不能让人恨；恐惧要靠可预期与不越界维持。
+  example: 主管靠罚立威，团队怕他但不服他，一有机会就走。
+  signals: [你需要维持权威, 团队/对手在试探]
+  scripts: [「规则清晰、执行一致。」, 「不羞辱人，不随意加码。」]
+  defense: [「我是被怕还是被尊重？」, 「对方是不是在制造恐惧？」]
+  recognize: [你需要维持权威, 团队/对手在试探]
+  misjudge: [用恐惧代替尊重, 越界引发憎恨]
+  failure_modes: [越界成恨, 规则随意, 团队离心]
+  action: [规则清晰、执行一致, 不随意加码, 避免羞辱]
+  params: {fear: 中, hatred: 低}
+  counter: [对手利用你的严苛制造反弹]
+  related: [M9 信号, M6 承诺]
+  source: {book: 君主论, chapter: 概念条目（章节待核）, source_type: 二手提炼, verified: false}
+  ethics: gray
+  confidence: medium
+  review_status: reviewed-v1
+  v2_status: operational-v2
+
+- id: model-divide-and-rule
+  name: 分化
+  card_type: model
+  mechanism: {primary: M7, secondary: [M3]}
+  definition: 让对手内部或联盟之间产生分歧，削弱其合力；分化比正面对抗省力。
+  example: 对手联盟内部对分成不满，你用真实利益分歧让他们谈不拢。
+  signals: [对手联盟稳固, 内部有潜在矛盾]
+  scripts: [「找真实利益分歧，不造谣。」, 「保留合作可能，不把路走死。」]
+  defense: [「他是不是在挑拨我们？」, 「我们的共同利益还在吗？」]
+  recognize: [对手联盟稳固, 内部有潜在矛盾]
+  misjudge: [挑拨过火被识破, 引发共同敌意]
+  failure_modes: [造谣被反噬, 挑拨失败, 对方更团结]
+  action: [找真实利益分歧, 用利益而非谣言, 保留合作可能]
+  params: {cleavage: 中, trust: 低}
+  counter: [对手识破并团结]
+  related: [M7 分化, M3 联盟]
+  source: {book: 君主论, chapter: 概念条目（章节待核）, source_type: 二手提炼, verified: false}
+  ethics: gray
+  confidence: low
+  review_status: reviewed-v1
+  v2_status: operational-v2
+
+- id: model-appearance-management
+  name: 形象管理
+  card_type: model
+  mechanism: {primary: M12, secondary: [M9]}
+  definition: 人们根据看到的形象判断你；形象要与行为大体一致，否则崩塌。
+  example: 对外说「客户第一」，实际交付一拖再拖，口碑很快崩。
+  signals: [你在意他人评价, 需要建立可信形象]
+  scripts: [「用行为兑现形象。」, 「危机时坦诚，比硬撑好。」]
+  defense: [「他的形象和做法一致吗？」, 「我是不是只做了表面？」]
+  recognize: [你在意他人评价, 需要建立可信形象]
+  misjudge: [只做表面人设, 行为不一致]
+  failure_modes: [人设崩塌, 表里不一被揭穿, 危机处理失败]
+  action: [明确想被如何看待, 用行为兑现, 危机时坦诚]
+  params: {image: 中, consistency: 高}
+  counter: [对手揭穿形象与行为不一致]
+  related: [M12 框架, M9 信号]
+  source: {book: 君主论, chapter: 概念条目（章节待核）, source_type: 二手提炼, verified: false}
+  ethics: green
+  confidence: medium
+  review_status: reviewed-v1
+  v2_status: operational-v2
+
+- id: model-counsel-information
+  name: 谏议与信息
+  card_type: model
+  mechanism: {primary: M10, secondary: [M3]}
+  definition: 决策质量取决于信息渠道与谏言机制；只听好话必然误判。
+  example: 身边只有一种声音，坏消息传不上来，决策越来越偏。
+  signals: [身边只有一种声音, 坏消息传不上来]
+  scripts: [「建多源渠道。」, 「保护说真话的人。」]
+  defense: [「坏消息能传到我这里吗？」, 「我是不是只听想听的？」]
+  recognize: [身边只有一种声音, 坏消息传不上来]
+  misjudge: [把顺从当忠诚, 忽略信息失真]
+  failure_modes: [信息失真, 报喜不报忧, 决策偏航]
+  action: [建多源渠道, 保护说真话的人, 定期核对]
+  params: {channels: 2–3 个, candor: 中}
+  counter: [对手封锁信息或安插亲信]
+  related: [M10 情报, M3 联盟]
+  source: {book: 君主论, chapter: 概念条目（章节待核）, source_type: 二手提炼, verified: false}
+  ethics: green
+  confidence: medium
+  review_status: reviewed-v1
+  v2_status: operational-v2
